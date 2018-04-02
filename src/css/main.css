@@ -1,43 +1,87 @@
 :root {
-  --blue: rgba(66, 66, 173, 0.699);
+  --white: rgba(66, 66, 173, 0.699);
 }
 
-main {
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--white);
+}
+
+.splash {
+  width: 70%;
+  max-width: 600px;
+  min-width: 350px;
+  margin: auto;
+  padding: 30px;
   display: grid;
-  -ms-grid-columns: 100px 10px 400px 10px 100px;
-  grid-template-columns: 100px 400px 100px;
-  grid-template-rows: 100px;
-  grid-gap: 10px;
-  background-color: var(--blue);
+  -ms-grid-columns: 1fr 20px 200px;
+  grid-template-columns: 1fr 200px;
+  -ms-grid-rows: 250px 20px 50px 20px 100px;
+  grid-template-rows: 250px 50px 100px;
+  grid-gap: 20px;
 }
 
-.brand {
+.profile {
   border: 1px solid black;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
-  grid-row-start: 1;
-  grid-row-end: -1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
 }
 
-.header {
+.greeting {
   border: 1px solid black;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
-  grid-row-start: 1;
-  grid-row-end: -1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.link {
+.title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / -1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.links {
   border: 1px solid black;
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 1;
-  grid-column: 3 / 4;
-  grid-row-start: 1;
-  grid-row-end: -1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 3;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / -1;
 }
 
-main:hover {
-  --blue: red;
+.links > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.links li {
+  border: 1px solid black;
+  padding: 10px 20px;
 }
