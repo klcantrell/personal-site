@@ -1,0 +1,43 @@
+:root {
+  --blue: rgba(66, 66, 173, 0.699);
+}
+
+main {
+  display: grid;
+  -ms-grid-columns: 100px 10px 400px 10px 100px;
+  grid-template-columns: 100px 400px 100px;
+  grid-template-rows: 100px;
+  grid-gap: 10px;
+  background-color: var(--blue);
+}
+
+.brand {
+  border: 1px solid black;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+
+.header {
+  border: 1px solid black;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+
+.link {
+  border: 1px solid black;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+
+main:hover {
+  --blue: red;
+}
