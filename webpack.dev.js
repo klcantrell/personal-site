@@ -48,6 +48,19 @@ module.exports = {
         ],
       },
       {
+        test: /\.jpg$/,
+        use: {
+          loader: 'responsive-loader',
+        },
+      },
+      {
+        test: /\.svg/,
+        use: {
+          loader: 'svg-url-loader',
+          options: {},
+        },
+      },
+      {
         test: /\.(ttf|eot|woff|woff2)$/,
         use: {
           loader: 'file-loader',
