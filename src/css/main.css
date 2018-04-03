@@ -9,8 +9,8 @@
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -21,6 +21,7 @@ body {
   background-image: url("../images/hexagonsFIXED.svg"),
     linear-gradient(to right bottom, #4242ad, #776ec3, #a59cd8, #fff);
   background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 main {
