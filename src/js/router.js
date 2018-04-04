@@ -1,12 +1,12 @@
 export default function Router() {
-  const routes = {},
-    activeRoute = {},
-    previousRoute = {};
+  const routes = {};
+  const activeRoute = {};
+  const previousRoute = {};
 
   function updateRouteObj(routeToUpdate, routeToCopy) {
-    for (const prop in routeToCopy) {
+    Object.keys(routeToCopy).forEach((prop) => {
       routeToUpdate[prop] = routeToCopy[prop];
-    }
+    });
   }
 
   return {
@@ -17,7 +17,7 @@ export default function Router() {
 
     initHistory() {
       const pathname = location.pathname.substring(1);
-      if (pathname == '') {
+      if (pathname === '') {
         window.history.replaceState('/', null, '');
         updateRouteObj(activeRoute, routes['/']);
       } else {
