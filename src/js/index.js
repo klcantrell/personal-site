@@ -15,6 +15,7 @@ router
   .add('/', controller)
   .add('about', controller)
   .add('projects', controller)
+  .add('publications', controller)
   .bindPopstate()
   .initHistory();
 
