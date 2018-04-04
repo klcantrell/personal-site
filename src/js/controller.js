@@ -1,7 +1,10 @@
-export default function Controller() {
+export default function Controller(view) {
   return {
-    render() {
-      console.log('SUP!');
+    renderSection(route) {
+      view.renderRouteTarget(route);
+    },
+    dismountSection(route) {
+      view.dismountRouteTarget(route);
     },
   };
 }

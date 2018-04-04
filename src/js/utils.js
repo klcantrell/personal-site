@@ -1,27 +1,19 @@
 function fetchData(url) {
   return fetch(url)
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      return data;
-    })
+    .then(res => res.json())
+    .then(data => data);
 }
 
 function fetchImg(url) {
   return fetch(url)
-    .then((res) => {
-      return res.blob();
-    })
-    .then((data) => {
-      return data;
-    })
+    .then(res => res.blob())
+    .then(data => data);
 }
 
 function html(literals, ...customs) {
   let result = '';
   customs.forEach((custom, i) => {
-    let lit = literals[i];
+    const lit = literals[i];
     if (Array.isArray(custom)) {
       custom = custom.join('');
     }
@@ -42,10 +34,10 @@ function EventBus() {
 
     emit(eventName, ...args) {
       events[eventName].forEach((func) => {
-        func(args);
-      })
-    }
-  }
+        func(args[0], ...args);
+      });
+    },
+  };
 }
 
 export { fetchData, fetchImg, html, EventBus };

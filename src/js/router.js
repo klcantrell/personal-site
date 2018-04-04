@@ -18,11 +18,12 @@ export default function Router() {
     initHistory() {
       const pathname = location.pathname.substring(1);
       if (pathname == '') {
+        window.history.replaceState('/', null, '');
         updateRouteObj(activeRoute, routes['/']);
-        history.replaceState('/', null, '');
       } else {
-        history.replaceState(pathname, null, pathname);
+        window.history.replaceState(pathname, null, pathname);
         updateRouteObj(activeRoute, routes[pathname]);
+        updateRouteObj(previousRoute, routes['/']);
         this.updateView();
       }
       return this;
@@ -44,14 +45,16 @@ export default function Router() {
       if (activeRoute.rule !== routeName) {
         updateRouteObj(previousRoute, activeRoute);
         updateRouteObj(activeRoute, routes[routeName]);
-        history.pushState(routeName, null, routeName);
+        window.history.pushState(routeName, null, routeName);
         this.updateView();
       }
       return this;
     },
 
     updateView() {
-      activeRoute.controller.render();
+      console.log(activeRoute, previousRoute);
+      activeRoute.controller.renderSection(activeRoute.rule);
+      previousRoute.controller.dismountSection(previousRoute.rule);
       return this;
     },
   };
