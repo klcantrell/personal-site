@@ -1,9 +1,13 @@
 :root {
   box-sizing: border-box;
 
-  --blue: rgba(66, 66, 173, 0.699);
+  --blue: rgb(66, 66, 173);
+  --orange: rgb(247, 170, 67);
   --black: rgb(39, 39, 39);
-  --dark-background: rgba(0, 0, 0, 0.144);
+  --light-background-transparent: rgba(255, 255, 255, 0.274);
+  --dark-background-transparent: rgba(0, 0, 0, 0.062);
+  --dark-shadow: #777;
+  --transparent-shadow: rgba(0, 0, 0, 0.4);
 
   color: var(--black);
 }
@@ -32,12 +36,38 @@ main {
   grid-template-rows: 1fr;
 }
 
-.section--aligned {
+.route-links > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.route-links a {
+  min-width: 145px;
+  width: 22%;
+  background-color: var(--light-background-transparent);
+  font-size: 1.2rem;
+  color: var(--black);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.route-links li {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.section--base {
   width: 70%;
   max-width: 900px;
   min-width: 350px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 60px 0;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / -1;
@@ -56,8 +86,8 @@ main {
   display: grid;
   -ms-grid-columns: 3fr 20px minmax(150px, 2fr);
   grid-template-columns: 3fr minmax(150px, 2fr);
-  -ms-grid-rows: 350px 20px 50px 20px 30px;
-  grid-template-rows: 350px 50px 30px;
+  -ms-grid-rows: 350px 20px 100px 20px 540px 60px;
+  grid-template-rows: 350px 100px 540px;
   grid-gap: 20px;
 }
 
@@ -72,6 +102,7 @@ main {
   background-image: url("../images/profile-pic.jpg");
   background-position: center;
   background-size: cover;
+  border-radius: 10px;
 }
 
 .splash__greeting {
@@ -84,7 +115,17 @@ main {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--dark-background);
+  color: var(--orange);
+  font-size: 4.25rem;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.5rem;
+  background-color: var(--dark-background-transparent);
+  border-radius: 10px;
+}
+
+.splash__greeting > p {
+  margin: 0;
 }
 
 .splash__title {
@@ -94,46 +135,59 @@ main {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
-  -ms-grid-column-align: center;
+  width: 100%;
+  -ms-grid-row-align: center;
   justify-self: center;
   -ms-grid-row-align: center;
   align-self: center;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  text-shadow: 1px -1px 0 #777, 0 1px 2px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 100;
+  text-shadow: 1px -1px 0 var(--dark-shadow),
+    0 2px 2px var(--transparent-shadow);
+  border-bottom: 3px solid var(--black);
 }
 
-.route-links {
+.route-links--home {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 3;
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 3 / -1;
+  padding: 0;
+  background-color: var(--dark-background-transparent);
+  border-radius: 10px;
 }
 
-.route-links > ul {
+.route-links--home > ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  width: 60%;
   height: 100%;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
 }
 
-.route-links a {
-  min-width: 145px;
-  width: 22%;
-  border: 1px solid var(--black);
-  font-size: 1.2rem;
+.route-links--home a {
+  width: 200px;
+  height: 200px;
+  background-color: var(--light-background-transparent);
+  font-size: 1.75rem;
   color: var(--black);
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.route-links li {
-  padding: 15px 0;
+.route-links--home li {
   text-align: center;
 }
 
@@ -211,4 +265,11 @@ main {
   margin: 0;
   -ms-grid-column-align: center;
   -ms-grid-row-align: center;
+}
+
+.ms-padding-bottom {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
 }
