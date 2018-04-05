@@ -1,15 +1,21 @@
+@font-face {
+  font-family: "Operator Mono";
+  src: url("../fonts/OperatorMono-Medium.otf") format("OpenType");
+}
+
 :root {
   box-sizing: border-box;
 
-  --blue: rgb(66, 66, 173);
-  --orange: rgb(247, 170, 67);
+  --blue: rgb(24, 0, 227);
+  --orange: rgb(255, 156, 0);
   --black: rgb(39, 39, 39);
   --light-background-transparent: rgba(255, 255, 255, 0.274);
-  --dark-background-transparent: rgba(0, 0, 0, 0.062);
+  --dark-background-transparent: rgba(0, 0, 0, 0.123);
   --dark-shadow: #777;
   --transparent-shadow: rgba(0, 0, 0, 0.4);
 
   color: var(--black);
+  font-family: "Operator Mono", sans-serif;
 }
 
 *,
@@ -23,7 +29,14 @@ body {
   height: 100vh;
   margin: 0;
   background-image: url("../images/hexagonsFIXED.svg"),
-    linear-gradient(to right bottom, #4242ad, #776ec3, #a59cd8, #fff);
+    linear-gradient(
+      to right bottom,
+      #1800e3,
+      #0048ed,
+      #006beb,
+      #3f88e2,
+      #79a2d4
+    );
   background-repeat: repeat;
   background-attachment: fixed;
 }
@@ -86,8 +99,8 @@ main {
   display: grid;
   -ms-grid-columns: 3fr 20px minmax(150px, 2fr);
   grid-template-columns: 3fr minmax(150px, 2fr);
-  -ms-grid-rows: 350px 20px 100px 20px 540px 60px;
-  grid-template-rows: 350px 100px 540px;
+  -ms-grid-rows: 53vh 20px 23vh 20px 10vh 20px 540px 60px;
+  grid-template-rows: 53vh 23vh 10vh 540px;
   grid-gap: 20px;
 }
 
@@ -103,6 +116,7 @@ main {
   background-position: center;
   background-size: cover;
   border-radius: 10px;
+  box-shadow: 0 0 10px var(--black), 0 0 20px var(--dark-background-transparent);
 }
 
 .splash__greeting {
@@ -115,13 +129,11 @@ main {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  color: var(--orange);
-  font-size: 4.25rem;
-  font-weight: bold;
-  font-style: italic;
-  letter-spacing: 0.5rem;
+  width: 100%;
+  height: auto;
   background-color: var(--dark-background-transparent);
   border-radius: 10px;
+  box-shadow: 0 0 10px var(--black), 0 0 20px var(--dark-background-transparent);
 }
 
 .splash__greeting > p {
@@ -146,19 +158,30 @@ main {
   font-weight: 100;
   text-shadow: 1px -1px 0 var(--dark-shadow),
     0 2px 2px var(--transparent-shadow);
-  border-bottom: 3px solid var(--black);
+}
+
+.splash__arrow {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 3;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column-align: center;
+  justify-self: center;
 }
 
 .route-links--home {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 3;
-  -ms-grid-row: 5;
+  -ms-grid-row: 7;
   -ms-grid-row-span: 1;
-  grid-row: 3 / -1;
+  grid-row: 4 / -1;
   padding: 0;
   background-color: var(--dark-background-transparent);
   border-radius: 10px;
+  border: 3px solid var(--black);
 }
 
 .route-links--home > ul {
@@ -270,6 +293,6 @@ main {
 .ms-padding-bottom {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  -ms-grid-row: 6;
+  -ms-grid-row: 9;
   -ms-grid-row-span: 1;
 }
