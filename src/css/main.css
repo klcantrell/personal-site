@@ -147,7 +147,7 @@ main {
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
   width: 100%;
-  -ms-grid-row-align: center;
+  -ms-grid-column-align: center;
   justify-self: center;
   -ms-grid-row-align: center;
   align-self: center;

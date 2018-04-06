@@ -1,10 +1,12 @@
 import KUTE from 'kute.js';
 import 'kute.js/kute-svg';
+import 'kute.js/kute-attr';
 
 export default function View(eventBus) {
   const rootEl = document.getElementById('portfolio');
   const triggerEls = Array.from(rootEl.querySelectorAll('a[routeTo]'));
-  const nameSVG = rootEl.querySelector('#name');
+  const namePath = rootEl.querySelector('#name');
+  const arrowPath = rootEl.querySelector('#downArrow');
   const routeMap = {
     '/': {
       triggerName: null,
@@ -27,19 +29,39 @@ export default function View(eventBus) {
     });
   }
 
-  function drawName() {
+  function drawName(startTime) {
     KUTE.fromTo(
-      nameSVG,
+      namePath,
       { draw: '0% 0%' },
       { draw: '0% 100%' },
       { duration: 25000, easing: 'easeIn' },
-    ).start();
+    ).start(startTime);
+  }
+
+  function drawArrow(startTime) {
+    const setupVisibility = KUTE.to(arrowPath, { opacity: '1' }, { duration: 10, delay: 3500 });
+    const drawInArrow = KUTE.fromTo(
+      arrowPath,
+      { draw: '0% 0%' },
+      { draw: '0% 100%' },
+      { duration: 1000, easing: 'easeIn', delay: 3500 },
+    );
+    const fillInArrow = KUTE.fromTo(
+      arrowPath,
+      { attr: { fillOpacity: 0 } },
+      { attr: { fillOpacity: 1 } },
+      { duration: 1000, easing: 'easeIn' },
+    );
+    setupVisibility.start(startTime);
+    drawInArrow.chain(fillInArrow).start(startTime);
   }
 
   return {
     init() {
       bindEvents();
-      drawName();
+      const now = window.performance.now();
+      drawName(now);
+      drawArrow(now);
     },
     renderRouteTarget(route) {
       routeMap[route].section.classList.remove('section--hidden');
