@@ -59,7 +59,23 @@ module.exports = {
         ],
       },
       {
-        test: /\.(ttf|eot|woff|woff2)$/,
+        test: /\.jpg$/,
+        use: {
+          loader: 'responsive-loader',
+          options: {
+            name: 'images/[name].[ext]',
+          },
+        },
+      },
+      {
+        test: /\.svg/,
+        use: {
+          loader: 'svg-url-loader',
+          options: {},
+        },
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2|otf)$/,
         use: {
           loader: 'file-loader',
           options: {
@@ -95,13 +111,13 @@ module.exports = {
         removeComments: true,
       },
     }),
-    new CompressionPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.ttf$/,
-      threshold: 10240,
-      minRatio: 0.8,
-      deleteOriginalAssets: true,
-    }),
+    // new CompressionPlugin({
+    //   asset: '[path].gz[query]',
+    //   algorithm: 'gzip',
+    //   test: /\.ttf$/,
+    //   threshold: 10240,
+    //   minRatio: 0.8,
+    //   deleteOriginalAssets: true,
+    // }),
   ],
 };
