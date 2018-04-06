@@ -1,10 +1,10 @@
-function fetchData(url) {
+function k_fetchData(url) {
   return fetch(url)
     .then(res => res.json())
     .then(data => data);
 }
 
-function fetchImg(url) {
+function k_fetchImg(url) {
   return fetch(url)
     .then(res => res.blob())
     .then(data => data);
@@ -40,4 +40,26 @@ function EventBus() {
   };
 }
 
-export { fetchData, fetchImg, html, EventBus };
+function k_classListAdd(el, classToAdd) {
+  const existingClasses = el.getAttribute('class');
+  el.setAttribute('class', `${existingClasses} ${classToAdd}`);
+}
+
+function k_classListRemove(el, classToRemove) {
+  const existingClasses = el.getAttribute('class');
+  const newClassList = existingClasses
+    .split(' ')
+    .filter(el => el !== classToRemove)
+    .join(' ');
+  el.setAttribute('class', newClassList);
+}
+
+function delay(ms) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, ms);
+  });
+}
+
+export { k_fetchData, k_fetchImg, html, EventBus, k_classListAdd, k_classListRemove, delay };
