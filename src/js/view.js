@@ -5,8 +5,9 @@ import 'kute.js/kute-attr';
 export default function View(eventBus) {
   const rootEl = document.getElementById('portfolio');
   const triggerEls = Array.from(rootEl.querySelectorAll('a[routeTo]'));
+  const arrowEl = rootEl.querySelector('.splash__arrow');
   const namePath = rootEl.querySelector('#name');
-  const arrowPath = rootEl.querySelector('#downArrow');
+  const arrowPath = arrowEl.querySelector('#downArrow');
   const routeMap = {
     '/': {
       triggerName: null,
@@ -54,6 +55,11 @@ export default function View(eventBus) {
     );
     setupVisibility.start(startTime);
     drawInArrow.chain(fillInArrow).start(startTime);
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+      }, 3000);
+    });
   }
 
   return {
@@ -61,7 +67,9 @@ export default function View(eventBus) {
       bindEvents();
       const now = window.performance.now();
       drawName(now);
-      drawArrow(now);
+      drawArrow(now).then(() => {
+        arrowEl.setAttribute('class', 'splash__arrow bounce');
+      });
     },
     renderRouteTarget(route) {
       routeMap[route].section.classList.remove('section--hidden');

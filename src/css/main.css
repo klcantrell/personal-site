@@ -98,8 +98,8 @@ main {
   display: grid;
   -ms-grid-columns: 3fr 20px minmax(150px, 2fr);
   grid-template-columns: 3fr minmax(150px, 2fr);
-  -ms-grid-rows: 53vh 20px 23vh 20px 10vh 20px 540px 60px;
-  grid-template-rows: 53vh 23vh 10vh 540px;
+  -ms-grid-rows: 53vh 20px 19vh 20px 14vh 20px 540px 60px;
+  grid-template-rows: 53vh 19vh 14vh 540px;
   grid-gap: 20px;
 }
 
@@ -293,4 +293,37 @@ main {
   -ms-grid-column-span: 3;
   -ms-grid-row: 9;
   -ms-grid-row-span: 1;
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-delay: 500ms;
+  transform-origin: center bottom;
 }
