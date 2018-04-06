@@ -19,4 +19,6 @@ router
   .bindPopstate()
   .initHistory();
 
+view.init();
+
 eventBus.on('routeChange', router.onRouteChange.bind(router));

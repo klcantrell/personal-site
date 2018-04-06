@@ -11,7 +11,6 @@
   --black: rgb(39, 39, 39);
   --light-background-transparent: rgba(255, 255, 255, 0.274);
   --dark-background-transparent: rgba(0, 0, 0, 0.123);
-  --dark-shadow: #777;
   --transparent-shadow: rgba(0, 0, 0, 0.4);
 
   color: var(--black);
@@ -156,8 +155,7 @@ main {
   margin: 0;
   font-size: 3rem;
   font-weight: 100;
-  text-shadow: 1px -1px 0 var(--dark-shadow),
-    0 2px 2px var(--transparent-shadow);
+  text-shadow: 0 -1px 40px var(--orange), 0 2px 2px var(--transparent-shadow);
 }
 
 .splash__arrow {
@@ -181,7 +179,7 @@ main {
   padding: 0;
   background-color: var(--dark-background-transparent);
   border-radius: 10px;
-  border: 3px solid var(--black);
+  box-shadow: 0 0 10px var(--black), 0 0 20px var(--dark-background-transparent);
 }
 
 .route-links--home > ul {
