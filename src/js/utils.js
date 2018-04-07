@@ -62,4 +62,48 @@ function k$delay(ms) {
   });
 }
 
-export { k$fetchData, k$fetchImg, k$html, EventBus, k$classListAdd, k$classListRemove, k$delay };
+function k$throttle(func, limit) {
+  let inThrottle;
+  let lastFunc;
+  let lastRan;
+  return function throttling(...args) {
+    const context = this;
+    if (!inThrottle) {
+      window.requestAnimationFrame(func.bind(context, args));
+      lastRan = Date.now();
+      inThrottle = true;
+    } else {
+      clearTimeout(lastFunc);
+      lastFunc = setTimeout(() => {
+        if (Date.now() - lastRan >= limit) {
+          window.requestAnimationFrame(func.bind(context, args));
+          lastRan = Date.now();
+        }
+      }, limit - (Date.now() - lastRan));
+    }
+  };
+}
+
+function k$whenTopQuarterInView(func, el) {
+  const windowT = window.pageYOffset;
+  const windowB = windowT + window.innerHeight;
+  const cRect = el.getBoundingClientRect();
+  const elT = windowT + cRect.top;
+  const elTopQuarter = cRect.height / 4 + elT;
+
+  if (windowB > elTopQuarter) {
+    func();
+  }
+}
+
+export {
+  k$fetchData,
+  k$fetchImg,
+  k$html,
+  EventBus,
+  k$classListAdd,
+  k$classListRemove,
+  k$delay,
+  k$throttle,
+  k$whenTopQuarterInView,
+};
