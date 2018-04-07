@@ -1,16 +1,16 @@
-function k_fetchData(url) {
+function k$fetchData(url) {
   return fetch(url)
     .then(res => res.json())
     .then(data => data);
 }
 
-function k_fetchImg(url) {
+function k$fetchImg(url) {
   return fetch(url)
     .then(res => res.blob())
     .then(data => data);
 }
 
-function html(literals, ...customs) {
+function k$html(literals, ...customs) {
   let result = '';
   customs.forEach((custom, i) => {
     const lit = literals[i];
@@ -40,12 +40,12 @@ function EventBus() {
   };
 }
 
-function k_classListAdd(el, classToAdd) {
+function k$classListAdd(el, classToAdd) {
   const existingClasses = el.getAttribute('class');
   el.setAttribute('class', `${existingClasses} ${classToAdd}`);
 }
 
-function k_classListRemove(el, classToRemove) {
+function k$classListRemove(el, classToRemove) {
   const existingClasses = el.getAttribute('class');
   const newClassList = existingClasses
     .split(' ')
@@ -54,7 +54,7 @@ function k_classListRemove(el, classToRemove) {
   el.setAttribute('class', newClassList);
 }
 
-function delay(ms) {
+function k$delay(ms) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve();
@@ -62,4 +62,4 @@ function delay(ms) {
   });
 }
 
-export { k_fetchData, k_fetchImg, html, EventBus, k_classListAdd, k_classListRemove, delay };
+export { k$fetchData, k$fetchImg, k$html, EventBus, k$classListAdd, k$classListRemove, k$delay };

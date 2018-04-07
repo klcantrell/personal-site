@@ -2,7 +2,7 @@ import KUTE from 'kute.js';
 import 'kute.js/kute-svg';
 import 'kute.js/kute-attr';
 
-import { delay, k_classListAdd, k_classListRemove } from './utils';
+import { k$delay, k$classListAdd, k$classListRemove } from './utils';
 
 export default function View(eventBus) {
   const rootEl = document.getElementById('portfolio');
@@ -58,16 +58,16 @@ export default function View(eventBus) {
     setupVisibility.start(startTime);
     drawInArrow.chain(fillInArrow).start(startTime);
     return new Promise(resolve => {
-      delay(3550).then(() => {
+      k$delay(3550).then(() => {
         resolve();
       });
     });
   }
 
   function bounceEl(el) {
-    k_classListAdd(el, 'bounce');
+    k$classListAdd(el, 'bounce');
     return new Promise(resolve => {
-      delay(4000).then(() => {
+      k$delay(4000).then(() => {
         resolve();
       });
     });
@@ -75,8 +75,8 @@ export default function View(eventBus) {
 
   function bounceLoop(el) {
     bounceEl(el).then(() => {
-      k_classListRemove(el, 'bounce');
-      delay(50).then(() => {
+      k$classListRemove(el, 'bounce');
+      k$delay(50).then(() => {
         bounceLoop(el);
       });
     });
