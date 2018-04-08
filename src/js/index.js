@@ -12,6 +12,8 @@ const view = View(eventBus);
 const controller = Controller(view);
 const router = Router();
 
+view.init();
+
 router
   .add('/', controller)
   .add('about', controller)
@@ -19,7 +21,5 @@ router
   .add('publications', controller)
   .bindPopstate()
   .initHistory();
-
-view.init();
 
 eventBus.on('routeChange', router.onRouteChange.bind(router));
