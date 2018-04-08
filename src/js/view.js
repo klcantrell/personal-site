@@ -134,6 +134,38 @@ export default function View(eventBus) {
     });
   }
 
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
+  function fadeOut(el) {
+    el.classList.add('fade-out');
+    return new Promise(resolve => {
+      k$delay(1000).then(() => {
+        el.classList.remove('fade-out');
+        resolve();
+      });
+    });
+  }
+
+  function fadeIn(el) {
+    el.classList.add('fade-in');
+    return new Promise(resolve => {
+      k$delay(1000).then(() => {
+        el.classList.remove('fade-in');
+        resolve();
+      });
+    });
+  }
+
+  function show(el) {
+    el.classList.remove('section--hidden');
+  }
+
+  function hide(el) {
+    el.classList.add('section--hidden');
+  }
+
   return {
     init() {
       bindEvents();
@@ -144,13 +176,20 @@ export default function View(eventBus) {
       });
     },
     renderRouteTarget(route) {
-      routeMap[route].section.classList.remove('section--hidden');
+      const el = routeMap[route].section;
+      scrollToTop();
+      fadeIn(el);
+      show(el);
     },
     dismountRouteTarget(route) {
-      routeMap[route].section.classList.add('section--hidden');
-    },
-    scrollToTop() {
-      window.scrollTo(0, 0);
+      const el = routeMap[route].section;
+      if (route === '/') {
+        hide(el);
+      } else {
+        fadeOut(el).then(() => {
+          hide(el);
+        });
+      }
     },
   };
 }

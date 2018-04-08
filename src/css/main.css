@@ -355,9 +355,39 @@ main {
   }
 }
 
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .bounce {
   animation-name: bounce;
   animation-duration: 1s;
   animation-delay: 500ms;
   transform-origin: center bottom;
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 1s;
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 1s;
 }
