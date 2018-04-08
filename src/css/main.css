@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Operator Mono";
-  src: url("../fonts/OperatorMono-Medium.otf") format("OpenType");
+  src: url("../fonts/OperatorMono-Medium.woff") format("woff");
 }
 
 :root {
@@ -9,6 +9,7 @@
   --blue: rgb(24, 0, 227);
   --orange: rgb(255, 156, 0);
   --black: rgb(39, 39, 39);
+  --white: rgb(223, 223, 223);
   --light-background-transparent: rgba(255, 255, 255, 0.274);
   --dark-background-transparent: rgba(0, 0, 0, 0.123);
   --transparent-shadow: rgba(0, 0, 0, 0.4);
@@ -68,10 +69,16 @@ main {
   text-transform: uppercase;
   border-radius: 10px;
   border: 5px outset var(--black);
+  border-top-color: var(--white);
+  border-left-color: var(--white);
+  box-shadow: 2px 3px 10px var(--black),
+    2px 3px 20px var(--dark-background-transparent);
 }
 
 .route-links a:active {
   border: 5px inset var(--black);
+  border-right-color: var(--white);
+  border-bottom-color: var(--white);
 }
 
 .route-links a:active li {
@@ -125,6 +132,8 @@ main {
   background-position: center;
   background-size: cover;
   border-radius: 10px;
+  border-bottom: 3px solid var(--black);
+  border-right: 3px solid var(--black);
   box-shadow: 0 0 10px var(--black), 0 0 20px var(--dark-background-transparent);
 }
 
@@ -165,7 +174,7 @@ main {
   margin: 0;
   font-size: 3rem;
   font-weight: 100;
-  text-shadow: 0 -1px 40px var(--orange), 0 2px 2px var(--transparent-shadow);
+  text-shadow: 0 -1px 50px var(--orange), 0 2px 2px var(--transparent-shadow);
 }
 
 .splash__arrow {
@@ -217,11 +226,15 @@ main {
   justify-content: center;
   align-items: center;
   border: 7px outset var(--black);
+  border-top-color: var(--white);
+  border-left-color: var(--white);
   box-shadow: 0 0 10px var(--black), 0 0 20px var(--dark-background-transparent);
 }
 
 .route-links--home a:active {
   border: 20px inset var(--black);
+  border-right-color: var(--white);
+  border-bottom-color: var(--white);
 }
 
 .route-links--home a:active li {
