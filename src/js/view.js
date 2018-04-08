@@ -61,7 +61,6 @@ export default function View(eventBus) {
   }
 
   function morphArrowToK() {
-    console.log('Arrow morphed');
     const morph = KUTE.to(arrowPath, {
       path: `M 152.77,315.36
       C 229.84,278.14 252.00,249.33 252.00,229.39
@@ -149,6 +148,9 @@ export default function View(eventBus) {
     },
     dismountRouteTarget(route) {
       routeMap[route].section.classList.add('section--hidden');
+    },
+    scrollToTop() {
+      window.scrollTo(0, 0);
     },
   };
 }
