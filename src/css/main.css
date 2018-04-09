@@ -29,22 +29,23 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  background-image: url("../images/hexagonsFIXED.svg"),
-    linear-gradient(
-      to right bottom,
-      #1800e3,
-      #0048ed,
-      #006beb,
-      #3fa6e2,
-      #79c2d4
-    );
-  background-repeat: repeat;
+  background-image: linear-gradient(
+    to right bottom,
+    #1800e3,
+    #0048ed,
+    #006beb,
+    #3fa6e2,
+    #79c2d4
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 }
 
 main {
   width: 100%;
   height: 100%;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -90,6 +91,15 @@ main {
   padding: 15px 0;
   text-align: center;
   pointer-events: none;
+}
+
+.background-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
 }
 
 .section--base {

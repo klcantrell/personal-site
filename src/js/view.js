@@ -19,7 +19,7 @@ export default function View(eventBus) {
   const landingPageNav = rootEl.querySelector('.route-links--splash');
   const arrowEl = rootEl.querySelector('.splash__arrow');
   const arrowPath = arrowEl.querySelector('#downArrow');
-  const arrowPathClone = arrowEl.querySelector('#downArrow-clone');
+  const bigLetterK = document.getElementById('bigLetterK');
   const routeMap = {
     '/': {
       triggerName: null,
@@ -126,6 +126,24 @@ export default function View(eventBus) {
     });
   }
 
+  function morphBigKC(startTime) {
+    const morph = KUTE.to(
+      bigLetterK,
+      {
+        path: `M 266.00,210.86
+        C 266.00,210.86 217.00,211.58 217.00,211.58
+          217.72,177.94 214.09,166.00 197.41,166.00
+          164.77,166.00 143.00,217.38 143.00,258.61
+          143.00,305.63 172.03,319.02 245.67,295.86
+          245.67,295.86 240.23,341.47 240.23,341.47
+          142.80,373.69 91.00,341.83 91.00,266.20
+          91.00,189.48 143.86,120.00 208.30,120.00
+          252.94,120.00 268.89,149.33 266.00,210.86 Z`,
+      },
+      { repeat: 50, yoyo: true, duration: 20000 },
+    ).start(startTime);
+  }
+
   function bounceEl(el) {
     k$classListAdd(el, 'bounce');
     return new Promise(resolve => {
@@ -188,6 +206,7 @@ export default function View(eventBus) {
       drawArrow(now).then(() => {
         bounceLoop(arrowEl);
       });
+      morphBigKC(now);
     },
     renderRouteTarget(route) {
       const el = routeMap[route].section;
