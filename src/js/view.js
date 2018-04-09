@@ -126,7 +126,7 @@ export default function View(eventBus) {
     });
   }
 
-  function morphBigKC(startTime) {
+  const bigLetterMorphControl = (() => {
     const morph = KUTE.to(
       bigLetterK,
       {
@@ -141,8 +141,16 @@ export default function View(eventBus) {
           252.94,120.00 268.89,149.33 266.00,210.86 Z`,
       },
       { repeat: 50, yoyo: true, duration: 20000 },
-    ).start(startTime);
-  }
+    );
+    return {
+      start() {
+        morph.start();
+      },
+      stop() {
+        morph.stop();
+      },
+    };
+  })();
 
   function bounceEl(el) {
     k$classListAdd(el, 'bounce');
@@ -206,9 +214,12 @@ export default function View(eventBus) {
       drawArrow(now).then(() => {
         bounceLoop(arrowEl);
       });
-      morphBigKC(now);
+      bigLetterMorphControl.start();
     },
     renderRouteTarget(route) {
+      if (route === '/') {
+        bigLetterMorphControl.start();
+      }
       const el = routeMap[route].section;
       scrollToTop();
       fadeIn(el);
@@ -218,6 +229,25 @@ export default function View(eventBus) {
       const el = routeMap[route].section;
       if (route === '/') {
         hide(el);
+        bigLetterMorphControl.stop();
+        bigLetterK.setAttribute(
+          'd',
+          `M 152.77,315.36
+        C 229.84,278.14 252.00,249.33 252.00,229.39
+          252.00,216.53 243.14,209.00 228.97,209.00
+          205.48,209.00 171.38,227.17 134.61,264.39
+          134.61,264.39 107.58,404.00 107.58,404.00
+          107.58,404.00 81.89,404.00 81.89,404.00
+          81.89,404.00 141.69,95.22 141.69,95.22
+          141.69,95.22 168.27,93.00 168.27,93.00
+          168.27,93.00 139.48,240.02 139.48,240.02
+          175.36,203.48 212.58,185.00 240.92,185.00
+          265.95,185.00 280.00,199.03 280.00,219.64
+          280.00,248.44 253.08,281.69 185.11,315.36
+          185.11,315.36 269.50,401.78 269.50,401.78
+          269.50,401.78 239.44,406.00 239.44,406.00
+          239.44,406.00 152.77,315.36 152.77,315.36 Z`,
+        );
       } else {
         disableRouteTriggers();
         fadeOut(el).then(() => {
