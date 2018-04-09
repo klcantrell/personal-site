@@ -16,7 +16,7 @@ export default function View(eventBus) {
   const rootEl = document.getElementById('portfolio');
   const triggerEls = Array.from(rootEl.querySelectorAll('a[routeTo]'));
   const namePath = rootEl.querySelector('#name');
-  const landingPageNav = rootEl.querySelector('.route-links--home');
+  const landingPageNav = rootEl.querySelector('.route-links--splash');
   const arrowEl = rootEl.querySelector('.splash__arrow');
   const arrowPath = arrowEl.querySelector('#downArrow');
   const arrowPathClone = arrowEl.querySelector('#downArrow-clone');
@@ -28,23 +28,36 @@ export default function View(eventBus) {
   };
 
   function bindEvents() {
-    handleClicksOnTriggers();
+    enableRouteTriggers();
     handleScroll();
   }
 
-  function handleClicksOnTriggers() {
+  function createRouteMap() {
     triggerEls.forEach(triggerEl => {
       const triggerName = triggerEl.getAttribute('routeTo');
       routeMap[triggerName] = {
         trigger: triggerEl,
         section: rootEl.querySelector(`section[routeTarget="${triggerName}"]`),
       };
-
-      triggerEl.addEventListener('click', e => {
-        e.preventDefault();
-        eventBus.emit('routeChange', triggerName);
-      });
     });
+  }
+
+  function enableRouteTriggers() {
+    triggerEls.forEach(triggerEl => {
+      triggerEl.addEventListener('click', triggerRouteChange);
+    });
+  }
+
+  function disableRouteTriggers() {
+    triggerEls.forEach(triggerEl => {
+      triggerEl.removeEventListener('click', triggerRouteChange);
+    });
+  }
+
+  function triggerRouteChange(e) {
+    const triggerName = e.currentTarget.getAttribute('routeTo');
+    e.preventDefault();
+    eventBus.emit('routeChange', triggerName);
   }
 
   function handleScroll() {
@@ -141,7 +154,7 @@ export default function View(eventBus) {
   function fadeOut(el) {
     el.classList.add('fade-out');
     return new Promise(resolve => {
-      k$delay(1000).then(() => {
+      k$delay(800).then(() => {
         el.classList.remove('fade-out');
         resolve();
       });
@@ -151,7 +164,7 @@ export default function View(eventBus) {
   function fadeIn(el) {
     el.classList.add('fade-in');
     return new Promise(resolve => {
-      k$delay(1000).then(() => {
+      k$delay(800).then(() => {
         el.classList.remove('fade-in');
         resolve();
       });
@@ -168,6 +181,7 @@ export default function View(eventBus) {
 
   return {
     init() {
+      createRouteMap();
       bindEvents();
       const now = window.performance.now();
       drawName(now);
@@ -186,7 +200,9 @@ export default function View(eventBus) {
       if (route === '/') {
         hide(el);
       } else {
+        disableRouteTriggers();
         fadeOut(el).then(() => {
+          enableRouteTriggers();
           hide(el);
         });
       }
