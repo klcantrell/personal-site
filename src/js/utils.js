@@ -96,6 +96,47 @@ function k$whenTopQuarterInView(func, el) {
   }
 }
 
+function k$bounceEl(el) {
+  k$classListAdd(el, 'bounce');
+  return new Promise((resolve) => {
+    k$delay(4000).then(() => {
+      resolve();
+    });
+  });
+}
+
+function k$scrollToTop() {
+  window.scrollTo(0, 0);
+}
+
+function k$fadeOut(el) {
+  el.classList.add('fade-out');
+  return new Promise((resolve) => {
+    k$delay(800).then(() => {
+      el.classList.remove('fade-out');
+      resolve();
+    });
+  });
+}
+
+function k$fadeIn(el) {
+  el.classList.add('fade-in');
+  return new Promise((resolve) => {
+    k$delay(800).then(() => {
+      el.classList.remove('fade-in');
+      resolve();
+    });
+  });
+}
+
+function k$show(el) {
+  el.classList.remove('section--hidden');
+}
+
+function k$hide(el) {
+  el.classList.add('section--hidden');
+}
+
 export {
   k$fetchData,
   k$fetchImg,
@@ -106,4 +147,10 @@ export {
   k$delay,
   k$throttle,
   k$whenTopQuarterInView,
+  k$bounceEl,
+  k$scrollToTop,
+  k$fadeOut,
+  k$fadeIn,
+  k$show,
+  k$hide,
 };
