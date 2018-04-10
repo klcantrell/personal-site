@@ -12,6 +12,7 @@
   box-sizing: border-box;
 
   --blue: rgb(24, 0, 227);
+  --light-blue: rgb(127, 183, 251);
   --orange: rgb(255, 156, 0);
   --black: rgb(39, 39, 39);
   --white: rgb(223, 223, 223);
@@ -45,6 +46,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 main {
@@ -86,6 +88,7 @@ p {
   box-shadow: 2px 3px 10px var(--black),
     2px 3px 20px var(--dark-background-transparent);
   transition: background-color 400ms ease-out;
+  cursor: pointer;
 }
 
 .route-links__menuBtn--active {
@@ -106,6 +109,8 @@ p {
   border-left-color: var(--white);
   box-shadow: 2px 3px 10px var(--black),
     2px 3px 20px var(--dark-background-transparent);
+  user-select: none;
+  cursor: pointer;
 }
 
 .route-links a:active {
@@ -328,6 +333,12 @@ p {
   border-top-color: var(--white);
   border-left-color: var(--white);
   box-shadow: 0 0 10px var(--black), 0 0 20px var(--dark-background-transparent);
+  user-select: none;
+  cursor: pointer;
+}
+
+#splash-contributions-btn {
+  font-size: 1.4rem;
 }
 
 .route-links--splash a:active {
@@ -337,7 +348,7 @@ p {
 }
 
 .route-links--splash a:active li {
-  transform: scale(0.9);
+  transform: scale(0.85);
 }
 
 .route-links--splash li {
@@ -393,18 +404,18 @@ p {
   border: 1px solid var(--black);
 }
 
-.publications > h2 {
+.contributions > h2 {
   text-align: center;
   font-size: 3rem;
   font-style: italic;
 }
 
-.publications__list {
+.contributions__list {
   margin: auto;
   width: 70%;
 }
 
-.publications__item {
+.contributions__item {
   border: 1px solid var(--black);
   height: 100px;
   margin-bottom: 20px;
@@ -418,7 +429,7 @@ p {
   align-items: center;
 }
 
-.publications__item-thumb {
+.contributions__item-thumb {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
@@ -430,7 +441,7 @@ p {
   -ms-grid-row-align: center;
 }
 
-.publications__item-description {
+.contributions__item-description {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / -1;
@@ -526,7 +537,7 @@ p {
 
 @media screen and (max-width: 900px) {
   .route-links a {
-    min-width: 100px;
+    min-width: 120px;
     font-size: 1rem;
   }
 
@@ -674,6 +685,7 @@ p {
     padding-top: 80px;
     width: 100%;
     height: 100%;
+    background-color: var(--dark-background-transparent);
     transform: translateX(100%);
   }
 
@@ -683,6 +695,7 @@ p {
 
   .route-links a {
     margin-bottom: 10px;
+    background-color: var(--light-blue);
   }
 
   .route-links__menuBtn {
@@ -700,12 +713,27 @@ p {
   }
 
   .splash__title {
-    font-size: 2rem;
+    font-size: 1.69rem;
   }
 
   .splash__arrow {
     width: 50px;
     height: 50px;
+  }
+
+  .route-links--splash a {
+    min-width: initial;
+    min-height: initial;
+    max-width: initial;
+    max-height: initial;
+    font-size: 1.3rem;
+    margin: 8px;
+    width: 130px;
+    height: 130px;
+  }
+
+  #splash-contributions-btn {
+    font-size: 1.1rem;
   }
 }
 
