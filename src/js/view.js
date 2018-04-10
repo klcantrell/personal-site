@@ -17,6 +17,8 @@ export default function View(eventBus) {
   const triggerEls = Array.from(rootEl.querySelectorAll('a[routeTo]'));
   const namePath = rootEl.querySelector('#name');
   const landingPageNav = rootEl.querySelector('.route-links--splash');
+  const menuBtns = Array.from(rootEl.querySelectorAll('.route-links__menuBtn'));
+  const contentPageMenus = Array.from(rootEl.querySelectorAll('.route-links__menu'));
   const arrowEl = rootEl.querySelector('.splash__arrow');
   const arrowPath = arrowEl.querySelector('#downArrow');
   const bigLetterK = document.getElementById('bigLetterK');
@@ -27,11 +29,6 @@ export default function View(eventBus) {
     },
   };
 
-  function bindEvents() {
-    enableRouteTriggers();
-    handleScroll();
-  }
-
   function createRouteMap() {
     triggerEls.forEach(triggerEl => {
       const triggerName = triggerEl.getAttribute('routeTo');
@@ -40,6 +37,12 @@ export default function View(eventBus) {
         section: rootEl.querySelector(`section[routeTarget="${triggerName}"]`),
       };
     });
+  }
+
+  function bindEvents() {
+    enableRouteTriggers();
+    handleScroll();
+    handleMenuBtnsClick();
   }
 
   function enableRouteTriggers() {
@@ -70,6 +73,26 @@ export default function View(eventBus) {
     eventBus.on('arrowmorphed', () => {
       isArrowMorphed = true;
       window.removeEventListener('scroll', morphArrowHandler);
+    });
+  }
+
+  function handleMenuBtnsClick() {
+    menuBtns.forEach(menuBtn => {
+      menuBtn.addEventListener('click', e => {
+        e.currentTarget.classList.toggle('route-links__menuBtn--active');
+        contentPageMenus.forEach(contentPageMenu => {
+          contentPageMenu.classList.toggle('route-links__menu--show');
+        });
+      });
+    });
+  }
+
+  function hideContentPageMenus() {
+    menuBtns.forEach(menuBtn => {
+      menuBtn.classList.remove('route-links__menuBtn--active');
+    });
+    contentPageMenus.forEach(contentPageMenu => {
+      contentPageMenu.classList.remove('route-links__menu--show');
     });
   }
 
@@ -224,6 +247,7 @@ export default function View(eventBus) {
       scrollToTop();
       fadeIn(el);
       show(el);
+      hideContentPageMenus();
     },
     dismountRouteTarget(route) {
       const el = routeMap[route].section;
