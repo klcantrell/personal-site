@@ -3,6 +3,11 @@
   src: url("../fonts/OperatorMono-Medium.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff") format("woff");
+}
+
 :root {
   box-sizing: border-box;
 
@@ -15,7 +20,7 @@
   --transparent-shadow: rgba(0, 0, 0, 0.4);
 
   color: var(--black);
-  font-family: "Operator Mono", sans-serif;
+  font-family: "Operator Mono";
   font-size: 16px;
 }
 
@@ -49,6 +54,10 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+}
+
+p {
+  font-family: "Open Sans";
 }
 
 .route-links > ul {
@@ -314,10 +323,32 @@ main {
   pointer-events: none;
 }
 
-.about > h2 {
+.about p {
+  font-size: 1.3rem;
+  line-height: 3rem;
+  padding-left: 20px;
+}
+
+.about h2 {
   text-align: center;
   font-size: 3rem;
   font-style: italic;
+}
+
+.about__me > header {
+  margin-top: 50px;
+  position: relative;
+}
+
+.about__me img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-25%) translateX(50%);
+  width: 125px;
+  height: 125px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
 }
 
 .projects > h2 {
@@ -462,12 +493,26 @@ main {
 
 @media screen and (max-width: 950px) {
   :root {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .splash {
     -ms-grid-rows: 53vh 2vh 15vh 2vh 14vh 2vh auto 10vh;
     grid-template-rows: 53vh 15vh 14vh auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about__me > header {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .about__me img {
+    position: initial;
+    transform: initial;
+    order: 1;
   }
 }
 
@@ -593,7 +638,7 @@ main {
   }
 
   .splash__title {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   .splash__arrow {
