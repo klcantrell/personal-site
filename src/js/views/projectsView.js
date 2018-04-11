@@ -1,10 +1,10 @@
 import { k$fadeOut, k$fadeIn, k$fadeOutDown, k$fadeInFromBelow } from '../utils';
 
-export default function ContributionsView(rootEl) {
-  const overlay = rootEl.querySelector('.contributions__overlay');
-  const content = overlay.querySelector('.contributions__overlay-content');
+export default function ProjectsView(rootEl) {
+  const overlay = rootEl.querySelector('.projects__overlay');
+  const content = overlay.querySelector('.projects__overlay-content');
   const closeBtn = overlay.querySelector('.close-overlay');
-  const contentItems = Array.from(rootEl.querySelectorAll('.contributions__item'));
+  const contentItems = Array.from(rootEl.querySelectorAll('.projects__item'));
 
   function handleCloseBtnClicks() {
     closeBtn.addEventListener('click', () => {
