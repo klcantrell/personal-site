@@ -1,6 +1,7 @@
-import { k$scrollToTop, k$fadeOut, k$fadeIn, k$show, k$hide } from './utils';
+import { k$scrollToTop, k$fadeOut, k$fadeIn, k$hide } from './utils';
 
 import SplashView from './views/splashView';
+import ProjectsView from './views/projectsView';
 import ContributionsView from './views/contributionsView';
 
 export default function View(eventBus) {
@@ -17,6 +18,7 @@ export default function View(eventBus) {
   };
 
   const splashView = SplashView(rootEl, eventBus);
+  const projectsView = ProjectsView(rootEl);
   const contributionsView = ContributionsView(rootEl);
 
   function createRouteMap() {
@@ -31,8 +33,10 @@ export default function View(eventBus) {
 
   function bindEvents() {
     enableRouteTriggers();
-    splashView.morphArrowOnScroll();
     handleMenuBtnsClick();
+    splashView.morphArrowOnScroll();
+    projectsView.handleEvents();
+    contributionsView.handleEvents();
   }
 
   function enableRouteTriggers() {
@@ -86,8 +90,9 @@ export default function View(eventBus) {
       }
       k$scrollToTop();
       k$fadeIn(el);
-      k$show(el);
       hideContentPageMenus();
+      projectsView.closeOverlay();
+      contributionsView.closeOverlay();
     },
     dismountRouteTarget(route) {
       const el = routeMap[route].section;
@@ -98,7 +103,6 @@ export default function View(eventBus) {
         disableRouteTriggers();
         k$fadeOut(el).then(() => {
           enableRouteTriggers();
-          k$hide(el);
         });
       }
     },
