@@ -52,7 +52,6 @@ export default function Router() {
     },
 
     updateView() {
-      console.log(activeRoute, previousRoute);
       activeRoute.controller.renderSection(activeRoute.rule);
       previousRoute.controller.dismountSection(previousRoute.rule);
       return this;
