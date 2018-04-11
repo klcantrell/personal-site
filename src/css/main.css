@@ -772,6 +772,10 @@ button {
     margin: 15px;
     margin-right: 20px;
   }
+
+  .about__me > header {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
