@@ -129,12 +129,32 @@ function k$fadeIn(el) {
   });
 }
 
+function k$fadeOutDown(el) {
+  el.classList.add('fade-out-down');
+  return new Promise((resolve) => {
+    k$delay(800).then(() => {
+      el.classList.remove('fade-out-down');
+      resolve();
+    });
+  });
+}
+
+function k$fadeInFromBelow(el) {
+  el.classList.add('fade-in-from-below');
+  return new Promise((resolve) => {
+    k$delay(800).then(() => {
+      el.classList.remove('fade-in-from-below');
+      resolve();
+    });
+  });
+}
+
 function k$show(el) {
-  el.classList.remove('section--hidden');
+  el.classList.remove('el--hidden');
 }
 
 function k$hide(el) {
-  el.classList.add('section--hidden');
+  el.classList.add('el--hidden');
 }
 
 export {
@@ -153,4 +173,6 @@ export {
   k$fadeIn,
   k$show,
   k$hide,
+  k$fadeOutDown,
+  k$fadeInFromBelow,
 };

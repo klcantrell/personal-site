@@ -18,6 +18,7 @@
   --white: rgb(223, 223, 223);
   --light-background-transparent: rgba(255, 255, 255, 0.274);
   --dark-background-transparent: rgba(0, 0, 0, 0.123);
+  --overlay-background: rgba(0, 0, 0, 0.384);
   --transparent-shadow: rgba(0, 0, 0, 0.4);
 
   color: var(--black);
@@ -62,6 +63,13 @@ p {
   font-family: "Open Sans";
 }
 
+button {
+  outline: none;
+  font-family: "Operator Mono";
+  color: var(--black);
+  cursor: pointer;
+}
+
 .route-links__menu {
   list-style-type: none;
   margin: 0;
@@ -75,20 +83,16 @@ p {
 }
 
 .route-links__menuBtn {
-  font-family: "Operator Mono";
-  color: var(--black);
   display: none;
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: 8px;
   border: 1px solid var(--black);
-  outline: none;
   background-color: var(--light-background-transparent);
   z-index: 888;
   box-shadow: 2px 3px 10px var(--black),
     2px 3px 20px var(--dark-background-transparent);
   transition: background-color 400ms ease-out;
-  cursor: pointer;
 }
 
 .route-links__menuBtn--active {
@@ -138,6 +142,11 @@ p {
   overflow: hidden;
 }
 
+.el--hidden {
+  display: none;
+  visibility: hidden;
+}
+
 .section--base {
   width: 70%;
   max-width: 900px;
@@ -152,9 +161,30 @@ p {
   grid-row: 1 / -1;
 }
 
-.section--hidden {
+.overlay--base {
+  position: fixed;
+  background-color: var(--overlay-background);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.overlay--hidden {
   display: none;
   visibility: hidden;
+}
+
+.overlay-content--base {
+  width: 80%;
+  height: 50%;
+  max-width: 700px;
+  min-width: 350px;
+  background-color: var(--light-blue);
 }
 
 .splash {
@@ -412,7 +442,7 @@ p {
 
 .contributions__list {
   margin: auto;
-  width: 70%;
+  width: 80%;
 }
 
 .contributions__item {
@@ -452,6 +482,9 @@ p {
   margin: 0;
   -ms-grid-column-align: center;
   -ms-grid-row-align: center;
+}
+
+.contributions__overlay {
 }
 
 .ms-padding-bottom {
@@ -507,6 +540,30 @@ p {
   }
 }
 
+@keyframes fade-in-from-below {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out-down {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
 .bounce {
   animation-name: bounce;
   animation-duration: 1s;
@@ -521,6 +578,16 @@ p {
 
 .fade-in {
   animation-name: fade-in;
+  animation-duration: 800ms;
+}
+
+.fade-in-from-below {
+  animation-name: fade-in-from-below;
+  animation-duration: 800ms;
+}
+
+.fade-out-down {
+  animation-name: fade-out-down;
   animation-duration: 800ms;
 }
 

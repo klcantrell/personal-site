@@ -1,6 +1,7 @@
 import { k$scrollToTop, k$fadeOut, k$fadeIn, k$show, k$hide } from './utils';
 
 import SplashView from './views/splashView';
+import ContributionsView from './views/contributionsView';
 
 export default function View(eventBus) {
   const rootEl = document.getElementById('portfolio');
@@ -16,6 +17,7 @@ export default function View(eventBus) {
   };
 
   const splashView = SplashView(rootEl, eventBus);
+  const contributionsView = ContributionsView(rootEl);
 
   function createRouteMap() {
     triggerEls.forEach((triggerEl) => {
@@ -78,13 +80,13 @@ export default function View(eventBus) {
       splashView.introDrawSequence();
     },
     renderRouteTarget(route) {
+      const el = routeMap[route].section;
       if (route === '/') {
         splashView.startBigLetterMorph();
       }
-      const el = routeMap[route].section;
       k$scrollToTop();
-      kfadeIn(el);
-      show(el);
+      k$fadeIn(el);
+      k$show(el);
       hideContentPageMenus();
     },
     dismountRouteTarget(route) {
@@ -94,7 +96,7 @@ export default function View(eventBus) {
         splashView.resetBigLetterK();
       } else {
         disableRouteTriggers();
-        fadeOut(el).then(() => {
+        k$fadeOut(el).then(() => {
           enableRouteTriggers();
           k$hide(el);
         });
