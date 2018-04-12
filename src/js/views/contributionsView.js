@@ -6,16 +6,42 @@ export default function ContributionsView(rootEl) {
   const closeBtn = overlay.querySelector('.close-overlay');
   const contentItems = Array.from(rootEl.querySelectorAll('.contributions__item'));
 
+  const contributions = {
+    c1: {
+      title: 'Contribution 1',
+      description: 'An Awesome Contribution',
+      icon: 'github',
+    },
+    c2: {
+      title: 'Contribution 2',
+      description: 'Another Awesome Contribution',
+      icon: 'medium',
+    },
+  };
+
+  function contributionsOverlayTemplate(contribution) {
+    return html`
+      <button closeOverlay class="close-overlay">X</button>
+      <h3>${contribution.title}</h3>
+      <p>${contribution.description}</p>
+      <i>${contribution.icon}</i>
+    `;
+  }
+
   function handleCloseBtnClicks() {
-    closeBtn.addEventListener('click', () => {
-      k$fadeOutDown(content);
-      k$fadeOut(overlay);
+    content.addEventListener('click', (e) => {
+      if (e.target.hasAttribute('closeOverlay')) {
+        e.stopPropagation();
+        closeOverlay();
+      }
     });
   }
 
   function handleContentItemClicks() {
     contentItems.forEach((contentItem) => {
-      contentItem.addEventListener('click', () => {
+      contentItem.addEventListener('click', (e) => {
+        const contributionId = e.currentTarget.getAttribute('contributionId');
+        content.innerHTML = contributionsOverlayTemplate(contributions[contributionId]);
         k$fadeIn(overlay);
         k$fadeInFromBelow(content);
       });
