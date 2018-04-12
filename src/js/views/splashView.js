@@ -111,18 +111,6 @@ export default function SplashView(rootEl, eventBus) {
     };
   })();
 
-  function bounceLoop(el) {
-    if (isArrowMorphed) {
-      return;
-    }
-    k$bounceEl(el).then(() => {
-      k$classListRemove(el, 'bounce');
-      k$delay(50).then(() => {
-        bounceLoop(el);
-      });
-    });
-  }
-
   function resetBigLetterKPath() {
     bigLetterK.setAttribute(
       'd',
@@ -144,8 +132,20 @@ export default function SplashView(rootEl, eventBus) {
     );
   }
 
+  function bounceLoop(el) {
+    if (isArrowMorphed) {
+      return null;
+    }
+    k$bounceEl(el).then(() => {
+      k$classListRemove(el, 'bounce');
+      k$delay(50).then(() => {
+        return bounceLoop(el);
+      });
+    });
+  }
+
   return {
-    introDrawSequence() {
+    introSequence() {
       const now = window.performance.now();
       drawName(now);
       drawArrow(now).then(() => {

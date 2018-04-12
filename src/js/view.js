@@ -81,7 +81,7 @@ export default function View(eventBus) {
     init() {
       createRouteMap();
       bindEvents();
-      splashView.introDrawSequence();
+      splashView.introSequence();
     },
     renderRouteTarget(route) {
       const el = routeMap[route].section;
