@@ -10,7 +10,7 @@ function k$fetchImg(url) {
     .then(data => data);
 }
 
-function k$html(literals, ...customs) {
+function html(literals, ...customs) {
   let result = '';
   customs.forEach((custom, i) => {
     const lit = literals[i];
@@ -164,7 +164,7 @@ function k$hide(el) {
 export {
   k$fetchData,
   k$fetchImg,
-  k$html,
+  html,
   EventBus,
   k$classListAdd,
   k$classListRemove,
