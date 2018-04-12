@@ -51,6 +51,10 @@ module.exports = {
         test: /\.jpg$/,
         use: {
           loader: 'responsive-loader',
+          options: {
+            placeholder: true,
+            placeholderSize: 50,
+          },
         },
       },
       {
