@@ -18,8 +18,9 @@
   --white: rgb(223, 223, 223);
   --light-background-transparent: rgba(255, 255, 255, 0.274);
   --dark-background-transparent: rgba(0, 0, 0, 0.123);
-  --overlay-background: rgba(0, 0, 0, 0.384);
   --transparent-shadow: rgba(0, 0, 0, 0.4);
+  --overlay-background: rgba(0, 0, 0, 0.384);
+  --overlay-content: rgb(255, 178, 57);
 
   color: var(--black);
   font-family: "Operator Mono";
@@ -184,7 +185,7 @@ button {
   height: 50%;
   max-width: 700px;
   min-width: 350px;
-  background-color: var(--light-blue);
+  background-color: var(--overlay-content);
 }
 
 .splash {
@@ -482,9 +483,6 @@ button {
   margin: 0;
   -ms-grid-column-align: center;
   -ms-grid-row-align: center;
-}
-
-.contributions__overlay {
 }
 
 .ms-padding-bottom {
