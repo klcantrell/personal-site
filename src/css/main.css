@@ -206,6 +206,7 @@ button {
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
   margin: 0;
+
   background-image: url("../images/profile-pic.jpg");
   background-position: center;
   background-size: cover;
