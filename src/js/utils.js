@@ -161,6 +161,14 @@ function k$hide(el) {
   el.classList.add('el--hidden');
 }
 
+function k$loadFullImage(el, imageUrls) {
+  if (window.innerWidth < 600) {
+    el.style.backgroundImage = imageUrls.small;
+  } else {
+    el.style.backgroundImage = imageUrls.large;
+  }
+}
+
 export {
   k$fetchData,
   k$fetchImg,
