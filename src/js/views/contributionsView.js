@@ -1,4 +1,4 @@
-import { k$fadeOut, k$fadeIn, k$fadeOutDown, k$fadeInFromBelow } from '../utils';
+import { k$fadeOut, k$fadeIn, k$fadeOutDown, k$fadeInFromBelow, html } from '../utils';
 
 export default function ContributionsView(rootEl) {
   const overlay = rootEl.querySelector('.contributions__overlay');
