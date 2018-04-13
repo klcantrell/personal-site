@@ -1,3 +1,5 @@
+-const profilePic = require('./src/images/profile-pic.jpg');
+
 <!DOCTYPE html>
 html(lang="en")
   head
@@ -32,7 +34,8 @@ html(lang="en")
         )
     main(id="portfolio")
       section(routeTarget="/" class="splash section--base")
-        figure(class="splash__profile")
+        figure(class="splash__profile" style=`background-image: url(${profilePic.placeholder})`)
+          div(class="image-hook el--hidden")
         .splash__greeting
           svg(viewBox="75 75 500 300")
             path(

@@ -162,11 +162,35 @@ function k$hide(el) {
 }
 
 function k$loadFullImage(el, imageUrls) {
-  if (window.innerWidth < 600) {
-    el.style.backgroundImage = imageUrls.small;
+  let image = new Image();
+  const url = window.innerWidth > 500 ? imageUrls.large.path : imageUrls.small.path;
+  image.src = url;
+  if (image.complete) {
+    el.style.backgroundImage = `url(${url})`;
+    k$fadeIn(el);
+    image = null;
   } else {
-    el.style.backgroundImage = imageUrls.large;
+    image.addEventListener('load', function fullImageLoaded() {
+      el.style.backgroundImage = `url(${url})`;
+      k$fadeIn(el);
+      image.removeEventListener('load', fullImageLoaded);
+      image = null;
+    });
   }
+}
+
+function k$processResponsiveLoaderData(raw) {
+  return raw.reduce((acc, item) => {
+    const sizeMap = {
+      500: 'small',
+      800: 'large',
+    };
+    const key = sizeMap[item.width];
+    acc[key] = {
+      path: item.path,
+    };
+    return acc;
+  }, {});
 }
 
 export {
@@ -187,4 +211,6 @@ export {
   k$hide,
   k$fadeOutDown,
   k$fadeInFromBelow,
+  k$loadFullImage,
+  k$processResponsiveLoaderData,
 };

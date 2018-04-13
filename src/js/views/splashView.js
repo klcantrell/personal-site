@@ -8,14 +8,17 @@ import {
   k$classListRemove,
   k$throttle,
   k$whenTopQuarterInView,
+  k$loadFullImage,
+  k$processResponsiveLoaderData,
 } from '../utils';
 
 export default function SplashView(rootEl, eventBus) {
+  const bigLetterK = document.getElementById('bigLetterK');
+  const profilePic = rootEl.querySelector('.splash__profile');
+  const namePath = rootEl.querySelector('#name');
   const arrowEl = rootEl.querySelector('.splash__arrow');
   const arrowPath = arrowEl.querySelector('#downArrow');
-  const namePath = rootEl.querySelector('#name');
   const splashPageNav = rootEl.querySelector('.route-links--splash');
-  const bigLetterK = document.getElementById('bigLetterK');
 
   let isArrowMorphed = false;
 
@@ -144,6 +147,12 @@ export default function SplashView(rootEl, eventBus) {
     });
   }
 
+  function loadFullProfilePic() {
+    const rawResponsiveL = require('../../images/profile-pic.jpg');
+    const cleanedUrls = k$processResponsiveLoaderData(rawUrls);
+    k$loadFullImage(profilePic.firstElementChild, cleanedUrls);
+  }
+
   return {
     introSequence() {
       const now = window.performance.now();
@@ -152,6 +161,7 @@ export default function SplashView(rootEl, eventBus) {
         bounceLoop(arrowEl);
       });
       bigLetterMorphControl.start();
+      loadFullProfilePic();
     },
     startBigLetterMorph() {
       bigLetterMorphControl.start();

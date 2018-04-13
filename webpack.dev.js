@@ -58,6 +58,7 @@ module.exports = {
         use: {
           loader: 'responsive-loader',
           options: {
+            sizes: [500, 800],
             placeholder: true,
             placeholderSize: 50,
           },

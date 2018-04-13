@@ -206,14 +206,20 @@ button {
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
   margin: 0;
-
-  background-image: url("../images/profile-pic.jpg");
   background-position: center;
   background-size: cover;
   border-radius: 10px;
   border-bottom: 4px solid var(--black);
   border-right: 4px solid var(--black);
   box-shadow: 0 0 10px var(--black), 0 0 20px var(--dark-background-transparent);
+}
+
+.splash__profile > .image-hook {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: inherit;
 }
 
 .splash__greeting {
