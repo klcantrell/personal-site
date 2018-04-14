@@ -1,4 +1,7 @@
--const profilePic = require('./src/images/profile-pic.jpg');
+-
+  const profilePic = require('./src/images/profile-pic.jpg?placeholder=true&placeholderSize=50');
+  const p1Pic = require('./src/images/p1.jpg?size=500');
+  const p2Pic = require('./src/images/p2.jpg?size=500');
 
 <!DOCTYPE html>
 html(lang="en")
@@ -33,6 +36,7 @@ html(lang="en")
                 239.44,406.00 152.77,315.36 152.77,315.36 Z`
         )
     main(id="portfolio")
+      button(class="route-links__menuBtn") Menu
       section(routeTarget="/" class="splash section--base")
         figure(class="splash__profile" style=`background-image: url(${profilePic.placeholder})`)
           div(class="image-hook el--hidden")
@@ -156,16 +160,6 @@ html(lang="en")
                   495.80,228.00 482.89,249.39 482.00,271.77 Z`
             )
         h3(class="splash__title") Front End Web Developer
-        nav(class="route-links--splash")
-          ul
-            a(routeTo="about")
-              li About
-            a(routeTo="projects")
-              li Projects
-            a(routeTo="contributions" id="splash-contributions-btn")
-              li Contributions
-            a(routeTo="about")
-              li Contact
         .splash__arrow
           svg(viewBox="0 0 352 512" style="overflow: visible;")
             path(
@@ -181,10 +175,20 @@ html(lang="en")
                   10.745 24 24v349.16l56.357-60.448c9.256-9.968 24.938-10.258 34.557-.639l22.056 
                   22.056c9.346 9.345 9.377 24.487.07 33.871z`
             )
+        nav(class="route-links--splash")
+          h2 Learn more
+          ul
+            a(routeTo="about")
+              li About
+            a(routeTo="projects")
+              li Projects
+            a(routeTo="contributions" id="splash-contributions-btn")
+              li Contributions
+            a(routeTo="about")
+              li Contact
         .ms-padding-bottom
       section(routeTarget="about" class="about section--base el--hidden")
         nav(class="route-links")
-          button(class="route-links__menuBtn") Menu
           ul(class="route-links__menu")
             a(routeTo="/")
               li Home
@@ -197,14 +201,13 @@ html(lang="en")
         article(class="about__me")
           header
             img(src="" alt="")
-            h2 About me
+            h2(class="section__header") About me
           p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laboriosam praesentium odio ab sit dicta obcaecati voluptatibus dolorem, ipsum, alias optio impedit quos tempore qui! Ipsum non optio magnam dolorem.
         article
-          h2 About this portfolio
+          h2(class="section__header") About this portfolio
           p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorem ab earum minus culpa debitis harum quam perferendis, aliquam ad reiciendis rem fugiat soluta animi? Nemo recusandae ut debitis corporis!
       section(routeTarget="projects" class="projects section--base el--hidden")
         nav(class="route-links")
-          button(class="route-links__menuBtn") Menu
           ul(class="route-links__menu")
             a(routeTo="/")
               li Home
@@ -214,10 +217,19 @@ html(lang="en")
               li Contributions
             a(routeTo="about")
               li Contact
-        h2 Projects
+        h2(class="section__header") Projects
         .projects__gallery
           article(class="projects__item" projectId="p1")
+            h3 Project 1
+            figure(style=`background-image: url(${p1Pic.src})`)
+            p This is project 1's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
+            button(class="details-btn") Details
           article(class="projects__item" projectId="p2")
+            h3 Project 2
+            figure
+              img(src=`${p2Pic.src}`)
+            p This is project 2's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
+            button(class="details-btn") Details
           article(class="projects__item")
           article(class="projects__item")
           article(class="projects__item")
@@ -226,7 +238,6 @@ html(lang="en")
           div(class="projects__overlay-content overlay-content--base")
       section(routeTarget="contributions" class="contributions section--base el--hidden")
         nav(class="route-links")
-          button(class="route-links__menuBtn") Menu
           ul(class="route-links__menu")
             a(routeTo="/")
               li Home
@@ -236,7 +247,7 @@ html(lang="en")
               li Projects
             a(routeTo="about")
               li Contact
-        h2 Contributions
+        h2(class="section__header") Contributions
         .contributions__list
           article(class="contributions__item" contributionId="c1")
             img(class="contributions__item-thumb" src="" alt="Placeholder")

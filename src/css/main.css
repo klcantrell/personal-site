@@ -21,9 +21,10 @@
   --transparent-shadow: rgba(0, 0, 0, 0.4);
   --overlay-background: rgba(0, 0, 0, 0.384);
   --overlay-content: rgb(255, 178, 57);
+  --portfolio-item: rgba(255, 255, 255, 0.486);
 
   color: var(--black);
-  font-family: "Operator Mono";
+  font-family: "Operator Mono", serif;
   font-size: 16px;
 }
 
@@ -60,8 +61,14 @@ main {
   grid-template-rows: 1fr;
 }
 
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
 p {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 
 button {
@@ -69,6 +76,13 @@ button {
   font-family: "Operator Mono";
   color: var(--black);
   cursor: pointer;
+}
+
+.route-links {
+  width: 70vw;
+  max-width: 900px;
+  margin: auto;
+  transition: transform 400ms ease-out;
 }
 
 .route-links__menu {
@@ -80,7 +94,6 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  transition: transform 400ms ease-out;
 }
 
 .route-links__menuBtn {
@@ -162,6 +175,16 @@ button {
   grid-row: 1 / -1;
 }
 
+.section__header {
+  font-size: 3rem;
+  font-style: italic;
+}
+
+.details-btn {
+  display: block;
+  margin: auto;
+}
+
 .overlay--base {
   position: fixed;
   background-color: var(--overlay-background);
@@ -193,8 +216,8 @@ button {
   display: grid;
   -ms-grid-columns: 3fr 20px minmax(150px, 2fr);
   grid-template-columns: 3fr minmax(150px, 2fr);
-  -ms-grid-rows: 53vh 2vh 15vh 2vh 14vh 2vh 540px 10vh;
-  grid-template-rows: 53vh 15vh 14vh 540px;
+  -ms-grid-rows: 53vh 2vh 15vh 2vh 14vh 2vh 550px 10vh;
+  grid-template-rows: 53vh 15vh 14vh 550px;
   grid-gap: 2vh;
 }
 
@@ -343,7 +366,6 @@ button {
   margin: 0 auto;
   padding: 0;
   width: 70%;
-  height: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -400,12 +422,6 @@ button {
   padding-left: 20px;
 }
 
-.about h2 {
-  text-align: center;
-  font-size: 3rem;
-  font-style: italic;
-}
-
 .about__me > header {
   margin-top: 50px;
   position: relative;
@@ -422,30 +438,51 @@ button {
   border-radius: 50%;
 }
 
-.projects > h2 {
-  text-align: center;
-  font-size: 3rem;
-  font-style: italic;
+.projects {
+  width: 95%;
+  max-width: initial;
 }
 
 .projects__gallery {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  margin-left: -13px;
 }
 
 .projects__item {
+  flex-grow: 1;
   flex-shrink: 0;
-  margin: 10px;
-  width: 250px;
-  height: 250px;
+  margin: 15px;
+  width: 375px;
+  max-width: 500px;
+  height: 420px;
   border: 1px solid var(--black);
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--portfolio-item);
 }
 
-.contributions > h2 {
-  text-align: center;
-  font-size: 3rem;
-  font-style: italic;
+.projects__item > h3 {
+  font-size: 1.5rem;
+  margin: 15px;
+}
+
+.projects__item > figure {
+  margin: 0 auto;
+  width: 400px;
+  height: 225px;
+  background-size: cover;
+  background-position: center;
+}
+
+.projects__item img {
+  width: 100%;
+}
+
+.projects__item p {
+  margin: 0;
+  padding: 10px 50px;
 }
 
 .contributions__list {
@@ -465,6 +502,7 @@ button {
   grid-template-rows: 1fr;
   justify-items: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .contributions__item-thumb {
@@ -747,6 +785,7 @@ button {
     right: 0;
     height: 100vh;
     width: 200px;
+    transform: translateX(100%);
     z-index: 777;
   }
 
@@ -757,7 +796,6 @@ button {
     width: 100%;
     height: 100%;
     background-color: var(--dark-background-transparent);
-    transform: translateX(100%);
   }
 
   .route-links__menu--show {
@@ -775,7 +813,7 @@ button {
     top: 0;
     right: 0;
     margin: 15px;
-    margin-right: 20px;
+    margin-right: 25px;
   }
 
   .about__me > header {
