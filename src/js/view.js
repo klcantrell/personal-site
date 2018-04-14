@@ -7,19 +7,14 @@ import ContributionsView from './views/contributionsView';
 export default function View(eventBus) {
   const rootEl = document.getElementById('portfolio');
   const triggerEls = Array.from(rootEl.querySelectorAll('a[routeTo]'));
-  const menuBtns = Array.from(rootEl.querySelectorAll('.route-links__menuBtn'));
-  const contentPageMenus = Array.from(rootEl.querySelectorAll('.route-links__menu'));
-
-  const routeMap = {
-    '/': {
-      triggerName: null,
-      section: rootEl.querySelector('section[routeTarget="/"]'),
-    },
-  };
+  const menuBtn = rootEl.querySelector('.route-links__menuBtn');
+  const contentPageNavs = Array.from(rootEl.querySelectorAll('.route-links'));
 
   const splashView = SplashView(rootEl, eventBus);
   const projectsView = ProjectsView(rootEl);
   const contributionsView = ContributionsView(rootEl);
+
+  const routeMap = {};
 
   function createRouteMap() {
     triggerEls.forEach((triggerEl) => {
@@ -29,6 +24,13 @@ export default function View(eventBus) {
         section: rootEl.querySelector(`section[routeTarget="${triggerName}"]`),
       };
     });
+  }
+
+  function addSpecialRenders() {
+    routeMap['/'].specialRender = () => {
+      k$fadeOut(menuBtn);
+      splashView.startBigLetterMorph();
+    };
   }
 
   function bindEvents() {
@@ -58,39 +60,36 @@ export default function View(eventBus) {
   }
 
   function handleMenuBtnsClick() {
-    menuBtns.forEach((menuBtn) => {
-      menuBtn.addEventListener('click', (e) => {
-        e.currentTarget.classList.toggle('route-links__menuBtn--active');
-        contentPageMenus.forEach((contentPageMenu) => {
-          contentPageMenu.classList.toggle('route-links__menu--show');
-        });
+    menuBtn.addEventListener('click', (e) => {
+      e.currentTarget.classList.toggle('route-links__menuBtn--active');
+      contentPageNavs.forEach((contentPageNav) => {
+        contentPageNav.classList.toggle('route-links__menu--show');
       });
     });
   }
 
-  function hideContentPageMenus() {
-    menuBtns.forEach((menuBtn) => {
-      menuBtn.classList.remove('route-links__menuBtn--active');
-    });
-    contentPageMenus.forEach((contentPageMenu) => {
-      contentPageMenu.classList.remove('route-links__menu--show');
+  function hideContentPageNavs() {
+    menuBtn.classList.remove('route-links__menuBtn--active');
+    contentPageNavs.forEach((contentPageNav) => {
+      contentPageNav.classList.remove('route-links__menu--show');
     });
   }
 
   return {
     init() {
       createRouteMap();
+      addSpecialRenders();
       bindEvents();
       splashView.introSequence();
     },
     renderRouteTarget(route) {
       const el = routeMap[route].section;
-      if (route === '/') {
-        splashView.startBigLetterMorph();
+      if (routeMap[route].specialRender) {
+        routeMap[route].specialRender();
       }
       k$scrollToTop();
       k$fadeIn(el);
-      hideContentPageMenus();
+      hideContentPageNavs();
       projectsView.closeOverlay();
       contributionsView.closeOverlay();
     },
@@ -98,6 +97,7 @@ export default function View(eventBus) {
       const el = routeMap[route].section;
       if (route === '/') {
         k$hide(el);
+        k$fadeIn(menuBtn);
         splashView.resetBigLetterK();
       } else {
         disableRouteTriggers();
