@@ -54,13 +54,11 @@ module.exports = {
         ],
       },
       {
-        test: /\.jpg$/,
+        test: /\.(jpg|gif)$/,
         use: {
           loader: 'responsive-loader',
           options: {
-            sizes: [500, 800],
-            placeholder: true,
-            placeholderSize: 50,
+            quality: 100,
           },
         },
       },

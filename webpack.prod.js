@@ -15,6 +15,12 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.pug$/,
+        use: {
+          loader: 'pug-loader',
+        },
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -41,17 +47,11 @@ module.exports = {
               name: '[name].css',
             },
           },
-          {
-            loader: 'extract-loader',
-            // compatibility with webpack 4
-            options: {
-              publicPath: null,
-            },
-          },
+          'extract-loader',
           {
             loader: 'css-loader',
             options: {
-              // minimize: true,
+              minimize: true,
               importLoaders: 1,
             },
           },
@@ -63,7 +63,9 @@ module.exports = {
         use: {
           loader: 'responsive-loader',
           options: {
-            name: 'images/[name].[ext]',
+            sizes: [500, 800],
+            placeholder: true,
+            placeholderSize: 50,
           },
         },
       },
@@ -102,7 +104,7 @@ module.exports = {
       },
     ),
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: 'index.pug',
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
