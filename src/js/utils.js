@@ -180,7 +180,7 @@ function k$loadFullImage(el, imageUrls) {
 }
 
 function k$processResponsiveLoaderData(raw) {
-  return raw.reduce((acc, item) => {
+  return raw.images.reduce((acc, item) => {
     const sizeMap = {
       500: 'small',
       800: 'large',

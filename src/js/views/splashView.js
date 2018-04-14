@@ -148,8 +148,8 @@ export default function SplashView(rootEl, eventBus) {
   }
 
   function loadFullProfilePic() {
-    const rawResponsiveL = require('../../images/profile-pic.jpg');
-    const cleanedUrls = k$processResponsiveLoaderData(rawUrls);
+    const rawResponsiveLoader = require('../../images/profile-pic.jpg?sizes[]=500,sizes[]=800');
+    const cleanedUrls = k$processResponsiveLoaderData(rawResponsiveLoader);
     k$loadFullImage(profilePic.firstElementChild, cleanedUrls);
   }
 
