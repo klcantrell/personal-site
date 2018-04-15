@@ -84,14 +84,14 @@ function k$throttle(func, limit) {
   };
 }
 
-function k$whenTopQuarterInView(func, el) {
+function k$whenTopTwoThirdsInView(func, el) {
   const windowT = window.pageYOffset;
   const windowB = windowT + window.innerHeight;
   const cRect = el.getBoundingClientRect();
   const elT = windowT + cRect.top;
-  const elTopQuarter = cRect.height / 4 + elT;
+  const elTopTwoThirds = cRect.height / 3 * 2 + elT;
 
-  if (windowB > elTopQuarter) {
+  if (windowB > elTopTwoThirds) {
     func();
   }
 }
@@ -221,7 +221,7 @@ export {
   k$classListRemove,
   k$delay,
   k$throttle,
-  k$whenTopQuarterInView,
+  k$whenTopTwoThirdsInView,
   k$bounceEl,
   k$scrollToTop,
   k$fadeOut,

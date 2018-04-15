@@ -39,7 +39,7 @@ export default function View(eventBus) {
   function bindEvents() {
     enableRouteTriggers();
     handleMenuBtnsClick();
-    splashView.morphArrowOnScroll();
+    splashView.handleScroll();
     projectsView.handleEvents();
     contributionsView.handleEvents();
   }
@@ -72,7 +72,7 @@ export default function View(eventBus) {
   }
 
   function hideContentPageNavs() {
-    menuBtn.classList.remove('route-links__menuBtn--active');
+    menuBtn.classList.remove('menu-btn--active');
     contentPageNavs.forEach((contentPageNav) => {
       contentPageNav.classList.remove('route-links__menu--show');
     });
