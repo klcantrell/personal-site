@@ -1,15 +1,3 @@
-function k$fetchData(url) {
-  return fetch(url)
-    .then(res => res.json())
-    .then(data => data);
-}
-
-function k$fetchImg(url) {
-  return fetch(url)
-    .then(res => res.blob())
-    .then(data => data);
-}
-
 function html(literals, ...customs) {
   let result = '';
   customs.forEach((custom, i) => {
@@ -213,8 +201,6 @@ function k$processResponsiveLoaderData(raw) {
 }
 
 export {
-  k$fetchData,
-  k$fetchImg,
   html,
   EventBus,
   k$classListAdd,
