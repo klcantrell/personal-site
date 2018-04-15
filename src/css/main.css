@@ -64,7 +64,8 @@ main {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   text-align: center;
 }
 
@@ -230,7 +231,7 @@ button {
   overflow-y: auto;
 }
 
-.tech-icons--base {
+.icons--base {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -238,12 +239,18 @@ button {
   margin: auto;
 }
 
-.tech-icons--base > i {
+.icons--base > i {
   margin: 15px;
   display: flex;
   flex-flow: column-reverse;
   justify-content: center;
   align-items: center;
+}
+
+.vr {
+  height: 100px;
+  width: 3px;
+  background-color: var(--black);
 }
 
 .splash {
@@ -536,6 +543,10 @@ button {
   margin-bottom: 5px;
 }
 
+.projects__overlay-content > ul {
+  font-family: "Open Sans", sans-serif;
+}
+
 .projects__overlay-content > figure {
   width: 100%;
   max-width: 600px;
@@ -543,6 +554,11 @@ button {
   background-size: cover;
   background-position: top;
   margin: 0 auto;
+}
+
+.projects__links-icons > i {
+  font-size: 1rem;
+  font-style: normal;
 }
 
 .projects__item p {
