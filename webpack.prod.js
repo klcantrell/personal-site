@@ -70,6 +70,21 @@ module.exports = {
         },
       },
       {
+        test: /\.gif$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'gifs/',
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+          },
+        ],
+      },
+      {
         test: /\.svg/,
         use: {
           loader: 'svg-url-loader',
