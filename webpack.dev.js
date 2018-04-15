@@ -54,13 +54,28 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|gif)$/,
+        test: /\.jpg$/,
         use: {
           loader: 'responsive-loader',
           options: {
             quality: 100,
           },
         },
+      },
+      {
+        test: /\.gif$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'gifs/',
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+          },
+        ],
       },
       {
         test: /\.svg/,

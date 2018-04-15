@@ -38,6 +38,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  padding-right: 12px;
   background-image: linear-gradient(
     to right bottom,
     #1800e3,
@@ -96,7 +97,7 @@ button {
   align-items: center;
 }
 
-.route-links__menuBtn {
+.menu-btn {
   display: none;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -109,7 +110,7 @@ button {
   transition: background-color 400ms ease-out;
 }
 
-.route-links__menuBtn--active {
+.menu-btn--active {
   background-color: var(--orange);
 }
 
@@ -185,6 +186,14 @@ button {
   margin: auto;
 }
 
+.loaded-image-hook {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: inherit;
+}
+
 .overlay--base {
   position: fixed;
   background-color: var(--overlay-background);
@@ -192,6 +201,7 @@ button {
   height: 100vh;
   top: 0;
   left: 0;
+  padding-right: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -203,12 +213,21 @@ button {
   visibility: hidden;
 }
 
+.close-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 5px;
+}
+
 .overlay-content--base {
-  width: 80%;
-  height: 50%;
+  position: relative;
+  width: 95%;
+  height: 95%;
   max-width: 700px;
-  min-width: 350px;
+  min-width: 300px;
   background-color: var(--overlay-content);
+  overflow-y: auto;
 }
 
 .splash {
@@ -235,14 +254,6 @@ button {
   border-bottom: 4px solid var(--black);
   border-right: 4px solid var(--black);
   box-shadow: 0 0 10px var(--black), 0 0 20px var(--dark-background-transparent);
-}
-
-.splash__profile > .image-hook {
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  border-radius: inherit;
 }
 
 .splash__greeting {
@@ -443,46 +454,69 @@ button {
   max-width: initial;
 }
 
+.projects h3 {
+  font-size: 1.5rem;
+  margin: 15px;
+}
+
 .projects__gallery {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin-left: -13px;
+  margin-right: -7px;
 }
 
 .projects__item {
   flex-grow: 1;
   flex-shrink: 0;
-  margin: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
   width: 375px;
-  max-width: 500px;
-  height: 420px;
+  height: 500px;
   border: 1px solid var(--black);
   overflow: hidden;
   cursor: pointer;
   background-color: var(--portfolio-item);
-}
-
-.projects__item > h3 {
-  font-size: 1.5rem;
-  margin: 15px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .projects__item > figure {
   margin: 0 auto;
-  width: 400px;
-  height: 225px;
+  width: 95%;
+  max-width: 500px;
+  height: 300px;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
-.projects__item img {
+.projects__item .details-btn {
+  margin-bottom: 5px;
+}
+
+.projects__overlay-content > figure {
   width: 100%;
+  max-width: 600px;
+  height: 325px;
+  background-size: cover;
+  background-position: top;
+  margin: 0 auto;
 }
 
 .projects__item p {
+  width: 100%;
   margin: 0;
-  padding: 10px 50px;
+  padding: 10px 10%;
+  padding-bottom: 0;
+}
+
+.projects__tech-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: auto;
 }
 
 .contributions__list {
@@ -662,6 +696,10 @@ button {
     transform: initial;
     order: 1;
   }
+
+  .projects__item p {
+    padding: 20px 30px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -807,7 +845,7 @@ button {
     background-color: var(--light-blue);
   }
 
-  .route-links__menuBtn {
+  .menu-btn {
     display: block;
     position: absolute;
     top: 0;
@@ -822,6 +860,14 @@ button {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    padding-right: 0;
+  }
+
+  .section__header {
+    font-size: 2.7rem;
+  }
+
   .splash__greeting > svg {
     width: 160px;
   }
@@ -848,6 +894,20 @@ button {
 
   #splash-contributions-btn {
     font-size: 1.1rem;
+  }
+
+  .projects__item {
+    width: 300px;
+  }
+
+  .projects__overlay-content > figure {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+  }
+
+  .overlay--base {
+    padding-right: 0;
   }
 }
 

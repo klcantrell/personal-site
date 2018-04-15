@@ -7,7 +7,7 @@ import ContributionsView from './views/contributionsView';
 export default function View(eventBus) {
   const rootEl = document.getElementById('portfolio');
   const triggerEls = Array.from(rootEl.querySelectorAll('a[routeTo]'));
-  const menuBtn = rootEl.querySelector('.route-links__menuBtn');
+  const menuBtn = rootEl.querySelector('.menu-btn');
   const contentPageNavs = Array.from(rootEl.querySelectorAll('.route-links'));
 
   const splashView = SplashView(rootEl, eventBus);
@@ -30,6 +30,9 @@ export default function View(eventBus) {
     routeMap['/'].specialRender = () => {
       k$fadeOut(menuBtn);
       splashView.startBigLetterMorph();
+    };
+    routeMap.projects.specialRender = () => {
+      projectsView.loadGifs();
     };
   }
 
@@ -61,7 +64,7 @@ export default function View(eventBus) {
 
   function handleMenuBtnsClick() {
     menuBtn.addEventListener('click', (e) => {
-      e.currentTarget.classList.toggle('route-links__menuBtn--active');
+      e.currentTarget.classList.toggle('menu-btn--active');
       contentPageNavs.forEach((contentPageNav) => {
         contentPageNav.classList.toggle('route-links__menu--show');
       });

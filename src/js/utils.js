@@ -179,6 +179,25 @@ function k$loadFullImage(el, imageUrls) {
   }
 }
 
+function k$loadFullGif(el, cacheLocation, imageUrl) {
+  let image = new Image();
+  image.src = imageUrl;
+  if (image.complete) {
+    el.style.backgroundImage = `url(${imageUrl})`;
+    k$fadeIn(el);
+    cacheLocation.image = image;
+    image = null;
+  } else {
+    image.addEventListener('load', function fullImageLoaded() {
+      el.style.backgroundImage = `url(${imageUrl})`;
+      k$fadeIn(el);
+      image.removeEventListener('load', fullImageLoaded);
+      cacheLocation.image = image;
+      image = null;
+    });
+  }
+}
+
 function k$processResponsiveLoaderData(raw) {
   return raw.images.reduce((acc, item) => {
     const sizeMap = {
@@ -213,4 +232,5 @@ export {
   k$fadeInFromBelow,
   k$loadFullImage,
   k$processResponsiveLoaderData,
+  k$loadFullGif,
 };

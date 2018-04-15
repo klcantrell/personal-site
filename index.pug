@@ -36,10 +36,10 @@ html(lang="en")
                 239.44,406.00 152.77,315.36 152.77,315.36 Z`
         )
     main(id="portfolio")
-      button(class="route-links__menuBtn") Menu
+      button(class="menu-btn el--hidden") Menu
       section(routeTarget="/" class="splash section--base")
         figure(class="splash__profile" style=`background-image: url(${profilePic.placeholder})`)
-          div(class="image-hook el--hidden")
+          div(class="loaded-image-hook el--hidden")
         .splash__greeting
           svg(viewBox="75 75 500 300")
             path(
@@ -184,7 +184,7 @@ html(lang="en")
               li Projects
             a(routeTo="contributions" id="splash-contributions-btn")
               li Contributions
-            a(routeTo="about")
+            a(routeTo="contact")
               li Contact
         .ms-padding-bottom
       section(routeTarget="about" class="about section--base el--hidden")
@@ -196,7 +196,7 @@ html(lang="en")
               li Projects
             a(routeTo="contributions")
               li Contributions
-            a(routeTo="about")
+            a(routeTo="contact")
               li Contact
         article(class="about__me")
           header
@@ -215,19 +215,20 @@ html(lang="en")
               li About
             a(routeTo="contributions")
               li Contributions
-            a(routeTo="about")
+            a(routeTo="contact")
               li Contact
         h2(class="section__header") Projects
         .projects__gallery
           article(class="projects__item" projectId="p1")
             h3 Project 1
             figure(style=`background-image: url(${p1Pic.src})`)
+              div(class="loaded-image-hook el--hidden")
             p This is project 1's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
             button(class="details-btn") Details
           article(class="projects__item" projectId="p2")
             h3 Project 2
-            figure
-              img(src=`${p2Pic.src}`)
+            figure(style=`background-image: url(${p2Pic.src})`)
+              div(class="loaded-image-hook el--hidden")
             p This is project 2's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
             button(class="details-btn") Details
           article(class="projects__item")
@@ -245,7 +246,7 @@ html(lang="en")
               li About
             a(routeTo="projects")
               li Projects
-            a(routeTo="about")
+            a(routeTo="contact")
               li Contact
         h2(class="section__header") Contributions
         .contributions__list
