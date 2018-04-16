@@ -215,10 +215,12 @@ button {
 }
 
 .close-overlay {
+  font-family: "Operator Mono", serif;
   position: absolute;
   left: 0;
   top: 0;
-  padding: 5px;
+  width: 40px;
+  height: 40px;
 }
 
 .overlay-content--base {
@@ -235,11 +237,12 @@ button {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  width: 70%;
+  width: 75%;
   margin: auto;
 }
 
 .icons--base > i {
+  width: 50px;
   margin: 15px;
   display: flex;
   flex-flow: column-reverse;
@@ -543,11 +546,16 @@ button {
   margin-bottom: 5px;
 }
 
-.projects__overlay-content > ul {
+.projects__item-overlay-content {
+  width: 90%;
+  margin: auto;
+}
+
+.projects__item-overlay-content > ul {
   font-family: "Open Sans", sans-serif;
 }
 
-.projects__overlay-content > figure {
+.projects__item-overlay-content > figure {
   width: 100%;
   max-width: 600px;
   height: 325px;
@@ -556,9 +564,10 @@ button {
   margin: 0 auto;
 }
 
-.projects__links-icons > i {
+.projects__overlay-links-icons > i {
   font-size: 1rem;
   font-style: normal;
+  width: auto;
 }
 
 .projects__item p {
@@ -922,6 +931,10 @@ button {
     padding-right: 0;
   }
 
+  .overlay--base {
+    padding-right: 0;
+  }
+
   .section__header {
     font-size: 2.7rem;
   }
@@ -958,14 +971,19 @@ button {
     width: 300px;
   }
 
-  .projects__overlay-content > figure {
+  .projects__overlay-links-icons {
+    width: 100%;
+  }
+
+  .projects__overlay-links-icons svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .projects__item-overlay-content > figure {
     background-size: contain;
     background-repeat: no-repeat;
     height: 200px;
-  }
-
-  .overlay--base {
-    padding-right: 0;
   }
 }
 
