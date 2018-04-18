@@ -1,31 +1,62 @@
 import { k$fadeOut, k$fadeIn, k$fadeOutDown, k$fadeInFromBelow, html } from '../utils';
+import IconLib from './icons';
 
 export default function ContributionsView(rootEl) {
   const overlay = rootEl.querySelector('.contributions__overlay');
   const content = overlay.querySelector('.contributions__overlay-content');
-  const closeBtn = overlay.querySelector('.close-overlay');
   const contentItems = Array.from(rootEl.querySelectorAll('.contributions__item'));
 
   const contributions = {
     c1: {
       title: 'Contribution 1',
-      description: 'An Awesome Contribution',
-      icon: 'github',
+      icon: 'GitHub',
+      message: 'See the code',
+      link: '',
+      description: `An Awesome Contribution. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
+      Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
+      VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
+      freegan green juice hot chicken literally.`,
+      role: 'Hackathon participant',
+      techUsed: ['Sass'],
     },
     c2: {
       title: 'Contribution 2',
-      description: 'Another Awesome Contribution',
-      icon: 'medium',
+      icon: 'Medium',
+      message: 'Read the blog',
+      link: '',
+      description: `Another Awesome Contribution. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
+      Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
+      VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
+      freegan green juice hot chicken literally.`,
+      role: 'Blog author',
+      techUsed: ['JavaScript'],
     },
   };
 
   function contributionsOverlayTemplate(contribution) {
     return html`
-      <button closeOverlay class="close-overlay">X</button>
-      <h3>${contribution.title}</h3>
-      <p>${contribution.description}</p>
-      <i>${contribution.icon}</i>
+      <div class="contributions__item-overlay-content">
+        <button closeOverlay class="close-overlay">X</button>
+        <h3>${contribution.title}</h3>
+        <a href="${contribution.link}" rel="noopener" target="_blank"> 
+          <i>${contribution.message}
+              ${IconLib.returnSvgMarkup(contribution.icon)}
+          </i>
+        </a>
+        <p><strong>Role:</strong> ${contribution.role}</p>
+        <p>${contribution.description}</p>
+        <h4>Technologies used</h4>
+  ${IconLib.returnIconsMarkup({
+    icons: contribution.techUsed,
+    classes: 'contributions__overlay-tech-icons icons--base',
+  })}
+      </div>
     `;
+  }
+
+  function closeOverlay() {
+    k$fadeOutDown(content);
+    k$fadeOut(overlay);
   }
 
   function handleCloseBtnClicks() {
@@ -46,11 +77,6 @@ export default function ContributionsView(rootEl) {
         k$fadeInFromBelow(content);
       });
     });
-  }
-
-  function closeOverlay() {
-    k$fadeOutDown(content);
-    k$fadeOut(overlay);
   }
 
   return {
