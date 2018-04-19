@@ -123,6 +123,14 @@ export default function ProjectsView(rootEl) {
     });
   }
 
+  function handleClickOffOverlayContent() {
+    overlay.addEventListener('click', e => {
+      if (e.target === e.currentTarget) {
+        closeOverlay();
+      }
+    });
+  }
+
   function closeOverlay() {
     k$fadeOutDown(content);
     k$fadeOut(overlay);
@@ -149,6 +157,7 @@ export default function ProjectsView(rootEl) {
     handleEvents() {
       handleContentItemClicks();
       handleCloseBtnClicks();
+      handleClickOffOverlayContent();
     },
     closeOverlay,
     loadGifs,
