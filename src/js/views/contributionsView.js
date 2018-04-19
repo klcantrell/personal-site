@@ -11,19 +11,19 @@ export default function ContributionsView(rootEl) {
       title: 'Contribution 1',
       icon: 'GitHub',
       message: 'See the code',
-      link: '',
+      link: 'https://google.com',
       description: `An Awesome Contribution. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
       Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
       VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
       freegan green juice hot chicken literally.`,
       role: 'Hackathon participant',
-      techUsed: ['Sass'],
+      techUsed: ['Sass', 'PostCSS'],
     },
     c2: {
       title: 'Contribution 2',
       icon: 'Medium',
       message: 'Read the blog',
-      link: '',
+      link: 'https://google.com',
       description: `Another Awesome Contribution. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
       Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
       VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
@@ -38,7 +38,8 @@ export default function ContributionsView(rootEl) {
       <div class="contributions__item-overlay-content">
         <button closeOverlay class="close-overlay">X</button>
         <h3>${contribution.title}</h3>
-        <a href="${contribution.link}" rel="noopener" target="_blank"> 
+        <a class="contributions__overlay-link" href="${contribution.link}" 
+        rel="noopener" target="_blank">
           <i>${contribution.message}
               ${IconLib.returnSvgMarkup(contribution.icon)}
           </i>
@@ -79,10 +80,19 @@ export default function ContributionsView(rootEl) {
     });
   }
 
+  function handleClickOffOverlayContent() {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) {
+        closeOverlay();
+      }
+    });
+  }
+
   return {
     handleEvents() {
       handleContentItemClicks();
       handleCloseBtnClicks();
+      handleClickOffOverlayContent();
     },
     closeOverlay,
   };
