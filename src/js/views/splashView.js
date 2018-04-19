@@ -39,7 +39,6 @@ export default function SplashView(rootEl, eventBus) {
 
   function morphArrowToK() {
     if (!isArrowMorphed) {
-      console.log('morph arrow');
       const morph = KUTE.to(arrowPath, {
         path: `M 152.77,315.36
         C 229.84,278.14 252.00,249.33 252.00,229.39
