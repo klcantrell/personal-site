@@ -125,7 +125,7 @@ export default class IconLib {
     let iconsMarkup = '';
     iconsMarkup += html`<div class="${classes}">`;
     icons.forEach((icon) => {
-      iconsMarkup += html`<i>${icon}${iconsSvg[icon]}</i>`;
+      iconsMarkup += html`<i>${icon}${iconsSvg[icon] || ''}</i>`;
     });
     iconsMarkup += html`</div>`;
     return iconsMarkup;
