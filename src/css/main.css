@@ -55,8 +55,6 @@ body {
 }
 
 main {
-  width: 100%;
-  height: 100%;
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -92,7 +90,8 @@ i {
 
 a,
 a:visited {
-  color: inherit;
+  text-decoration: none;
+  color: var(--black);
 }
 
 .route-links {
@@ -136,7 +135,6 @@ a:visited {
   background-color: var(--light-background-transparent);
   font-size: 1.2rem;
   color: var(--black);
-  text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
   border: 5px outset var(--black);
@@ -171,11 +169,7 @@ a:visited {
   width: 100%;
   height: 200vh;
   overflow: hidden;
-}
-
-.el--hidden {
-  display: none;
-  visibility: hidden;
+  z-index: -1;
 }
 
 .box-shadow--std {
@@ -269,6 +263,20 @@ a:visited {
   height: 100px;
   width: 3px;
   background-color: var(--black);
+}
+
+.contact {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  min-width: 300px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact__icons i {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
 }
 
 .splash {
@@ -456,7 +464,6 @@ a:visited {
   background-color: var(--light-background-transparent);
   font-size: 1.6rem;
   color: var(--black);
-  text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
   display: flex;
@@ -491,6 +498,7 @@ a:visited {
 .about__content {
   border-radius: 10px;
   background-color: var(--light-background-transparent);
+  margin-top: 40px;
   padding: 0 40px;
   padding-bottom: 40px;
 }
@@ -503,19 +511,27 @@ a:visited {
 }
 
 .about__me > header {
-  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 150px;
   position: relative;
 }
 
 .about__me img {
   position: absolute;
-  left: 0;
-  top: 0;
-  transform: translateY(-25%) translateX(50%);
+  left: 75px;
+  top: 10px;
   width: 125px;
   height: 125px;
   border: 1px solid var(--black);
   border-radius: 50%;
+}
+
+.about__me h2 {
+  margin-top: 10px;
 }
 
 .projects {
@@ -670,6 +686,12 @@ a:visited {
   margin: auto;
 }
 
+.contributions__overlay-link {
+  display: block;
+  width: 125px;
+  margin: auto;
+}
+
 .contributions i {
   font-size: 1rem;
   font-style: normal;
@@ -682,6 +704,11 @@ a:visited {
   -ms-grid-column-span: 3;
   -ms-grid-row: 10;
   -ms-grid-row-span: 1;
+}
+
+.el--hidden {
+  display: none;
+  visibility: hidden;
 }
 
 @keyframes bounce {
@@ -801,9 +828,8 @@ a:visited {
   }
 
   .about__me > header {
-    display: flex;
     flex-flow: column;
-    align-items: center;
+    height: auto;
   }
 
   .about__me img {
@@ -992,6 +1018,10 @@ a:visited {
     border-right: none;
     border-bottom: 3px solid var(--black);
   }
+
+  #splash-contributions-btn {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1025,10 +1055,6 @@ a:visited {
     margin: 8px;
     width: 130px;
     height: 130px;
-  }
-
-  #splash-contributions-btn {
-    font-size: 1.1rem;
   }
 
   .projects__item {
