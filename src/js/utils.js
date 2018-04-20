@@ -93,8 +93,8 @@ function k$bounceEl(el) {
   });
 }
 
-function k$scrollToTop() {
-  window.scrollTo(0, 0);
+function k$scrollToTop(el) {
+  el.scrollTo(0, 0);
 }
 
 function k$fadeOut(el) {
