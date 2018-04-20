@@ -90,7 +90,7 @@ export default function View(eventBus) {
       if (routeMap[route].specialRender) {
         routeMap[route].specialRender();
       }
-      k$scrollToTop();
+      k$scrollToTop(window);
       k$fadeIn(el);
       hideContentPageNavs();
       projectsView.closeOverlay();
