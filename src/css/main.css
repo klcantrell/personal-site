@@ -636,6 +636,14 @@ a:visited {
   width: auto;
 }
 
+.projects__overlay-down-arrows {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3%;
+  margin: auto;
+}
+
 .contributions__list {
   margin: auto;
   width: 80%;
@@ -1021,6 +1029,34 @@ a:visited {
 
   #splash-contributions-btn {
     font-size: 1rem;
+  }
+
+  .overlay-content--base {
+    height: 85%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-scrollbar:vertical {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 2px solid #fff;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #fff;
   }
 }
 
