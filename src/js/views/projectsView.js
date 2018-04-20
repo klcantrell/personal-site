@@ -10,6 +10,7 @@ import {
   k$processResponsiveLoaderData,
   k$loadFullImage,
   k$loadFullGif,
+  k$scrollToTop,
 } from '../utils';
 
 import IconLib from './icons';
@@ -17,6 +18,7 @@ import IconLib from './icons';
 export default function ProjectsView(rootEl) {
   const overlay = rootEl.querySelector('.projects__overlay');
   const content = overlay.querySelector('.projects__overlay-content');
+  const downArrows = overlay.querySelector('.projects__overlay-down-arrows');
   const contentItems = Array.from(rootEl.querySelectorAll('.projects__item'));
 
   let areGifsLoaded = false;
@@ -118,7 +120,11 @@ export default function ProjectsView(rootEl) {
         const projectId = e.currentTarget.getAttribute('projectId');
         content.innerHTML = projectsOverlayTemplate(projects[projectId]);
         k$fadeIn(overlay);
-        k$fadeInFromBelow(content);
+        k$fadeInFromBelow(content).then(() => {
+          k$fadeIn(downArrows);
+        });
+        k$scrollToTop(content);
+        handleInitialScroll();
       });
     });
   }
@@ -128,6 +134,14 @@ export default function ProjectsView(rootEl) {
       if (e.target === e.currentTarget) {
         closeOverlay();
       }
+    });
+  }
+
+  function handleInitialScroll() {
+    content.addEventListener('scroll', function removeDownArrows() {
+      console.log('handling scroll');
+      k$fadeOut(downArrows);
+      content.removeEventListener('scroll', removeDownArrows);
     });
   }
 
