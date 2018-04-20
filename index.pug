@@ -10,6 +10,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Kalalau Cantrell
+    link(rel="stylesheet", href="main.css")
   body
     .background-name
       svg(viewBox="100 150 150 250")
@@ -408,6 +409,16 @@ html(lang="en")
           article(class="projects__item box-shadow--std")
         div(class="projects__overlay overlay--base el--hidden")
           div(class="projects__overlay-content overlay-content--base")
+          i(class="projects__overlay-down-arrows el--hidden")
+            svg(width="60" height="60" viewBox="0 0 256 512")
+              path(
+                fill="rgb(223, 223, 223)" 
+                  d=`M119.5 262.9L3.5 145.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 
+                  223.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 263c-4.7 
+                  4.6-12.3 4.6-17-.1zm17 128l116-117.8c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 
+                  0L128 351.3 27.6 249.1c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l116 117.8c4.7 
+                  4.6 12.3 4.6 17-.1z`
+              )
       section(routeTarget="contributions" class="contributions section--base el--hidden")
         nav(class="route-links")
           ul(class="route-links__menu")
