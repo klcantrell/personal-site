@@ -1,4 +1,11 @@
-import { k$fadeOut, k$fadeIn, k$fadeOutDown, k$fadeInFromBelow, html } from '../utils';
+import {
+  k$fadeOut,
+  k$fadeIn,
+  k$fadeOutDown,
+  k$fadeInFromBelow,
+  k$scrollToTop,
+  html,
+} from '../utils';
 import IconLib from './icons';
 
 export default function ContributionsView(rootEl) {
@@ -76,6 +83,7 @@ export default function ContributionsView(rootEl) {
         content.innerHTML = contributionsOverlayTemplate(contributions[contributionId]);
         k$fadeIn(overlay);
         k$fadeInFromBelow(content);
+        k$scrollToTop(content);
       });
     });
   }
