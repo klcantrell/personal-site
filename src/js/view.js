@@ -9,6 +9,7 @@ export default function View(eventBus) {
   const triggerEls = Array.from(rootEl.querySelectorAll('a[routeTo]'));
   const menuBtn = rootEl.querySelector('.menu-btn');
   const contentPageNavs = Array.from(rootEl.querySelectorAll('.route-links'));
+  const branding = document.querySelector('.branding');
 
   const splashView = SplashView(rootEl, eventBus);
   const projectsView = ProjectsView(rootEl);
@@ -29,10 +30,15 @@ export default function View(eventBus) {
   function addSpecialRenders() {
     routeMap['/'].specialRender = () => {
       k$fadeOut(menuBtn);
+      k$fadeOut(branding);
       splashView.startBigLetterMorph();
     };
     routeMap.projects.specialRender = () => {
       projectsView.loadGifs();
+      projectsView.closeOverlay();
+    };
+    routeMap.contributions.specialRender = () => {
+      contributionsView.closeOverlay();
     };
   }
 
@@ -93,14 +99,13 @@ export default function View(eventBus) {
       k$scrollToTop(window);
       k$fadeIn(el);
       hideContentPageNavs();
-      projectsView.closeOverlay();
-      contributionsView.closeOverlay();
     },
     dismountRouteTarget(route) {
       const el = routeMap[route].section;
       if (route === '/') {
         k$hide(el);
         k$fadeIn(menuBtn);
+        k$fadeIn(branding);
         splashView.resetBigLetterK();
       } else {
         disableRouteTriggers();
