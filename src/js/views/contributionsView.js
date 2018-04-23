@@ -5,12 +5,14 @@ import {
   k$fadeInFromBelow,
   k$scrollToTop,
   html,
+  k$doesContentCauseScroll,
 } from '../utils';
 import IconLib from './icons';
 
 export default function ContributionsView(rootEl) {
   const overlay = rootEl.querySelector('.contributions__overlay');
   const content = overlay.querySelector('.contributions__overlay-content');
+  const downArrows = overlay.querySelector('.contributions__overlay-down-arrows');
   const contentItems = Array.from(rootEl.querySelectorAll('.contributions__item'));
 
   const contributions = {
@@ -65,6 +67,7 @@ export default function ContributionsView(rootEl) {
   function closeOverlay() {
     k$fadeOutDown(content);
     k$fadeOut(overlay);
+    k$fadeOut(downArrows);
   }
 
   function handleCloseBtnClicks() {
@@ -82,7 +85,9 @@ export default function ContributionsView(rootEl) {
         const contributionId = e.currentTarget.getAttribute('contributionId');
         content.innerHTML = contributionsOverlayTemplate(contributions[contributionId]);
         k$fadeIn(overlay);
-        k$fadeInFromBelow(content);
+        k$fadeInFromBelow(content).then(() => {
+          k$doesContentCauseScroll(content.firstElementChild, content) ? k$fadeIn(downArrows) : '';
+        });
         k$scrollToTop(content);
       });
     });

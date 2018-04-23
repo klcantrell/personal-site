@@ -84,6 +84,12 @@ function k$whenTopTwoThirdsInView(func, el) {
   }
 }
 
+function k$doesContentCauseScroll(contentEl, parentEl) {
+  const contentHeight = contentEl.getBoundingClientRect().height;
+  const parentHeight = parentEl.getBoundingClientRect().height;
+  return contentHeight > parentHeight;
+}
+
 function k$bounceEl(el) {
   k$classListAdd(el, 'bounce');
   return new Promise((resolve) => {
@@ -219,4 +225,5 @@ export {
   k$loadFullImage,
   k$processResponsiveLoaderData,
   k$loadFullGif,
+  k$doesContentCauseScroll,
 };

@@ -176,6 +176,14 @@ a:visited {
   box-shadow: 0 0 10px var(--black), 0 0 20px var(--dark-background-transparent);
 }
 
+.overlay-down-arrows--base {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3%;
+  margin: auto;
+}
+
 .section--base {
   width: 75%;
   max-width: 900px;
@@ -646,14 +654,6 @@ a:visited {
   font-size: 1rem;
   font-style: normal;
   width: auto;
-}
-
-.projects__overlay-down-arrows {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 3%;
-  margin: auto;
 }
 
 .contributions__list {

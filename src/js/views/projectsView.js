@@ -11,6 +11,7 @@ import {
   k$loadFullImage,
   k$loadFullGif,
   k$scrollToTop,
+  k$doesContentCauseScroll,
 } from '../utils';
 
 import IconLib from './icons';
@@ -105,6 +106,12 @@ export default function ProjectsView(rootEl) {
     return listMarkup;
   }
 
+  function closeOverlay() {
+    k$fadeOutDown(content);
+    k$fadeOut(overlay);
+    k$fadeOut(downArrows);
+  }
+
   function handleCloseBtnClicks() {
     content.addEventListener('click', e => {
       if (e.target.hasAttribute('closeOverlay')) {
@@ -121,7 +128,7 @@ export default function ProjectsView(rootEl) {
         content.innerHTML = projectsOverlayTemplate(projects[projectId]);
         k$fadeIn(overlay);
         k$fadeInFromBelow(content).then(() => {
-          k$fadeIn(downArrows);
+          k$doesContentCauseScroll(content.firstElementChild, content) ? k$fadeIn(downArrows) : '';
         });
         k$scrollToTop(content);
         handleInitialScroll();
@@ -139,15 +146,9 @@ export default function ProjectsView(rootEl) {
 
   function handleInitialScroll() {
     content.addEventListener('scroll', function removeDownArrows() {
-      console.log('handling scroll');
       k$fadeOut(downArrows);
       content.removeEventListener('scroll', removeDownArrows);
     });
-  }
-
-  function closeOverlay() {
-    k$fadeOutDown(content);
-    k$fadeOut(overlay);
   }
 
   function loadGifs() {
