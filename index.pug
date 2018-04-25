@@ -1,8 +1,13 @@
 -
   const profilePic = require('./src/images/profile-pic-FIXED.jpg?placeholder=true&placeholderSize=50');
   const aboutPic = require('./src/images/about-me-pic.jpg?size=170');
-  const p1Pic = require('./src/images/p1.jpg?size=500');
-  const p2Pic = require('./src/images/p2.jpg?size=500');
+  const p1Pic = require('./src/images/p1.jpg?size=600');
+  const p2Pic = require('./src/images/p2.jpg?size=600');
+  const p3Pic = require('./src/images/p3.jpg?size=600');
+  const p4Pic = require('./src/images/p4.jpg?size=600');
+  const p5Pic = require('./src/images/p5.jpg?size=600');
+  const p6Pic = require('./src/images/p6.jpg?size=600');
+  const p7Pic = require('./src/images/p7.jpg?size=600');
 
 <!DOCTYPE html>
 html(lang="en")
@@ -186,17 +191,57 @@ html(lang="en")
             .projects__item-footer
               p This is project 2's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
               button(class="details-btn") Details
-          article(class="projects__item box-shadow--std")
-          article(class="projects__item box-shadow--std")
-          article(class="projects__item box-shadow--std")
-          article(class="projects__item box-shadow--std")
+          article(class="projects__item box-shadow--std" projectId="p3")
+            .projects__item-header
+              h3 Project 3
+              figure(style=`background-image: url(${p3Pic.src})`)
+                div(class="loaded-image-hook el--hidden")
+            .projects__item-footer
+              p This is project 3's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
+              button(class="details-btn") Details
+          article(class="projects__item box-shadow--std" projectId="p4")
+            .projects__item-header
+              h3 Project 4
+              figure(style=`background-image: url(${p4Pic.src})`)
+                div(class="loaded-image-hook el--hidden")
+            .projects__item-footer
+              p This is project 4's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
+              button(class="details-btn") Details
+          article(class="projects__item box-shadow--std" projectId="p5")
+            .projects__item-header
+              h3 Project 5
+              figure(style=`background-image: url(${p5Pic.src})`)
+                div(class="loaded-image-hook el--hidden")
+            .projects__item-footer
+              p This is project 5's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
+              button(class="details-btn") Details
+          article(class="projects__item box-shadow--std" projectId="p6")
+            .projects__item-header
+              h3 Project 6
+              figure(style=`background-image: url(${p6Pic.src})`)
+                div(class="loaded-image-hook el--hidden")
+            .projects__item-footer
+              p This is project 6's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
+              button(class="details-btn") Details
+          article(class="projects__item box-shadow--std" projectId="p7")
+            .projects__item-header
+              h3 Project 7
+              figure(style=`background-image: url(${p7Pic.src})`)
+                div(class="loaded-image-hook el--hidden")
+            .projects__item-footer
+              p This is project 7's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
+              button(class="details-btn") Details
         div(class="projects__overlay overlay--base el--hidden")
           div(class="projects__overlay-content overlay-content--base")
           i(class="projects__overlay-down-arrows overlay-down-arrows--base el--hidden")
-            svg(width="60" height="60" viewBox="0 0 256 512")
+            svg(width="70" height="70" viewBox="0 0 256 512")
+              defs
+                filter(id="shadow")
+                  feDropShadow(dx="5" dy="10" stdDeviation="10")
               path(
-                fill="rgb(223, 223, 223)" 
-                  d=`M119.5 262.9L3.5 145.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 223.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 263c-4.7 4.6-12.3 4.6-17-.1zm17 128l116-117.8c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L128 351.3 27.6 249.1c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l116 117.8c4.7 4.6 12.3 4.6 17-.1z`
+                fill="white" 
+                filter="url(#shadow)"
+                d=`M119.5 262.9L3.5 145.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 223.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 263c-4.7 4.6-12.3 4.6-17-.1zm17 128l116-117.8c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L128 351.3 27.6 249.1c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l116 117.8c4.7 4.6 12.3 4.6 17-.1z`
               )
       section(routeTarget="contributions" class="contributions section--base el--hidden")
         nav(class="route-links")
@@ -285,10 +330,14 @@ html(lang="en")
         div(class="contributions__overlay overlay--base el--hidden")
           div(class="contributions__overlay-content overlay-content--base")
           i(class="contributions__overlay-down-arrows overlay-down-arrows--base el--hidden")
-            svg(width="60" height="60" viewBox="0 0 256 512")
+            svg(width="70" height="70" viewBox="0 0 256 512")
+              defs
+                filter(id="shadow")
+                  feDropShadow(dx="5" dy="10" stdDeviation="10")
               path(
-                fill="rgb(223, 223, 223)" 
-                  d=`M119.5 262.9L3.5 145.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 223.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 263c-4.7 4.6-12.3 4.6-17-.1zm17 128l116-117.8c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L128 351.3 27.6 249.1c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l116 117.8c4.7 4.6 12.3 4.6 17-.1z`
+                fill="white" 
+                filter="url(#shadow)"
+                d=`M119.5 262.9L3.5 145.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 223.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 263c-4.7 4.6-12.3 4.6-17-.1zm17 128l116-117.8c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L128 351.3 27.6 249.1c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l116 117.8c4.7 4.6 12.3 4.6 17-.1z`
               )
     footer(class="contact")
       h3 You can find me on:
