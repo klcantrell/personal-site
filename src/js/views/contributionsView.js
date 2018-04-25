@@ -24,6 +24,12 @@ export default function ContributionsView(rootEl) {
       description: `An Awesome Contribution. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
       Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
       VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
+      freegan green juice hot chicken literally. An Awesome Contribution. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
+      Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
+      VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
+      freegan green juice hot chicken literally. An Awesome Contribution. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
+      Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
+      VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
       freegan green juice hot chicken literally.`,
       role: 'Hackathon participant',
       techUsed: ['Sass', 'PostCSS'],
@@ -89,6 +95,7 @@ export default function ContributionsView(rootEl) {
           k$doesContentCauseScroll(content.firstElementChild, content) ? k$fadeIn(downArrows) : '';
         });
         k$scrollToTop(content);
+        handleInitialScroll();
       });
     });
   }
@@ -98,6 +105,13 @@ export default function ContributionsView(rootEl) {
       if (e.target === e.currentTarget) {
         closeOverlay();
       }
+    });
+  }
+
+  function handleInitialScroll() {
+    content.addEventListener('scroll', function removeDownArrows() {
+      k$fadeOut(downArrows);
+      content.removeEventListener('scroll', removeDownArrows);
     });
   }
 
