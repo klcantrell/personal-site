@@ -1,5 +1,10 @@
-const p1Pic = require('../../images/p1.jpg?size=500');
-const p2Pic = require('../../images/p2.jpg?size=500');
+const p1Pic = require('../../images/p1.jpg?size=600');
+const p2Pic = require('../../images/p2.jpg?size=600');
+const p3Pic = require('../../images/p3.jpg?size=600');
+const p4Pic = require('../../images/p4.jpg?size=600');
+const p5Pic = require('../../images/p5.jpg?size=600');
+const p6Pic = require('../../images/p6.jpg?size=600');
+const p7Pic = require('../../images/p7.jpg?size=600');
 
 import {
   k$fadeOut,
@@ -42,7 +47,7 @@ export default function ProjectsView(rootEl) {
     },
     p2: {
       title: 'Project 2',
-      description: `Another Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
+      description: `An Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat. 
         Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
         VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
         freegan green juice hot chicken literally.`,
@@ -51,6 +56,81 @@ export default function ProjectsView(rootEl) {
       techUsed: ['HTML', 'CSS', 'JavaScript'],
       backupImage: {
         src: p2Pic.src,
+      },
+      github: 'https://github.com/klcantrell/wikipedia-crawler',
+      website: 'http://kals-practice-history-router.surge.sh/',
+    },
+    p3: {
+      title: 'Project 3',
+      description: `An Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat. 
+        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
+        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
+        freegan green juice hot chicken literally.`,
+      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
+      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
+      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      backupImage: {
+        src: p3Pic.src,
+      },
+      github: 'https://github.com/klcantrell/wikipedia-crawler',
+      website: 'http://kals-practice-history-router.surge.sh/',
+    },
+    p4: {
+      title: 'Project 4',
+      description: `An Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat. 
+        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
+        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
+        freegan green juice hot chicken literally.`,
+      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
+      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
+      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      backupImage: {
+        src: p4Pic.src,
+      },
+      github: 'https://github.com/klcantrell/wikipedia-crawler',
+      website: 'http://kals-practice-history-router.surge.sh/',
+    },
+    p5: {
+      title: 'Project 5',
+      description: `Another Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
+        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
+        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
+        freegan green juice hot chicken literally.`,
+      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
+      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
+      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      backupImage: {
+        src: p5Pic.src,
+      },
+      github: 'https://github.com/klcantrell/weather-viewer',
+      website: 'http://kals-practice-history-router.surge.sh/cloud-strife',
+    },
+    p6: {
+      title: 'Project 6',
+      description: `Another Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
+        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
+        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
+        freegan green juice hot chicken literally.`,
+      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
+      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
+      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      backupImage: {
+        src: p6Pic.src,
+      },
+      github: 'https://github.com/klcantrell/weather-viewer',
+      website: 'http://kals-practice-history-router.surge.sh/cloud-strife',
+    },
+    p7: {
+      title: 'Project 7',
+      description: `Another Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
+        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
+        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
+        freegan green juice hot chicken literally.`,
+      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
+      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
+      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      backupImage: {
+        src: p7Pic.src,
       },
       github: 'https://github.com/klcantrell/weather-viewer',
       website: 'http://kals-practice-history-router.surge.sh/cloud-strife',
@@ -62,7 +142,7 @@ export default function ProjectsView(rootEl) {
       <div class="projects__item-overlay-content">
         <button closeOverlay class="close-overlay">X</button>
         <h3>${project.title}</h3>
-        <figure style="background-image: url(
+        <figure class="box-shadow--std" style="background-image: url(
           ${project.image ? project.image.src : project.backupImage.src}
         )"></figure>
         <h4>Links</h4>
