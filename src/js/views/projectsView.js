@@ -46,14 +46,20 @@ export default function ProjectsView(rootEl) {
       website: 'http://kals-practice-history-router.surge.sh/',
     },
     p2: {
-      title: 'Project 2',
-      description: `An Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat. 
-        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
-        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
-        freegan green juice hot chicken literally.`,
-      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
-      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
-      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      title: 'Final Fantasy MiniWiki',
+      description:
+        "This is a single page app that lets you view quick facts about your favorite Final Fantasy characters.  Just by clicking on each picture, you can select the character you're interested in and the app will load that characters info.  Although the app doesn't trigger a page refresh, it provides you URLs for each character so that you can quickly revisit the view containing a specific character's info.",
+      userCan: [
+        'View new character information at the click of a picture',
+        "Save a URL to visit the site with a specific character's info loaded",
+      ],
+      techHighlights: [
+        'AJAX to fetch new character info',
+        'Vanilla JS to re-render views based on selected character',
+        'Vanilla JS history API router',
+        'Progressive image loading',
+      ],
+      techUsed: ['JavaScript', 'Pug', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p2Pic.src,
       },
@@ -76,14 +82,15 @@ export default function ProjectsView(rootEl) {
       website: 'http://kals-practice-history-router.surge.sh/',
     },
     p4: {
-      title: 'Project 4',
-      description: `An Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat. 
-        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
-        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
-        freegan green juice hot chicken literally.`,
-      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
-      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
-      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      title: 'K-Calc',
+      description: `This is a calculator that uses pure JavaScript for computation and memory.  As soon as you hover over the calculator (or tap on it if on mobile), you experience a bit of fun 3D delight as it rotates in before you need to get to the number crunching.`,
+      userCan: [
+        'Add, subtract, multiply and divide two numbers',
+        'Clear the input field with a clear button',
+        'Keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output',
+      ],
+      techHighlights: ['Used 3D CSS transforms for the rotation action'],
+      techUsed: ['JavaScript', 'HTML', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p4Pic.src,
       },
