@@ -8,6 +8,7 @@
   const p5Pic = require('./src/images/p5.jpg?size=600');
   const p6Pic = require('./src/images/p6.jpg?size=600');
   const p7Pic = require('./src/images/p7.jpg?size=600');
+  const p8Pic = require('./src/images/p8.jpg?size=600');
 
 <!DOCTYPE html>
 html(lang="en")
@@ -230,10 +231,10 @@ html(lang="en")
             header
               img(src=`${aboutPic.src}` alt="about-me-pic")
               h2(class="section__header") About me
-            p I create user interfaces for web applications.  I enjoy what I do because I believe technology provides us tools that we can use to unlock human potential.  I think this is true not just for the users of the technology, but also for the individuals that develop that technology as well.
+            p I develop user interfaces for web applications.  I enjoy what I do because I believe technology is a tool that we can use to unlock human potential.  I think this is true not just for the users of the technology, but also for the individuals that develop that technology as well.
             p(class="emphasized-paragraph") The more we learn and the more we help each other learn, the better we become as individuals and a community!
             p I use <strong>front end web technologies</strong> as the tools for my craft, but I'm working on rounding out my technical skills by adding <strong>Node.js</strong> + <strong>serverless</strong> services to my toolbelt. 
-            p Some interesting facts to throw out are that 1) I'm from an island but I don't like seafood 2) My first name means "The One Who Wanders" in Hawaiian and 3) When not coding, you can find me taking care of my family or playing Final Fantasy.
+            p Some fun facts about me are that 1) I'm from an island but I don't like seafood 2) My first name means "The One Who Wanders" in Hawaiian and 3) When not coding, you can find me taking care of my family or playing Final Fantasy.
           article
             h2(class="section__header") Design choices
             p With every project I do, I work to strike a balance between using new features such as <strong>CSS Grid</strong> or <strong>async function</strong> while not excluding users who may not be on the latest devices and browsers.
@@ -254,11 +255,11 @@ html(lang="en")
         .projects__gallery
           article(class="projects__item box-shadow--std" projectId="p1")
             .projects__item-header
-              h3 Project 1
+              h3 Simon - Morph Edition
               figure(style=`background-image: url(${p1Pic.src})`)
                 div(class="loaded-image-hook el--hidden")
             .projects__item-footer
-              p This is project 1's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
+              p Exercise your memory muscles with a this game of tones, lights, and patterns.
               button(class="details-btn") Details
           article(class="projects__item box-shadow--std" projectId="p2")
             .projects__item-header
@@ -276,13 +277,21 @@ html(lang="en")
             .projects__item-footer
               p This is project 3's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
               button(class="details-btn") Details
+          article(class="projects__item box-shadow--std" projectId="p8")
+            .projects__item-header
+              h3 Spinning Pomodoro
+              figure(style=`background-image: url(${p8Pic.src})`)
+                div(class="loaded-image-hook el--hidden")
+            .projects__item-footer
+              p Work in productive bursts with a little help from the timer that animates to let you know how much time you have left.
+              button(class="details-btn") Details
           article(class="projects__item box-shadow--std" projectId="p4")
             .projects__item-header
               h3 K-Calc
               figure(style=`background-image: url(${p4Pic.src})`)
                 div(class="loaded-image-hook el--hidden")
             .projects__item-footer
-              p A 3D calculator from the future for all your calculating needs.
+              p A 3D calculator from the future for all your computation needs.
               button(class="details-btn") Details
           article(class="projects__item box-shadow--std" projectId="p5")
             .projects__item-header
@@ -294,11 +303,11 @@ html(lang="en")
               button(class="details-btn") Details
           article(class="projects__item box-shadow--std" projectId="p6")
             .projects__item-header
-              h3 Project 6
+              h3 K-Tatap
               figure(style=`background-image: url(${p6Pic.src})`)
                 div(class="loaded-image-hook el--hidden")
             .projects__item-footer
-              p This is project 6's description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia saepe dignissimos.
+              p Turn your keyboard into an electronic drum kit that also triggers some tasty visuals.
               button(class="details-btn") Details
           article(class="projects__item box-shadow--std" projectId="p7")
             .projects__item-header
