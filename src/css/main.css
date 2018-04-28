@@ -94,6 +94,11 @@ a:visited {
   color: var(--black);
 }
 
+code {
+  background: var(--lighter-blue);
+  padding: 3px;
+}
+
 .route-links {
   width: 70vw;
   max-width: 900px;
