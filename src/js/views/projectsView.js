@@ -64,9 +64,9 @@ export default function ProjectsView(rootEl) {
         "Save a URL to visit the site with a specific character's info loaded",
       ],
       techHighlights: [
-        'Used AJAX to fetch new character info',
-        'Used Vanilla JS to re-render views based on selected character',
-        'Used vanilla JS history API router',
+        'Used <strong>AJAX</strong> to fetch new character info',
+        'Used vanilla JS to re-render views based on selected character',
+        'Used vanilla JS <strong>history API</strong> router',
         'Images are progressively loaded from blurred placeholders to full images',
       ],
       techUsed: ['JavaScript', 'Pug', 'CSS', 'Webpack', 'PostCSS'],
@@ -77,14 +77,19 @@ export default function ProjectsView(rootEl) {
       website: 'http://kals-practice-history-router.surge.sh/',
     },
     p3: {
-      title: 'Project 3',
-      description: `An Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat. 
-        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
-        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
-        freegan green juice hot chicken literally.`,
-      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
-      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
-      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      title: 'Drawn Tic-Tac-Toe',
+      description:
+        "Upon loading the game, the Tic-Tac-Toe grid draws itself in and the user is asked to select between the 'X' or 'O' symbol.  As the user and the CPU place their symbols on the board, the symbols are drawn in.  Try as they might, the user cannot hope to beat the CPU.  At best, they can achieve a draw.  If they're not careful, the CPU's logic is coded to pursue a win rather than just place symbols randomly on the board.  Once the game is over, the user is prompted to start over and pick a new symbol.",
+      userCan: [
+        'Play a game of Tic Tac Toe with the computer',
+        'Reset the game as soon as its over to play again',
+        "Choose whether to play as 'X' or 'O'",
+      ],
+      techHighlights: [
+        'Used an SVG animation library <strong>KUTE.js</strong> to draw the shapes',
+        'CPU logic and strategy coded from stratch in vanilla JS',
+      ],
+      techUsed: ['SVG', 'KUTE.js', 'JavaScript', 'HTML', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p3Pic.src,
       },
@@ -99,7 +104,7 @@ export default function ProjectsView(rootEl) {
         'Clear the input field with a clear button',
         'Keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output',
       ],
-      techHighlights: ['Used <code>CSS 3D transforms</code> for the rotation action'],
+      techHighlights: ['Used <strong>CSS 3D transforms</strong> for the rotation action'],
       techUsed: ['JavaScript', 'HTML', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p4Pic.src,
@@ -108,14 +113,19 @@ export default function ProjectsView(rootEl) {
       website: 'http://kals-practice-history-router.surge.sh/',
     },
     p5: {
-      title: 'Project 5',
-      description: `Another Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
-        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
-        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
-        freegan green juice hot chicken literally.`,
-      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
-      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
-      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      title: 'WeatherGist',
+      description:
+        "This weather app gets straight to the point and shows the user the temperature, a brief description of the weather conditions, an icon that portrays that description, and a color animation to match the conditions as well.  Upon loading, the app immediately requests the user's location and then interfaces with the <strong>Dark Sky API</strong> to retrieve and display the weather information based on that location.",
+      userCan: [
+        'See the weather in their current location',
+        'See a different icon (e.g. rainy clouds, sunny sky) depending on the weather',
+        'Push a button to toggle between Fahrenheit and Celsius',
+      ],
+      techHighlights: [
+        'Setup an <strong>AWS lambda function</strong> with <strong>Node.js</strong> to act as a proxy server with the <strong>Dark Sky API</strong>',
+        'Used SVG <code>defs</code> and <code>symbol</code> elements to load and switch between different weather icons',
+      ],
+      techUsed: ['AWS', 'Node.js', 'SVG', 'JavaScript', 'HTML', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p5Pic.src,
       },
@@ -133,8 +143,8 @@ export default function ProjectsView(rootEl) {
       ],
       techHighlights: [
         'Used promises to handle the asynchronous interaction that the user has with the introduction prompts',
-        'Used canvas JS library <code>Paper.js</code> to create the colorful animations',
-        'Used audio JS library <code>Howler.js</code> to load, cache, and play the drum sounds',
+        'Used canvas JS library <strong>Paper.js</strong> to create the colorful animations',
+        'Used audio JS library <strong>Howler.js</strong> to load, cache, and play the drum sounds',
       ],
       techUsed: ['HTML', 'Paper.js', 'CSS', 'Howler.js', 'JavaScript'],
       backupImage: {
@@ -144,13 +154,19 @@ export default function ProjectsView(rootEl) {
       website: 'http://kals-practice-history-router.surge.sh/cloud-strife',
     },
     p7: {
-      title: 'Project 7',
-      description: `Another Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
-        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
-        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
-        freegan green juice hot chicken literally.`,
-      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
-      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
+      title: 'Wikipedia Gateway',
+      description:
+        "This app provides the user a way to enter in search keywords and find content on Wikipedia.  It is built on top Wikipedia's <strong>MediaWiki action API</strong> to find the 10 most relevant articles based on the user's inputted keywords.  Once a search is executed, the interface displays the title of each article and a small snippet of the content.  If users are feeling particularly adventurous, they can press a button that shows them a random Wikipedia article.",
+      userCan: [
+        'Search Wikipedia entries in a search box and see the resulting Wikipedia entries',
+        'Click a button to see a random Wikipedia entry',
+        'Get notified if their query returns no results',
+      ],
+      techHighlights: [
+        'Setup an <strong>AWS lambda function</strong> with <strong>Node.js</strong> to act as a proxy server with the <strong>MediaWiki action API</strong>',
+        'Hippest tools',
+        'Performant techniques',
+      ],
       techUsed: ['HTML', 'CSS', 'JavaScript'],
       backupImage: {
         src: p7Pic.src,
@@ -168,8 +184,8 @@ export default function ProjectsView(rootEl) {
         'Customize the length of each pomodoro',
       ],
       techHighlights: [
-        'Used animation library <code>KUTE.js</code> to visually convey time remaining',
-        'Used <code>ES2015 classes</code> to encapsulate main timer and break timer functionality',
+        'Used animation library <strong>KUTE.js</strong> to visually convey time remaining',
+        'Used <strong>ES2015 classes</strong> to encapsulate main timer and break timer functionality',
       ],
       techUsed: ['JavaScript', 'SVG', 'KUTE.js', 'HTML', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
@@ -252,9 +268,9 @@ export default function ProjectsView(rootEl) {
         k$fadeIn(overlay);
         k$fadeInFromBelow(content).then(() => {
           k$doesContentCauseScroll(content.firstElementChild, content) ? k$fadeIn(downArrows) : '';
+          handleInitialScroll();
         });
         k$scrollToTop(content);
-        handleInitialScroll();
       });
     });
   }
