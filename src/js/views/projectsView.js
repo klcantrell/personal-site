@@ -5,6 +5,7 @@ const p4Pic = require('../../images/p4.jpg?size=600');
 const p5Pic = require('../../images/p5.jpg?size=600');
 const p6Pic = require('../../images/p6.jpg?size=600');
 const p7Pic = require('../../images/p7.jpg?size=600');
+const p8Pic = require('../../images/p8.jpg?size=600');
 
 import {
   k$fadeOut,
@@ -31,14 +32,23 @@ export default function ProjectsView(rootEl) {
 
   const projects = {
     p1: {
-      title: 'Project 1',
-      description: `An Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat. 
-        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
-        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
-        freegan green juice hot chicken literally.`,
-      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
-      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
-      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      title: 'Simon - Morph Edition',
+      description:
+        "This app is a browser based implementation of the original Simon game.  The game creates a pattern of tones and lights and challenges the user to repeat the pattern in exact sequence.  This user interface features morphing text that reminds the user whose turn it is and whether they've succeeded or failed.",
+      userCan: [
+        'Each time they input button presses correctly, see the same series of button presses but with an additional step',
+        'Hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button',
+        'Get notified when they press a wrong button and the series of button presses starts again to remind them of the pattern so they can try again',
+        'See how many steps are in the current series of button presses',
+        'Hit a button to restart the game to a single step',
+        'Play in "strict" mode where if they get a button press wrong, it notifies them that they have done so, and the game restarts at a new random series of button presses',
+        'Win the game by getting a series of 20 steps correct',
+      ],
+      techHighlights: [
+        'Used async functions for handling the flow of the game',
+        'Composed the functionality of the CPU and player objects with small factory functions',
+      ],
+      techUsed: ['JavaScript', 'SVG', 'KUTE.js', 'HTML', 'Sass', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p1Pic.src,
       },
@@ -54,10 +64,10 @@ export default function ProjectsView(rootEl) {
         "Save a URL to visit the site with a specific character's info loaded",
       ],
       techHighlights: [
-        'AJAX to fetch new character info',
-        'Vanilla JS to re-render views based on selected character',
-        'Vanilla JS history API router',
-        'Progressive image loading',
+        'Used AJAX to fetch new character info',
+        'Used Vanilla JS to re-render views based on selected character',
+        'Used vanilla JS history API router',
+        'Images are progressively loaded from blurred placeholders to full images',
       ],
       techUsed: ['JavaScript', 'Pug', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
@@ -89,7 +99,7 @@ export default function ProjectsView(rootEl) {
         'Clear the input field with a clear button',
         'Keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output',
       ],
-      techHighlights: ['Used 3D CSS transforms for the rotation action'],
+      techHighlights: ['Used <code>CSS 3D transforms</code> for the rotation action'],
       techUsed: ['JavaScript', 'HTML', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p4Pic.src,
@@ -113,14 +123,20 @@ export default function ProjectsView(rootEl) {
       website: 'http://kals-practice-history-router.surge.sh/cloud-strife',
     },
     p6: {
-      title: 'Project 6',
-      description: `Another Awesome Project. Crucifix gochujang hell of, letterpress copper mug gastropub waistcoat.  
-        Kitsch marfa squid, man bun food truck gochujang copper mug. Man braid iPhone schlitz 
-        VHS flexitarian. Cronut tattooed irony banjo hashtag snackwave. Intelligentsia franzen 
-        freegan green juice hot chicken literally.`,
-      userCan: ['Be Productive', 'Do cool stuff', 'Look real smart'],
-      techHighlights: ['Latest technology', 'Hippest tools', 'Performant techniques'],
-      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      title: 'K-Tatap',
+      description:
+        'This is an application that turns your keyboard into an electronic drum kit controller.  Key strokes trigger a variety of drum sounds that can be combined to make a beat.  The ear-tickling sounds are accompanied by colorful visuals making the overall experience pleasure for the senses. The user is guided through some getting started prompts when the page first loads.',
+      userCan: [
+        'Press keys to trigger a sound and a colorful visual',
+        'Press multiple keys together rhythmically to create a drum beat',
+        'Receive introduction prompts on how to get started with the application',
+      ],
+      techHighlights: [
+        'Used promises to handle the asynchronous interaction that the user has with the introduction prompts',
+        'Used canvas JS library <code>Paper.js</code> to create the colorful animations',
+        'Used audio JS library <code>Howler.js</code> to load, cache, and play the drum sounds',
+      ],
+      techUsed: ['HTML', 'Paper.js', 'CSS', 'Howler.js', 'JavaScript'],
       backupImage: {
         src: p6Pic.src,
       },
@@ -138,6 +154,26 @@ export default function ProjectsView(rootEl) {
       techUsed: ['HTML', 'CSS', 'JavaScript'],
       backupImage: {
         src: p7Pic.src,
+      },
+      github: 'https://github.com/klcantrell/weather-viewer',
+      website: 'http://kals-practice-history-router.surge.sh/cloud-strife',
+    },
+    p8: {
+      title: 'Spinning Pomodoro',
+      description:
+        "This app helps users implement the pomodoro technique, which recommends breaking work into short, productive intervals usually 25 minutes long.  The interface not only numerically displays the remaining time, different parts of the interface will animate to show the user the remaining time.  If the user wishes to customize the timer, they can use the app's controls to set custom work and break intervals.",
+      userCan: [
+        'Start a 25 minute pomodoro and the timer will turn off once 25 minutes has elapsed',
+        'Reset the clock for the next pomodoro',
+        'Customize the length of each pomodoro',
+      ],
+      techHighlights: [
+        'Used animation library <code>KUTE.js</code> to visually convey time remaining',
+        'Used <code>ES2015 classes</code> to encapsulate main timer and break timer functionality',
+      ],
+      techUsed: ['JavaScript', 'SVG', 'KUTE.js', 'HTML', 'CSS', 'Webpack', 'PostCSS'],
+      backupImage: {
+        src: p8Pic.src,
       },
       github: 'https://github.com/klcantrell/weather-viewer',
       website: 'http://kals-practice-history-router.surge.sh/cloud-strife',
