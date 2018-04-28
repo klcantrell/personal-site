@@ -106,7 +106,7 @@ function k$scrollToTop(el) {
 function k$fadeOut(el) {
   el.classList.add('fade-out');
   return new Promise((resolve) => {
-    k$delay(750).then(() => {
+    k$delay(450).then(() => {
       k$hide(el);
       el.classList.remove('fade-out');
       resolve();
@@ -118,7 +118,7 @@ function k$fadeIn(el) {
   el.classList.add('fade-in');
   k$show(el);
   return new Promise((resolve) => {
-    k$delay(750).then(() => {
+    k$delay(450).then(() => {
       el.classList.remove('fade-in');
       resolve();
     });
@@ -128,7 +128,7 @@ function k$fadeIn(el) {
 function k$fadeOutDown(el) {
   el.classList.add('fade-out-down');
   return new Promise((resolve) => {
-    k$delay(750).then(() => {
+    k$delay(350).then(() => {
       k$hide(el);
       el.classList.remove('fade-out-down');
       resolve();
@@ -140,7 +140,7 @@ function k$fadeInFromBelow(el) {
   el.classList.add('fade-in-from-below');
   k$show(el);
   return new Promise((resolve) => {
-    k$delay(750).then(() => {
+    k$delay(350).then(() => {
       el.classList.remove('fade-in-from-below');
       resolve();
     });
