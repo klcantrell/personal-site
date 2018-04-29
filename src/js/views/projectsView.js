@@ -6,12 +6,14 @@ const p5Pic = require('../../images/p5.jpg?size=600');
 const p6Pic = require('../../images/p6.jpg?size=600');
 const p7Pic = require('../../images/p7.jpg?size=600');
 const p8Pic = require('../../images/p8.jpg?size=600');
+const p9Pic = require('../../images/p9.jpg?size=600');
 
 import {
   k$fadeOut,
   k$fadeIn,
   k$fadeOutDown,
   k$fadeInFromBelow,
+  k$delay,
   html,
   k$processResponsiveLoaderData,
   k$loadFullImage,
@@ -34,31 +36,31 @@ export default function ProjectsView(rootEl) {
     p1: {
       title: 'Simon - Morph Edition',
       description:
-        "This app is a browser based implementation of the original Simon game.  The game creates a pattern of tones and lights and challenges the user to repeat the pattern in exact sequence.  This user interface features morphing text that reminds the user whose turn it is and whether they've succeeded or failed.",
+        "This app is a browser based implementation of the original Simon game.  The game creates a pattern of tones and lights, and challenges the user to repeat the pattern in exact sequence.  This user interface features morphing text that reminds the user whose turn it is and whether they've succeeded or failed.",
       userCan: [
-        'Each time they input button presses correctly, see the same series of button presses but with an additional step',
-        'Hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button',
-        'Get notified when they press a wrong button and the series of button presses starts again to remind them of the pattern so they can try again',
+        'See the same series of button presses but with an additional step each time they input the pattern correctly',
+        'Hear a sound that corresponds to each button both when the series plays for them and when they press a button',
+        'Get notified when they press a wrong button and the series of starts again to remind them of the pattern so they can try again',
         'See how many steps are in the current series of button presses',
         'Hit a button to restart the game to a single step',
-        'Play in "strict" mode where if they get a button press wrong, it notifies them that they have done so, and the game restarts at a new random series of button presses',
+        'Play in "strict" mode where if they get a button press wrong, it notifies them that they have done so and the game restarts with a new random series of button presses',
         'Win the game by getting a series of 20 steps correct',
       ],
       techHighlights: [
-        'Used async functions for handling the flow of the game',
+        'Used <strong>async functions</strong> for handling the flow of the game',
         'Composed the functionality of the CPU and player objects with small factory functions',
       ],
       techUsed: ['JavaScript', 'SVG', 'KUTE.js', 'HTML', 'Sass', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p1Pic.src,
       },
-      github: 'https://github.com/klcantrell/wikipedia-crawler',
-      website: 'http://kals-practice-history-router.surge.sh/',
+      github: 'https://github.com/klcantrell/simon-game',
+      website: 'https://simon-morphedition.surge.sh/',
     },
     p2: {
       title: 'Final Fantasy MiniWiki',
       description:
-        "This is a single page app that lets you view quick facts about your favorite Final Fantasy characters.  Just by clicking on each picture, you can select the character you're interested in and the app will load that characters info.  Although the app doesn't trigger a page refresh, it provides you URLs for each character so that you can quickly revisit the view containing a specific character's info.",
+        "This is a single page app that lets Final Fantasy fans view quick facts about their favorite Final Fantasy characters.  Just by clicking on each picture, the user can select the character they're interested in and the app will load that characters info.  Although the app doesn't trigger a page refresh, it provides the user URLs for each character so that they can quickly revisit the view containing a specific character's info.",
       userCan: [
         'View new character information at the click of a picture',
         "Save a URL to visit the site with a specific character's info loaded",
@@ -66,20 +68,20 @@ export default function ProjectsView(rootEl) {
       techHighlights: [
         'Used <strong>AJAX</strong> to fetch new character info',
         'Used vanilla JS to re-render views based on selected character',
-        'Used vanilla JS <strong>history API</strong> router',
+        'Created a <strong>vanilla JS history API router</strong> from scratch',
         'Images are progressively loaded from blurred placeholders to full images',
       ],
       techUsed: ['JavaScript', 'Pug', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p2Pic.src,
       },
-      github: 'https://github.com/klcantrell/wikipedia-crawler',
-      website: 'http://kals-practice-history-router.surge.sh/',
+      github: 'https://github.com/klcantrell/finalfantasy-miniwiki-vanillaspa',
+      website: 'https://finalfantasy-miniwiki.surge.sh/',
     },
     p3: {
       title: 'Drawn Tic-Tac-Toe',
       description:
-        "Upon loading the game, the Tic-Tac-Toe grid draws itself in and the user is asked to select between the 'X' or 'O' symbol.  As the user and the CPU place their symbols on the board, the symbols are drawn in.  Try as they might, the user cannot hope to beat the CPU.  At best, they can achieve a draw.  If they're not careful, the CPU's logic is coded to pursue a win rather than just place symbols randomly on the board.  Once the game is over, the user is prompted to start over and pick a new symbol.",
+        "Upon loading the game, the Tic-Tac-Toe grid draws itself in and the user is asked to select between the 'X' or 'O' symbol.  As the user and the CPU place their symbols on the board, the symbols are drawn in.  Try as they might, the user cannot hope to beat the CPU.  At best, they can achieve a draw.  If the user is not careful, the CPU's logic is coded to pursue a win rather than just place symbols randomly on the board.  Once the game is over, the user is prompted to start over and pick a new symbol.",
       userCan: [
         'Play a game of Tic Tac Toe with the computer',
         'Reset the game as soon as its over to play again',
@@ -87,14 +89,14 @@ export default function ProjectsView(rootEl) {
       ],
       techHighlights: [
         'Used an SVG animation library <strong>KUTE.js</strong> to draw the shapes',
-        'CPU logic and strategy coded from stratch in vanilla JS',
+        'Coded the CPU logic and strategy from stratch in vanilla JS',
       ],
       techUsed: ['SVG', 'KUTE.js', 'JavaScript', 'HTML', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p3Pic.src,
       },
-      github: 'https://github.com/klcantrell/wikipedia-crawler',
-      website: 'http://kals-practice-history-router.surge.sh/',
+      github: 'https://github.com/klcantrell/tic-tac-toe',
+      website: 'https://drawn-tictactoe.surge.sh/',
     },
     p4: {
       title: 'K-Calc',
@@ -102,20 +104,20 @@ export default function ProjectsView(rootEl) {
       userCan: [
         'Add, subtract, multiply and divide two numbers',
         'Clear the input field with a clear button',
-        'Keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output',
+        'Keep chaining mathematical operations together until the equal button is hit, and the calculator will display the correct output',
       ],
       techHighlights: ['Used <strong>CSS 3D transforms</strong> for the rotation action'],
       techUsed: ['JavaScript', 'HTML', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p4Pic.src,
       },
-      github: 'https://github.com/klcantrell/wikipedia-crawler',
-      website: 'http://kals-practice-history-router.surge.sh/',
+      github: 'https://github.com/klcantrell/js-calculator',
+      website: 'https://k-calc.surge.sh/',
     },
     p5: {
       title: 'WeatherGist',
       description:
-        "This weather app gets straight to the point and shows the user the temperature, a brief description of the weather conditions, an icon that portrays that description, and a color animation to match the conditions as well.  Upon loading, the app immediately requests the user's location and then interfaces with the <strong>Dark Sky API</strong> to retrieve and display the weather information based on that location.",
+        "This weather app gets straight to the point and shows the user their local temperature, a brief description of the weather conditions in their area, and an icon and color animation that portrays that description.  Upon loading, the app immediately requests the user's location and then interfaces with the <strong>Dark Sky API</strong> to retrieve and display the weather information based on that location.",
       userCan: [
         'See the weather in their current location',
         'See a different icon (e.g. rainy clouds, sunny sky) depending on the weather',
@@ -130,12 +132,12 @@ export default function ProjectsView(rootEl) {
         src: p5Pic.src,
       },
       github: 'https://github.com/klcantrell/weather-viewer',
-      website: 'http://kals-practice-history-router.surge.sh/cloud-strife',
+      website: 'https://weathergist.surge.sh/',
     },
     p6: {
       title: 'K-Tatap',
       description:
-        'This is an application that turns your keyboard into an electronic drum kit controller.  Key strokes trigger a variety of drum sounds that can be combined to make a beat.  The ear-tickling sounds are accompanied by colorful visuals making the overall experience pleasure for the senses. The user is guided through some getting started prompts when the page first loads.',
+        'This is an application that turns your keyboard into an electronic drum kit controller.  Key strokes trigger a variety of drum sounds that can be combined to make a beat.  The ear-tickling sounds are accompanied by colorful visuals making the overall experience a pleasure for the senses. The user is guided through some "getting started" prompts when the page first loads.',
       userCan: [
         'Press keys to trigger a sound and a colorful visual',
         'Press multiple keys together rhythmically to create a drum beat',
@@ -150,8 +152,8 @@ export default function ProjectsView(rootEl) {
       backupImage: {
         src: p6Pic.src,
       },
-      github: 'https://github.com/klcantrell/weather-viewer',
-      website: 'http://kals-practice-history-router.surge.sh/cloud-strife',
+      github: 'https://github.com/klcantrell/patatap',
+      website: 'https://k-tatap.surge.sh/',
     },
     p7: {
       title: 'Wikipedia Gateway',
@@ -164,20 +166,19 @@ export default function ProjectsView(rootEl) {
       ],
       techHighlights: [
         'Setup an <strong>AWS lambda function</strong> with <strong>Node.js</strong> to act as a proxy server with the <strong>MediaWiki action API</strong>',
-        'Hippest tools',
-        'Performant techniques',
+        'Setup error handling in case the API or the proxy server returns an error',
       ],
-      techUsed: ['HTML', 'CSS', 'JavaScript'],
+      techUsed: ['AWS', 'Node.js', 'HTML', 'CSS', 'JavaScript', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p7Pic.src,
       },
-      github: 'https://github.com/klcantrell/weather-viewer',
-      website: 'http://kals-practice-history-router.surge.sh/cloud-strife',
+      github: 'https://github.com/klcantrell/wikipedia-gateway',
+      website: 'https://wikipedia-gateway.surge.sh',
     },
     p8: {
       title: 'Spinning Pomodoro',
       description:
-        "This app helps users implement the pomodoro technique, which recommends breaking work into short, productive intervals usually 25 minutes long.  The interface not only numerically displays the remaining time, different parts of the interface will animate to show the user the remaining time.  If the user wishes to customize the timer, they can use the app's controls to set custom work and break intervals.",
+        "This app helps users implement the pomodoro technique, which recommends breaking work into short, productive intervals usually 25 minutes long.  The interface not only numerically displays the remaining time, but it also animates different parts of the app to show the user the remaining time.  If the user wishes to customize the timer, they can use the app's controls to set custom work and break intervals.",
       userCan: [
         'Start a 25 minute pomodoro and the timer will turn off once 25 minutes has elapsed',
         'Reset the clock for the next pomodoro',
@@ -191,8 +192,28 @@ export default function ProjectsView(rootEl) {
       backupImage: {
         src: p8Pic.src,
       },
-      github: 'https://github.com/klcantrell/weather-viewer',
-      website: 'http://kals-practice-history-router.surge.sh/cloud-strife',
+      github: 'https://github.com/klcantrell/pomodoro-clock',
+      website: 'https://spinning-pomodoro.surge.sh',
+    },
+    p9: {
+      title: 'HydraBase',
+      description:
+        'This prototype was designed with stories from actual fire fighters in mind.  The app is meant to help fire departments keep track of and share information about fire hydrants especially when requesting mutual aid. The app aims to solve the problem of fire hydrant information being "tribal knowledge" that is hard to keep track of, communicate, and get access to quickly. HydraBase is built on top of the <strong>Google Maps API</strong> and uses web technologies to create a cross-platform web app. The app is intended to be used over the <strong>FirstNet</strong> network that is dedicated to the data needs of first responders.  It was developed at the 2018 AT&T IoT Civic Hack in Indy.',
+      userCan: [
+        'See the fire hydrants at a given geolocation',
+        'Click on a fire hydrant icon to see important information about the hydrant at that location such as its hose size and thread type',
+      ],
+      techHighlights: [
+        'Used the <strong>Google Maps API</strong> to build the user interface on top of',
+        'Designed the app with the user stories of actual fire fighters in mind',
+        'Developed the app on a team that worked together for the first time, had a variety of skill levels, and was on a tight timeline',
+      ],
+      techUsed: ['JavaScript', 'Google Maps API', 'SVG', 'HTML', 'CSS'],
+      backupImage: {
+        src: p9Pic.src,
+      },
+      github: 'https://github.com/klcantrell/hydrabase',
+      website: 'https://hydrabase.surge.sh/',
     },
   };
 
@@ -293,15 +314,17 @@ export default function ProjectsView(rootEl) {
   function loadGifs() {
     if (!areGifsLoaded) {
       areGifsLoaded = true;
-      contentItems.forEach(contentItem => {
+      contentItems.forEach((contentItem, idx) => {
         if (contentItem.hasAttribute('projectId')) {
           const projectId = contentItem.getAttribute('projectId');
           const imageUrl = require(`../../images/${projectId}.gif`);
-          k$loadFullGif(
-            contentItem.querySelector('.loaded-image-hook'),
-            projects[projectId],
-            imageUrl,
-          );
+          k$delay(idx * 1500).then(() => {
+            k$loadFullGif(
+              contentItem.querySelector('.loaded-image-hook'),
+              projects[projectId],
+              imageUrl,
+            );
+          });
         }
       });
     }
