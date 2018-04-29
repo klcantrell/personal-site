@@ -10,6 +10,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
+    publicPath: 'https://s3.us-east-2.amazonaws.com/kals-portfolio-assets/main/',
     filename: '[name].bundle.js',
   },
   module: {
@@ -63,6 +64,7 @@ module.exports = {
         use: {
           loader: 'responsive-loader',
           options: {
+            name: 'images/[name]-[width].[ext]',
             sizes: [500, 800],
             placeholder: true,
             placeholderSize: 50,
@@ -77,6 +79,7 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'gifs/',
+              publicPath: 'https://s3.us-east-2.amazonaws.com/kals-portfolio-assets/main/gifs/',
             },
           },
           {
@@ -98,7 +101,7 @@ module.exports = {
           options: {
             name: '[name].[ext]',
             outputPath: 'fonts/',
-            // publicPath: 'https://s3.us-east-2.amazonaws.com/kals-portfolio-assets/fonts'
+            publicPath: 'https://s3.us-east-2.amazonaws.com/kals-portfolio-assets/fonts/',
           },
         },
       },
@@ -120,6 +123,7 @@ module.exports = {
     ),
     new HtmlWebpackPlugin({
       template: 'index.pug',
+      inject: false,
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
@@ -128,13 +132,13 @@ module.exports = {
         removeComments: true,
       },
     }),
-    // new CompressionPlugin({
-    //   asset: '[path].gz[query]',
-    //   algorithm: 'gzip',
-    //   test: /\.ttf$/,
-    //   threshold: 10240,
-    //   minRatio: 0.8,
-    //   deleteOriginalAssets: true,
-    // }),
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.(ttf|woff)$/,
+      threshold: 10240,
+      minRatio: 0.8,
+      deleteOriginalAssets: true,
+    }),
   ],
 };
