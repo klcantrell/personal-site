@@ -32,7 +32,7 @@ export default function ContributionsView(rootEl) {
       message: 'See the code',
       link: 'https://github.com/klcantrell/Mini-Hackathon-SpaceX-board',
       description:
-        'This was my first ever hackathon-like experience.  Although not a full hackathon, it was a tremendous learning experience.  One big takeaway was that working on a team requires much organization, planning, and a clear goal.  Another one was that although I was still learning the fundamentals of front end development, I was still able to contribute much to this project - all it took was a willingness to cooperate and learn.',
+        "This was my first ever hackathon-like experience.  Although not a full hackathon, it was a tremendous learning experience.  One big takeaway was that working on a team requires much organization, planning, and a clear goal.  Another one was no matter your skill level, you can contribute much to a project if you have a solid grasp of the basics and you're willing to cooperate and learn.",
       role: 'Hackathon participant',
       techUsed: ['JavaScript', 'HTML', 'CSS', 'Git', 'SVG'],
     },
