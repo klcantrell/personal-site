@@ -54,7 +54,7 @@ export default function ProjectsView(rootEl) {
       backupImage: {
         src: p1Pic.src,
       },
-      github: 'https://github.com/klcantrell/simon-game',
+      github: 'https://github.com/klcantrell/simon-morphedition',
       website: 'https://simon-morphedition.surge.sh/',
     },
     p2: {
@@ -95,7 +95,7 @@ export default function ProjectsView(rootEl) {
       backupImage: {
         src: p3Pic.src,
       },
-      github: 'https://github.com/klcantrell/tic-tac-toe',
+      github: 'https://github.com/klcantrell/drawn-tictactoe',
       website: 'https://drawn-tictactoe.surge.sh/',
     },
     p4: {
@@ -111,7 +111,7 @@ export default function ProjectsView(rootEl) {
       backupImage: {
         src: p4Pic.src,
       },
-      github: 'https://github.com/klcantrell/js-calculator',
+      github: 'https://github.com/klcantrell/k-calc',
       website: 'https://k-calc.surge.sh/',
     },
     p5: {
@@ -131,7 +131,7 @@ export default function ProjectsView(rootEl) {
       backupImage: {
         src: p5Pic.src,
       },
-      github: 'https://github.com/klcantrell/weather-viewer',
+      github: 'https://github.com/klcantrell/weathergist',
       website: 'https://weathergist.surge.sh/',
     },
     p6: {
@@ -152,7 +152,7 @@ export default function ProjectsView(rootEl) {
       backupImage: {
         src: p6Pic.src,
       },
-      github: 'https://github.com/klcantrell/patatap',
+      github: 'https://github.com/klcantrell/k-tatap',
       website: 'https://k-tatap.surge.sh/',
     },
     p7: {
@@ -192,7 +192,7 @@ export default function ProjectsView(rootEl) {
       backupImage: {
         src: p8Pic.src,
       },
-      github: 'https://github.com/klcantrell/pomodoro-clock',
+      github: 'https://github.com/klcantrell/spinning-pomodoro',
       website: 'https://spinning-pomodoro.surge.sh',
     },
     p9: {
