@@ -157,7 +157,7 @@ function k$hide(el) {
 
 function k$loadFullImage(el, imageUrls) {
   let image = new Image();
-  const url = window.innerWidth > 500 ? imageUrls.large.path : imageUrls.small.path;
+  const url = window.innerWidth > 600 ? imageUrls.large.path : imageUrls.small.path;
   image.src = url;
   if (image.complete) {
     el.style.backgroundImage = `url(${url})`;
@@ -195,8 +195,8 @@ function k$loadFullGif(el, cacheLocation, imageUrl) {
 function k$processResponsiveLoaderData(raw) {
   return raw.images.reduce((acc, item) => {
     const sizeMap = {
-      500: 'small',
-      800: 'large',
+      800: 'small',
+      1200: 'large',
     };
     const key = sizeMap[item.width];
     acc[key] = {
