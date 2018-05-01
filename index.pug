@@ -16,11 +16,13 @@ html(lang="en")
   head
     title Kalalau Cantrell
     link(rel="stylesheet", href="main.css")
-    link(rel="apple-touch-icon-precomposed", sizes="180x180", href="apple-touch-icon.png")
+    link(rel="apple-touch-icon", sizes="180x180", href="apple-touch-icon.png")
+    link(rel="apple-touch-icon-precomposed", sizes="180x180", href="apple-touch-icon-precomposed.png")
     link(rel="icon", type="image/png", sizes="32x32", href="favicon-32x32.png")
     link(rel="icon", type="image/png", sizes="16x16", href="favicon-16x16.png")
     link(rel="manifest", href="site.webmanifest")
     link(rel="mask-icon", href="safari-pinned-tab.svg", color="#5bbad5")
+    link(rel="icon" href="favicon.ico" type="image/x-icon")
     link(rel="shortcut icon" href="favicon.ico" type="image/ico")
     meta(name="msapplication-TileColor", content="#2d89ef")
     meta(name="theme-color", content="#1800e3")
@@ -263,7 +265,7 @@ html(lang="en")
               figure(style=`background-image: url(${p1Pic.src})`)
                 div(class="loaded-image-hook el--hidden")
             .projects__item-footer
-              p Exercise your memory muscles with a this game of tones, lights, and patterns.
+              p Exercise your memory muscles with this game of tones, lights, and patterns.
               button(class="details-btn") Details
           article(class="projects__item box-shadow--std" projectId="p2")
             .projects__item-header
@@ -344,7 +346,7 @@ html(lang="en")
               li Projects
             a(href="http://coder-rising.blog/" target="_blank" rel="noopener" class="box-shadow--std")
               li Blog
-        h2(class="section__header") Contributions
+        h2(class="section__header" id="contributions-header") Contributions
         .contributions__list
           article(class="contributions__item box-shadow--std" contributionId="c7")
             .contributions__item-icon.icons--base
