@@ -100,7 +100,11 @@ function k$bounceEl(el) {
 }
 
 function k$scrollToTop(el) {
-  el.scrollTo(0, 0);
+  if (el.scrollTo) {
+    el.scrollTo(0, 0);
+  } else {
+    el.scrollTop = 0;
+  }
 }
 
 function k$fadeOut(el) {

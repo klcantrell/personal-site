@@ -577,7 +577,7 @@ code {
 
 .projects h3 {
   font-size: 1.5rem;
-  margin: 15px;
+  margin: 30px;
 }
 
 .projects__gallery {
@@ -705,10 +705,13 @@ code {
 }
 
 .contributions__item-info > h3 {
+  width: 100%;
   margin-bottom: 0;
 }
 
 .contributions__item-info > p {
+  width: 100%;
+  text-align: center;
   margin: 0;
 }
 
@@ -724,6 +727,10 @@ code {
   width: 90%;
   max-width: 500px;
   margin: auto;
+}
+
+.contributions__item-overlay-content > h3 {
+  margin: 30px;
 }
 
 .contributions__overlay-link {
