@@ -672,6 +672,10 @@ code {
   width: auto;
 }
 
+.projects__overlay-tech-icons > i {
+  width: auto;
+}
+
 .contributions__list {
   margin: auto;
   width: 80%;
@@ -751,6 +755,7 @@ code {
 }
 
 .contributions__overlay-tech-icons > i {
+  width: auto;
   margin: 5px;
 }
 

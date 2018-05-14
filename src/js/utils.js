@@ -182,13 +182,11 @@ function k$loadFullGif(el, cacheLocation, imageUrl) {
   image.src = imageUrl;
   if (image.complete) {
     el.style.backgroundImage = `url(${imageUrl})`;
-    k$fadeIn(el);
     cacheLocation.image = image;
     image = null;
   } else {
     image.addEventListener('load', function fullImageLoaded() {
       el.style.backgroundImage = `url(${imageUrl})`;
-      k$fadeIn(el);
       image.removeEventListener('load', fullImageLoaded);
       cacheLocation.image = image;
       image = null;

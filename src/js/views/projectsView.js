@@ -314,16 +314,27 @@ export default function ProjectsView(rootEl) {
   function loadGifs() {
     if (!areGifsLoaded) {
       areGifsLoaded = true;
-      contentItems.forEach((contentItem, idx) => {
+      contentItems.forEach(contentItem => {
         if (contentItem.hasAttribute('projectId')) {
           const projectId = contentItem.getAttribute('projectId');
           const imageUrl = require(`../../images/${projectId}.gif`);
-          k$delay(idx * 1500).then(() => {
-            k$loadFullGif(
-              contentItem.querySelector('.loaded-image-hook'),
-              projects[projectId],
-              imageUrl,
-            );
+          const imageHook = contentItem.querySelector('.loaded-image-hook');
+          k$loadFullGif(
+            imageHook,
+            projects[projectId],
+            imageUrl,
+          );
+          contentItem.addEventListener('mouseenter', () => {
+            k$fadeIn(imageHook);
+          });
+          contentItem.addEventListener('mouseleave', () => {
+            k$fadeOut(imageHook);
+          });
+          contentItem.addEventListener('touchstart', () => {
+            k$fadeIn(imageHook);
+          });
+          contentItem.addEventListener('touchend', () => {
+            k$fadeOut(imageHook);
           });
         }
       });
