@@ -251,6 +251,14 @@ html(lang="en")
               li Blog
         h2(class="section__header") Projects
         .projects__gallery
+          article(class="projects__item box-shadow--std" projectId="p2")
+            .projects__item-header
+              h3 Final Fantasy MiniWiki
+              figure(style=`background-image: url(${p2Pic.src})`)
+                div(class="loaded-image-hook el--hidden")
+            .projects__item-footer
+              p View quick facts about your favorite Final Fantasy characters with this <strong>React / Redux</strong> app. 
+              button(class="details-btn") Details
           article(class="projects__item box-shadow--std" projectId="p9")
             .projects__item-header
               h3 HydraBase
@@ -266,14 +274,6 @@ html(lang="en")
                 div(class="loaded-image-hook el--hidden")
             .projects__item-footer
               p Exercise your memory muscles with this game of tones, lights, and patterns.
-              button(class="details-btn") Details
-          article(class="projects__item box-shadow--std" projectId="p2")
-            .projects__item-header
-              h3 Final Fantasy MiniWiki
-              figure(style=`background-image: url(${p2Pic.src})`)
-                div(class="loaded-image-hook el--hidden")
-            .projects__item-footer
-              p View quick facts about your favorite Final Fantasy characters.
               button(class="details-btn") Details
           article(class="projects__item box-shadow--std" projectId="p3")
             .projects__item-header

@@ -60,23 +60,24 @@ export default function ProjectsView(rootEl) {
     p2: {
       title: 'Final Fantasy MiniWiki',
       description:
-        "This is a single page app that lets Final Fantasy fans view quick facts about their favorite Final Fantasy characters.  Just by clicking on each picture, the user can select the character they're interested in and the app will load that characters info.  Although the app doesn't trigger a page refresh, it provides the user URLs for each character so that they can quickly revisit the view containing a specific character's info.",
+        "This is a <strong>React / Redux</strong> app that lets Final Fantasy fans view quick facts about their favorite characters from the series.  It is a remake of a vanilla-spa that I made without any frameworks (see <a href='https://github.com/klcantrell/finalfantasy-miniwiki-vanillaspa' rel='noopener' target='_blank'>this repo</a>). Just by clicking on each picture, the user can select the character they're interested in and the app will load that characters info.  Users can also switch games and get a whole set of new characters to choose from. Although navigating the app doesn't trigger a page refresh, it provides the user URLs for each game and each character so that they can quickly revisit the view containing a specific character's info.",
       userCan: [
         'View new character information at the click of a picture',
-        "Save a URL to visit the site with a specific character's info loaded",
+        "Save a URL to revisit the site with a specific character's info loaded",
+        "Switch games to get new character options for that particular game"
       ],
       techHighlights: [
-        'Used <strong>AJAX</strong> to fetch new character info',
-        'Used vanilla JS to re-render views based on selected character',
-        'Created a <strong>vanilla JS history API router</strong> from scratch',
-        'Images are progressively loaded from blurred placeholders to full images',
+        'Used <strong>React</strong> for rendering the UI',
+        'Used <strong>Redux</strong> to manage the app\'s state such as page number and selected game',
+        'Used <strong>Redux-Thunk</strong> to allow asynchronous actions like AJAX calls inside of Redux',
+        'Used <strong>React Router</strong> to bind views with routes based on the selected game and character',
       ],
-      techUsed: ['JavaScript', 'Pug', 'CSS', 'Webpack', 'PostCSS'],
+      techUsed: ['React', 'Redux', 'Redux-Thunk', 'React Router', 'CSS', 'Webpack', 'PostCSS'],
       backupImage: {
         src: p2Pic.src,
       },
-      github: 'https://github.com/klcantrell/finalfantasy-miniwiki-vanillaspa',
-      website: 'https://finalfantasy-miniwiki.surge.sh/',
+      github: 'https://github.com/klcantrell/finalfantasy-miniwiki-reactified',
+      website: 'https://ff-miniwiki-staging.surge.sh/',
     },
     p3: {
       title: 'Drawn Tic-Tac-Toe',
