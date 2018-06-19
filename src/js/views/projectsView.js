@@ -47,7 +47,7 @@ export default function ProjectsView(rootEl) {
         'Win the game by getting a series of 20 steps correct',
       ],
       techHighlights: [
-        'Used <strong>async functions</strong> for handling the flow of the game',
+        'Used <strong>async functions</strong> to control how the game responds to user interactions',
         'Composed the functionality of the CPU and player objects with small factory functions',
       ],
       techUsed: ['JavaScript', 'SVG', 'KUTE.js', 'HTML', 'Sass', 'Webpack', 'PostCSS'],
