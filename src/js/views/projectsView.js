@@ -47,7 +47,7 @@ export default function ProjectsView(rootEl) {
         'Win the game by getting a series of 20 steps correct',
       ],
       techHighlights: [
-        'Used <strong>async functions</strong> for handling the flow of the game',
+        'Used <strong>async functions</strong> to control how the game responds to user interactions',
         'Composed the functionality of the CPU and player objects with small factory functions',
       ],
       techUsed: ['JavaScript', 'SVG', 'KUTE.js', 'HTML', 'Sass', 'Webpack', 'PostCSS'],
@@ -145,7 +145,7 @@ export default function ProjectsView(rootEl) {
         'Receive introduction prompts on how to get started with the application',
       ],
       techHighlights: [
-        'Used promises to handle the asynchronous interaction that the user has with the introduction prompts',
+        'Used promises to handle the asynchronous interaction between the user and the introduction prompts',
         'Used canvas JS library <strong>Paper.js</strong> to create the colorful animations',
         'Used audio JS library <strong>Howler.js</strong> to load, cache, and play the drum sounds',
       ],
