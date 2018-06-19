@@ -145,7 +145,7 @@ export default function ProjectsView(rootEl) {
         'Receive introduction prompts on how to get started with the application',
       ],
       techHighlights: [
-        'Used promises to handle the asynchronous interaction that the user has with the introduction prompts',
+        'Used promises to handle the asynchronous interaction between the user and the introduction prompts',
         'Used canvas JS library <strong>Paper.js</strong> to create the colorful animations',
         'Used audio JS library <strong>Howler.js</strong> to load, cache, and play the drum sounds',
       ],
