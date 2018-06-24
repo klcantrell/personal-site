@@ -77,7 +77,7 @@ export default function ProjectsView(rootEl) {
         src: p2Pic.src,
       },
       github: 'https://github.com/klcantrell/finalfantasy-miniwiki-reactified',
-      website: 'https://ff-miniwiki-staging.surge.sh/',
+      website: 'https://ff-miniwiki.surge.sh/',
     },
     p3: {
       title: 'Drawn Tic-Tac-Toe',
