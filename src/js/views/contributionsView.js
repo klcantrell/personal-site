@@ -90,6 +90,16 @@ export default function ContributionsView(rootEl) {
       role: 'Hackathon participant',
       techUsed: ['JavaScript', 'HTML', 'CSS'],
     },
+    c8: {
+      title: 'freeCodeCamp Indy website',
+      icon: 'GitHub',
+      message: 'See the code',
+      link: 'https://github.com/Free-Code-Camp-Indy/free-code-camp-indy.github.io',
+      description:
+        'The <a class="contributions__inline-link" href="https://free-code-camp-indy.github.io/" rel="noopener" target="_blank">website</a> for Indy\'s freeCodeCamp meetup is also a local open source project. I have worked with the maintaners of this project to merge pull requests that have resolved open issues in the project\'s codebase.  Check out <a class="contributions__inline-link" href="https://github.com/Free-Code-Camp-Indy/free-code-camp-indy.github.io/pull/65" rel="noopener" target="_blank">one of my contributions</a> to the project.',
+      role: 'Contributor',
+      techUsed: ['JavaScript', 'HTML', 'Sass', 'Git'],
+    },
   };
 
   function contributionsOverlayTemplate(contribution) {
