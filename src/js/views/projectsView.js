@@ -116,24 +116,25 @@ export default function ProjectsView(rootEl) {
       website: 'https://k-calc.surge.sh/',
     },
     p5: {
-      title: 'WeatherGist',
+      title: 'Star Wars Guess Who Game',
       description:
-        "This weather app gets straight to the point and shows the user their local temperature, a brief description of the weather conditions in their area, and an icon and color animation that portrays that description.  Upon loading, the app immediately requests the user's location and then interfaces with the <strong>Dark Sky API</strong> to retrieve and display the weather information based on that location.",
+        "This is a <strong>React</strong> app that challenges the user to guess the name of random Star Wars characters.  For a snappy initial load, the app gets <strong>server-side</strong> rendered with the first random character.  The app keeps track of the user's streak of correct guesses, and should the user desire they can sign up for an account to keep track of their current streak.",
       userCan: [
-        'See the weather in their current location',
-        'See a different icon (e.g. rainy clouds, sunny sky) depending on the weather',
-        'Push a button to toggle between Fahrenheit and Celsius',
+        'Play the game and try to select the name of the character displayed in the random image',
+        'Sign up for an account to save their streak score',
       ],
       techHighlights: [
-        'Setup an <strong>AWS lambda function</strong> with <strong>Node.js</strong> to act as a proxy server with the <strong>Dark Sky API</strong>',
-        'Used SVG <code>defs</code> and <code>symbol</code> elements to load and switch between different weather icons',
+        'Used <strong>AWS Lambda</strong> running <strong>Node</strong> to server-side render the initial load of the app',
+        'Used <strong>AWS Lambda</strong> running <strong>Node</strong> to handle authentication with <strong>JWTs</strong>',
+        'Used <strong>React</strong> for rendering the UI and managing app state',
+        'Used <strong>AWS RDS</strong> running <strong>PostgreSQL</strong> to persist the user\'s streak if they choose to sign up',
       ],
-      techUsed: ['AWS', 'Node.js', 'SVG', 'JavaScript', 'HTML', 'CSS', 'Webpack', 'PostCSS'],
+      techUsed: ['AWS', 'Node.js', 'React', 'SVG', 'JWT', 'CSS', 'Webpack'],
       backupImage: {
         src: p5Pic.src,
       },
-      github: 'https://github.com/klcantrell/weathergist',
-      website: 'https://weathergist.surge.sh/',
+      github: 'https://github.com/klcantrell/ssr-react-swapi',
+      website: 'https://swguesswho.kalalau-cantrell.me/',
     },
     p6: {
       title: 'K-Tatap',

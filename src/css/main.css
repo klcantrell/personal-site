@@ -408,11 +408,22 @@ code {
   -ms-grid-row-align: center;
   align-self: center;
   text-align: center;
-  margin: 0;
-  font-size: 3rem;
-  font-weight: 100;
+}
+
+.splash__title > h3 {
   text-shadow: 0 -1px 3px var(--light-background-transparent),
     0 2px 2px var(--transparent-shadow);
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.splash__title > p {
+  text-shadow: 0 -1px 3px var(--light-background-transparent),
+    0 2px 2px var(--transparent-shadow);
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 100;
 }
 
 .splash__arrow {
@@ -1166,8 +1177,12 @@ code {
     width: 160px;
   }
 
-  .splash__title {
+  .splash__title > h3 {
     font-size: 1.69rem;
+  }
+
+  .splash__title > p {
+    font-size: 1.25rem;
   }
 
   .splash__arrow {
