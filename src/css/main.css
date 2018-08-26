@@ -269,6 +269,11 @@ code {
   overflow-y: auto;
 }
 
+.overlay-content__inline-link {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .icons--base {
   display: flex;
   flex-flow: row wrap;
@@ -769,11 +774,6 @@ code {
 .contributions__overlay-tech-icons > i {
   width: auto;
   margin: 5px;
-}
-
-.contributions__inline-link {
-  font-weight: bold;
-  text-decoration: underline;
 }
 
 .ms-padding-bottom {

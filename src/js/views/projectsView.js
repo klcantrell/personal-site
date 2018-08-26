@@ -60,7 +60,7 @@ export default function ProjectsView(rootEl) {
     p2: {
       title: 'Final Fantasy MiniWiki',
       description:
-        "This is a <strong>React / Redux</strong> app that lets Final Fantasy fans view quick facts about their favorite characters from the series.  It is a remake of a vanilla-spa that I made without any frameworks (see <a href='https://github.com/klcantrell/finalfantasy-miniwiki-vanillaspa' rel='noopener' target='_blank'>this repo</a>). Just by clicking on each picture, the user can select the character they're interested in and the app will load that characters info.  Users can also switch games and get a whole set of new characters to choose from. Although navigating the app doesn't trigger a page refresh, it provides the user URLs for each game and each character so that they can quickly revisit the view containing a specific character's info.",
+        "This is a <strong>React / Redux</strong> app that lets Final Fantasy fans view quick facts about their favorite characters from the series.  It is a remake of a vanilla-spa that I made without any frameworks (see <a class='overlay-content__inline-link' href='https://github.com/klcantrell/finalfantasy-miniwiki-vanillaspa' rel='noopener' target='_blank'>this repo</a>). Although navigating the app doesn't trigger a page refresh, it provides the user URLs for each game and each character so that they can quickly revisit the view containing a specific character's info.",
       userCan: [
         'View new character information at the click of a picture',
         "Save a URL to revisit the site with a specific character's info loaded",
@@ -118,7 +118,7 @@ export default function ProjectsView(rootEl) {
     p5: {
       title: 'Star Wars Guess Who Game',
       description:
-        "This is a <strong>React</strong> app that challenges the user to guess the name of random Star Wars characters.  For a snappy initial load, the app gets <strong>server-side</strong> rendered with the first random character.  The app keeps track of the user's streak of correct guesses, and should the user desire they can sign up for an account to keep track of their current streak.",
+        "This is a <strong>React</strong> app that challenges the user to guess the name of random Star Wars characters.  For a snappy initial load, the app gets <strong>server-side rendered</strong> with the first random character.  The app keeps track of the user's streak of correct guesses, and should the user desire they can sign up for an account to keep track of their current streak.",
       userCan: [
         'Play the game and try to select the name of the character displayed in the random image',
         'Sign up for an account to save their streak score',
@@ -200,7 +200,7 @@ export default function ProjectsView(rootEl) {
     p9: {
       title: 'HydraBase',
       description:
-        'This prototype was designed with stories from actual fire fighters in mind.  The app is meant to help fire departments keep track of and share information about fire hydrants especially when requesting mutual aid. The app aims to solve the problem of fire hydrant information being "tribal knowledge" that is hard to keep track of, communicate, and get access to quickly. HydraBase is built on top of the <strong>Google Maps API</strong> and uses web technologies to create a cross-platform web app. The app is intended to be used over the <strong>FirstNet</strong> network that is dedicated to the data needs of first responders.  It was developed at the 2018 AT&T IoT Civic Hack in Indy.',
+        'This prototype was designed with stories from actual fire fighters in mind.  The app is meant to help fire departments keep track of and share information about fire hydrants especially when requesting mutual aid. The app aims to solve the problem of fire hydrant information being "tribal knowledge" that is hard to keep track of, communicate, and get access to quickly.',
       userCan: [
         'See the fire hydrants at a given geolocation',
         'Click on a fire hydrant icon to see important information about the hydrant at that location such as its hose size and thread type',

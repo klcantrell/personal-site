@@ -76,7 +76,7 @@ export default function ContributionsView(rootEl) {
       link:
         'http://www.lavieencode.net/podcast/026-self-taught-student-talks-with-kalalau-cantrell',
       description:
-        'The host of La Vie En Code, Nicole Archambault, read my <a class="contributions__inline-link" href="https://medium.freecodecamp.org/how-and-why-a-sound-engineer-started-learning-to-code-2a3ae7fac5cc" rel="noopener" target="_blank">blog story</a> and then contacted me to be a guest on her show.  In this podcast episode, we dive into my origin story as a developer in hopes that it will help others in their own journey of learning to code.',
+        'The host of La Vie En Code, Nicole Archambault, read my <a class="overlay-content__inline-link" href="https://medium.freecodecamp.org/how-and-why-a-sound-engineer-started-learning-to-code-2a3ae7fac5cc" rel="noopener" target="_blank">blog story</a> and then contacted me to be a guest on her show.  In this podcast episode, we dive into my origin story as a developer in hopes that it will help others in their own journey of learning to code.',
       role: 'Guest on podcast',
       techUsed: ['JavaScript', 'HTML', 'CSS'],
     },
@@ -96,9 +96,19 @@ export default function ContributionsView(rootEl) {
       message: 'See the code',
       link: 'https://github.com/Free-Code-Camp-Indy/free-code-camp-indy.github.io',
       description:
-        'The <a class="contributions__inline-link" href="https://free-code-camp-indy.github.io/" rel="noopener" target="_blank">website</a> for Indy\'s freeCodeCamp meetup is also a local open source project. I have worked with the maintaners of this project to merge pull requests that have resolved open issues in the project\'s codebase.  Check out <a class="contributions__inline-link" href="https://github.com/Free-Code-Camp-Indy/free-code-camp-indy.github.io/pull/65" rel="noopener" target="_blank">one of my contributions</a> to the project.',
+        'The <a class="overlay-content__inline-link" href="https://free-code-camp-indy.github.io/" rel="noopener" target="_blank">website</a> for Indy\'s freeCodeCamp meetup is also a local open source project. I have worked with the maintaners of this project to merge pull requests that have resolved open issues in the project\'s codebase.  Check out <a class="overlay-content__inline-link" href="https://github.com/Free-Code-Camp-Indy/free-code-camp-indy.github.io/pull/65" rel="noopener" target="_blank">one of my contributions</a> to the project.',
       role: 'Contributor',
       techUsed: ['JavaScript', 'HTML', 'Sass', 'Git'],
+    },
+    c9: {
+      title: 'Learn Webpack by Example: Simple code-splitting in a vanilla JS app',
+      icon: 'Medium',
+      message: 'Read the blog',
+      link: 'https://medium.freecodecamp.org/learn-webpack-by-example-simple-code-splitting-in-a-vanilla-js-app-b366798336a4',
+      description:
+        'Article description',
+      role: 'Blog author',
+      techUsed: ['JavaScript', 'HTML', 'CSS', 'Webpack', 'Git', 'SVG'],
     },
   };
 
