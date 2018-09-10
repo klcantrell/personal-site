@@ -106,7 +106,7 @@ export default function ContributionsView(rootEl) {
       message: 'Read the blog',
       link: 'https://medium.freecodecamp.org/learn-webpack-by-example-simple-code-splitting-in-a-vanilla-js-app-b366798336a4',
       description:
-        'Article description',
+        'I wrote this help others learn how to do a web optimization technique with Webpack',
       role: 'Blog author',
       techUsed: ['JavaScript', 'HTML', 'CSS', 'Webpack', 'Git', 'SVG'],
     },
