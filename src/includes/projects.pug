@@ -22,6 +22,14 @@ section(routeTarget="projects" class="projects section--base el--hidden")
         li Blog
   h2(class="section__header") Projects
   .projects__gallery
+    article(class="projects__item box-shadow--std" projectId="p6")
+      .projects__item-header
+        h3 PiChat
+        figure(style=`background-image: url(${p6Pic.src})`)
+          div(class="loaded-image-hook el--hidden")
+      .projects__item-footer
+        p Chat with a Raspberry Pi.  Subscribe to real-time updates of its temperature readings.  Built with <strong>GraphQL</strong> and <strong>React</strong>.
+        button(class="details-btn") Details
     article(class="projects__item box-shadow--std" projectId="p5")
       .projects__item-header
         h3 Star Wars Guess Who Game
@@ -77,14 +85,6 @@ section(routeTarget="projects" class="projects section--base el--hidden")
           div(class="loaded-image-hook el--hidden")
       .projects__item-footer
         p A 3D calculator from the future for all your computation needs. Built with <strong>CSS 3D transforms and animation</strong>.
-        button(class="details-btn") Details
-    article(class="projects__item box-shadow--std" projectId="p6")
-      .projects__item-header
-        h3 K-Tatap
-        figure(style=`background-image: url(${p6Pic.src})`)
-          div(class="loaded-image-hook el--hidden")
-      .projects__item-footer
-        p Turn your keyboard into an electronic drum kit that also triggers some tasty visuals. Developed with JS libraries <strong>Paper.js</strong> and <strong>Howler.js</strong>.
         button(class="details-btn") Details
     article(class="projects__item box-shadow--std" projectId="p7")
       .projects__item-header

@@ -137,25 +137,25 @@ export default function ProjectsView(rootEl) {
       website: 'https://swguesswho.kalalau-cantrell.me/',
     },
     p6: {
-      title: 'K-Tatap',
+      title: 'PiChat',
       description:
-        'This is an application that turns your keyboard into an electronic drum kit controller.  Key strokes trigger a variety of drum sounds that can be combined to make a beat.  The ear-tickling sounds are accompanied by colorful visuals making the overall experience a pleasure for the senses. The user is guided through some "getting started" prompts when the page first loads.',
+        'The chat style interface of this app accepts commands from the user.  The user can send a command to subscribe to real-time updates of temperature readings from the Raspberry Pi.  If the user wants to unsubscribe or just wants the latest temperature reading, there are commands for that, too.',
       userCan: [
-        'Press keys to trigger a sound and a colorful visual',
-        'Press multiple keys together rhythmically to create a drum beat',
-        'Receive introduction prompts on how to get started with the application',
+        'Interact with a Raspberry Pi through a chat UI',
+        'Subscribe to real-time data',
+        'Be notified if they issue a command that the Pi doesn\'t understand',
       ],
       techHighlights: [
-        'Used promises to handle the asynchronous interaction between the user and the introduction prompts',
-        'Used canvas JS library <strong>Paper.js</strong> to create the colorful animations',
-        'Used audio JS library <strong>Howler.js</strong> to load, cache, and play the drum sounds',
+        'UseUsed <strong>AWS AppSync</strong> to run a <strong>GraphQL</strong> back-end service',
+        'Used <strong>React</strong> for rendering the UI and managing app state',
+        'Used <strong>Raspberry Pi</strong> running <strong>Node</strong> and <strong>Apollo Client</strong> for sending data',
       ],
-      techUsed: ['HTML', 'Paper.js', 'CSS', 'Howler.js', 'JavaScript'],
+      techUsed: ['GraphQL', 'React', 'Sass', 'AWS', 'Node.js'],
       backupImage: {
         src: p6Pic.src,
       },
-      github: 'https://github.com/klcantrell/k-tatap',
-      website: 'https://k-tatap.surge.sh/',
+      github: 'https://github.com/klcantrell/pi-chat',
+      website: 'https://pichat.surge.sh/',
     },
     p7: {
       title: 'Wikipedia Gateway',
