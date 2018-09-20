@@ -146,7 +146,7 @@ export default function ProjectsView(rootEl) {
         'Be notified if they issue a command that the Pi doesn\'t understand',
       ],
       techHighlights: [
-        'UseUsed <strong>AWS AppSync</strong> to run a <strong>GraphQL</strong> back-end service',
+        'Used <strong>AWS AppSync</strong> to run a <strong>GraphQL</strong> back-end service',
         'Used <strong>React</strong> for rendering the UI and managing app state',
         'Used <strong>Raspberry Pi</strong> running <strong>Node</strong> and <strong>Apollo Client</strong> for sending data',
       ],
