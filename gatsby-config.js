@@ -1,7 +1,5 @@
-const postCssPresetEnv = require(`postcss-preset-env`);
-const postCSSImports = require("postcss-import");
-const cssnano = require("cssnano");
-const autoprefixer = require("autoprefixer");
+const postCssPresetEnv = require('postcss-preset-env');
+const postCSSImports = require('postcss-import');
 
 module.exports = {
   siteMetadata: {
@@ -21,25 +19,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [
-          autoprefixer(),
-          postCSSImports(),
-          postCssPresetEnv({
-            "postcss-preset-env": {
-              features: {
-                "nesting-rules": true,
-              },
-            },
-          }),
-          cssnano({
-            preset: "default",
-          }),
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -51,7 +30,21 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-
+    `gatsby-plugin-typescript`,
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postCssPlugins: [
+          postCssPresetEnv({
+            stage: 3,
+            features: {
+              'nesting-rules': true,
+            },
+          }),
+          postCSSImports(),
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
