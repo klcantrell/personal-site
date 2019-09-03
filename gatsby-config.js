@@ -3,9 +3,33 @@ const postCSSImports = require('postcss-import');
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Hello Friend`,
+    description: `A simple starter for Gatsby. That's it.`,
+    copyrights: '',
+    author: `@panr`,
+    logo: {
+      src: '',
+      alt: '',
+    },
+    logoText: 'hello friend',
+    defaultTheme: 'dark',
+    postsPerPage: 5,
+    showMenuItems: 2,
+    menuMoreText: 'Show more',
+    mainMenu: [
+      {
+        title: 'About',
+        path: '/about',
+      },
+      {
+        title: 'Showcase',
+        path: '/showcase',
+      },
+      {
+        title: 'Example',
+        path: '/example',
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -35,14 +59,17 @@ module.exports = {
       resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [
+          postCSSImports(),
           postCssPresetEnv({
+            importFrom: 'src/styles/variables.css',
+            preserve: false,
             stage: 3,
             features: {
               'nesting-rules': true,
             },
           }),
-          postCSSImports(),
         ],
+        cssLoaderOptions: {},
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
