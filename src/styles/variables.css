@@ -16,6 +16,8 @@
   /* variables for js, must be the same as these in @custom-media queries */
   --phoneWidth: (max-width: 684px);
   --tabletWidth: (max-width: 900px);
+
+  --accent-color: #51a2fe;
 }
 
 @custom-media --phone (width < 684px);

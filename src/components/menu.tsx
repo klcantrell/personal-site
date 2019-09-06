@@ -46,8 +46,7 @@ const SubMenu = ({
   mainMenuItems,
   onToggleSubMenu,
 }: SubMenuProps) => {
-  const menu = mainMenu.slice(0);
-  menu.splice(mainMenuItems);
+  const menu = mainMenu.slice(mainMenuItems);
 
   const items = menu.map((menuItem: MenuItem, index) => (
     <li key={index}>
