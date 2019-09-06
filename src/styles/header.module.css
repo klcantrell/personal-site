@@ -1,3 +1,5 @@
+@import './variables.css';
+
 .header {
   background: #fafafa;
   display: flex;
@@ -6,13 +8,13 @@
   position: relative;
   padding: 20px;
 
-  :global .dark-theme :local & {
-    background: #252627;
-  }
-
-  a {
+  & a {
     text-decoration: none;
   }
+}
+
+:global .dark-theme :local(.header) {
+  background: #252627;
 }
 
 .inner {
@@ -43,7 +45,7 @@
   display: inline-block;
   width: 10px;
   height: 1rem;
-  background: #fe5186;
+  background: var(--accent-color);
   margin-left: 5px;
   border-radius: 1px;
   animation: cursor 1s infinite;
@@ -60,7 +62,13 @@
 }
 
 @keyframes cursor {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

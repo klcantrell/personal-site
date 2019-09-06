@@ -1,9 +1,10 @@
 const postCssPresetEnv = require('postcss-preset-env');
 const postCSSImports = require('postcss-import');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   siteMetadata: {
-    title: `Hello Friend`,
+    title: `Kalalau Cantrell`,
     description: `A simple starter for Gatsby. That's it.`,
     copyrights: '',
     author: `@panr`,
@@ -11,10 +12,10 @@ module.exports = {
       src: '',
       alt: '',
     },
-    logoText: 'hello friend',
-    defaultTheme: 'dark',
+    logoText: 'kalalau cantrell',
+    defaultTheme: 'light',
     postsPerPage: 5,
-    showMenuItems: 2,
+    showMenuItems: 3,
     menuMoreText: 'Show more',
     mainMenu: [
       {
@@ -59,14 +60,11 @@ module.exports = {
       resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [
+          autoprefixer(),
           postCSSImports(),
           postCssPresetEnv({
-            importFrom: 'src/styles/variables.css',
             preserve: false,
-            stage: 3,
-            features: {
-              'nesting-rules': true,
-            },
+            stage: 1,
           }),
         ],
         cssLoaderOptions: {},

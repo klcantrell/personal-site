@@ -151,10 +151,10 @@ code {
   margin: 0 2px;
   border-radius: 5px;
   font-size: 0.9rem;
+}
 
-  .dark-theme & {
-    background: var(--dark-background-secondary);
-  }
+.dark-theme code {
+  background: var(--dark-background-secondary);
 }
 
 pre {
@@ -169,7 +169,7 @@ pre {
     word-wrap: break-word;
   }
 
-  code {
+  & code {
     background: none !important;
     color: #ccc;
     margin: 0;
@@ -188,11 +188,11 @@ blockquote {
     padding: 10px;
   }
 
-  p:first-of-type {
+  & p:first-of-type {
     margin-top: 0;
   }
 
-  p:last-of-type {
+  & p:last-of-type {
     margin-bottom: 0;
   }
 }
@@ -210,18 +210,18 @@ th,
 td {
   border: 1px solid var(--light-color);
   padding: 10px;
+}
 
-  .dark-theme & {
-    border-color: var(--dark-color);
-  }
+.dark-theme td {
+  border-color: var(--dark-color);
 }
 
 th {
   background: var(--light-background-secondary);
+}
 
-  .dark-theme & {
-    background: var(--dark-background-secondary);
-  }
+.dark-theme th {
+  background: var(--dark-background-secondary);
 }
 
 ul,
@@ -276,10 +276,10 @@ hr {
   border: none;
   background: var(--light-border-color);
   height: 1px;
+}
 
-  .dark-theme & {
-    background: var(--dark-border-color);
-  }
+.dark-theme hr {
+  background: var(--dark-border-color);
 }
 
 .infoBanner {
@@ -290,13 +290,13 @@ hr {
   width: calc(100% - 40px);
   background: var(--light-background-secondary);
 
-  .dark-theme & {
-    background: var(--dark-background-secondary);
-  }
-
-  span {
+  & span {
     font-weight: bold;
   }
+}
+
+.dark-theme .infoBanner {
+  background: var(--dark-background-secondary);
 }
 
 .hidden {
@@ -309,7 +309,7 @@ hr {
   height: 0;
   overflow: hidden;
 
-  iframe {
+  & iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -329,13 +329,13 @@ footer {
     flex-direction: column;
   }
 
-  .footerCopyrights {
+  & .footerCopyrights {
     &:not(:first-of-type) {
       margin-left: 20px;
       padding-left: 20px;
       border-left: 1px solid;
 
-      @media (--phone) {
+      & @media (--phone) {
         margin: 0;
         padding: 0;
         border: none;
