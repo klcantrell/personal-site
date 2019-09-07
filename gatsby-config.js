@@ -23,12 +23,12 @@ module.exports = {
         path: '/about',
       },
       {
-        title: 'Showcase',
-        path: '/showcase',
+        title: 'Projects',
+        path: '/projects',
       },
       {
-        title: 'Example',
-        path: '/example',
+        title: 'Blog',
+        path: '/blog',
       },
     ],
   },

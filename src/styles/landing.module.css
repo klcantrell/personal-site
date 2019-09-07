@@ -1,0 +1,25 @@
+@import './variables.css';
+
+.container {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerAccent {
+  color: var(--accent-color);
+  margin-left: 12px;
+}
+
+.titles {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  font-size: 1.3rem;
+  margin: 0 12px;
+}
