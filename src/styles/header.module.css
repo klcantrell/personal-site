@@ -59,6 +59,7 @@
 .right {
   display: flex;
   position: relative;
+  align-items: center;
 }
 
 @keyframes cursor {

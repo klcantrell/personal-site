@@ -7,18 +7,19 @@ interface Props {
   size?: IconSize;
   label?: string;
   style: React.CSSProperties;
+  viewBox: string;
 }
 
 type IconSize = number | string;
 
-const Icon = ({ d, size = '1em', label, style: styles }: Props) => {
+const Icon = ({ d, size = '1em', label, style: styles, viewBox }: Props) => {
   return (
     <span className={style.root} style={styles} role="figure">
       <svg
         version="1.1"
         width={size}
         height={size}
-        viewBox="0 0 48 48"
+        viewBox={viewBox}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d={d} className={style.icon} />
