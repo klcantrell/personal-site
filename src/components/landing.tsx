@@ -13,7 +13,7 @@ const Landing = () => {
         <span className={style.divider}>|</span>
         Learner
         <span className={style.divider}>|</span>
-        Final Fantasy fan
+        Final Fantasy nerd
       </p>
     </article>
   );
