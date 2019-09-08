@@ -56,8 +56,8 @@
 
 .mobileMenu {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 80%;
+  right: 60%;
   flex-direction: column;
   align-items: flex-start;
   background: #fafafa;
