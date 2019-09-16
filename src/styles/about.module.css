@@ -3,6 +3,24 @@
   width: 100%;
 }
 
+.content {
+  text-align: left;
+  width: 85%;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-top: 40px;
+}
+
+.blockQuote {
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  & p {
+    margin-left: 3vw;
+  }
+}
+
 .profilePicContainer {
   border-radius: 50%;
   width: 25%;

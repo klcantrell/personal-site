@@ -2,11 +2,15 @@
 
 .container {
   position: absolute;
-  top: 45%;
-  transform: translateY(-50%);
+  top: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (--short) {
+    position: relative;
+    top: 0vh;
+  }
 }
 
 .headerAccent {
@@ -17,9 +21,8 @@
 .titles {
   display: flex;
   align-items: center;
-}
 
-.divider {
-  font-size: 1.3rem;
-  margin: 0 12px;
+  & p {
+    margin: 0 10px;
+  }
 }

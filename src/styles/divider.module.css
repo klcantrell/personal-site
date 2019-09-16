@@ -1,0 +1,22 @@
+@import './variables.css';
+
+.divider {
+  height: 100%;
+  width: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & svg {
+    & line {
+      stroke: var(--light-color);
+      stroke-width: 4px;
+      stroke-linecap: round;
+    }
+  }
+}
+
+:global .dark-theme :local(.divider) {
+  & svg line {
+    stroke: var(--dark-color);
+  }
+}

@@ -5,9 +5,9 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
   siteMetadata: {
     title: `Kalalau Cantrell`,
-    description: `A simple starter for Gatsby. That's it.`,
+    description: `My personal site`,
     copyrights: '',
-    author: `@panr`,
+    author: `@kalalaucantrell`,
     logo: {
       src: '',
       alt: '',
@@ -46,13 +46,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `kalalau's personal site`,
+        short_name: `kalalau`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/k-ico.png`, // This path is relative to the root of the site.
+        icon: `src/images/k-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-typescript`,
