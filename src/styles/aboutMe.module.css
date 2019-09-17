@@ -6,7 +6,7 @@
 .content {
   text-align: left;
   width: 85%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 2rem;
   margin-top: 40px;
 }
@@ -18,19 +18,5 @@
 
   & p {
     margin-left: 3vw;
-  }
-}
-
-.profilePicContainer {
-  border-radius: 50%;
-  width: 25%;
-  top: 50%;
-  transform: translateY(-50%);
-
-  @media (--phone) {
-    position: relative !important;
-    top: initial;
-    transform: none;
-    margin: auto;
   }
 }

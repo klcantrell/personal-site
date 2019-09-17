@@ -1,0 +1,13 @@
+.container {
+  border-radius: 50%;
+  width: 25%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (--phone) {
+    position: relative !important;
+    top: initial;
+    transform: none;
+    margin: auto;
+  }
+}

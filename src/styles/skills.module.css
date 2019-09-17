@@ -1,0 +1,17 @@
+@import './variables.css';
+
+.skill {
+  & path {
+    fill: var(--light-color);
+  }
+
+  & p {
+    margin-top: 0;
+  }
+}
+
+:global .dark-theme :local(.skill) {
+  & path {
+    fill: var(--dark-color);
+  }
+}
