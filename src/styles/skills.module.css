@@ -1,7 +1,21 @@
 @import './variables.css';
 
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .skill {
+  width: 20%;
+
   & path {
+    fill: var(--light-color);
+  }
+
+  & rect {
     fill: var(--light-color);
   }
 
@@ -13,5 +27,53 @@
 :global .dark-theme :local(.skill) {
   & path {
     fill: var(--dark-color);
+  }
+
+  & rect {
+    fill: var(--dark-color);
+  }
+}
+
+.reasonLogoContainer {
+  width: 20%;
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & p {
+    margin-top: auto;
+  }
+}
+
+.reasonLogo {
+  position: relative;
+
+  &::before {
+    border: 2px solid var(--light-color);
+    display: block;
+    border-radius: 2px;
+    width: 34px;
+    height: 34px;
+    content: '';
+  }
+
+  &::after {
+    font-weight: 700;
+    font-size: 16px;
+    content: 'RE';
+    color: var(--light-color);
+    position: absolute;
+    bottom: 0;
+    right: 3px;
+  }
+}
+
+:global .dark-theme :local(.reasonLogo) {
+  &::before {
+    border: 2px solid var(--dark-color);
+  }
+  &::after {
+    color: var(--dark-color);
   }
 }
