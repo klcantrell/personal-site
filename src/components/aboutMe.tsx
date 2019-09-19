@@ -21,7 +21,7 @@ const AboutMe = () => (
       </div>
       <p>
         I have experience writing web applications with technologies such as
-        JavaScript, Node, React, and Java. Currently following the
+        JavaScript, Node, React, and Java. I&apos;m currently following the
         ReasonML/OCaml language and progressive web app technologies.
       </p>
     </article>

@@ -16,6 +16,18 @@ interface MainMenuProps {
   isMobileMenu?: boolean;
 }
 
+const BlogLink = () => (
+  <li>
+    <a
+      href="https://blog.kalalau-cantrell.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Blog
+    </a>
+  </li>
+);
+
 const MainMenu = ({
   mainMenu,
   mainMenuItems = 0,
@@ -31,6 +43,7 @@ const MainMenu = ({
           <Link to={menuItem.path}>{menuItem.title}</Link>
         </li>
       ))}
+      <BlogLink />
     </>
   );
 };
@@ -49,9 +62,12 @@ const SubMenu = ({
   const menu = mainMenu.slice(mainMenuItems);
 
   const items = menu.map((menuItem: MenuItem, index) => (
-    <li key={index}>
-      <Link to={menuItem.path}>{menuItem.title}</Link>
-    </li>
+    <>
+      <li key={index}>
+        <Link to={menuItem.path}>{menuItem.title}</Link>
+      </li>
+      <BlogLink />
+    </>
   ));
 
   return (
