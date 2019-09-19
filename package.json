@@ -14,6 +14,7 @@
     "gatsby-plugin-sharp": "^2.2.13",
     "gatsby-plugin-typescript": "^2.1.6",
     "gatsby-source-filesystem": "^2.1.11",
+    "gatsby-transformer-json": "^2.2.8",
     "gatsby-transformer-sharp": "^2.2.7",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
@@ -27,6 +28,7 @@
     "@types/react-helmet": "^5.0.9",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
+    "apollo": "^2.18.3",
     "autoprefixer": "^9.6.1",
     "eslint": "^6.3.0",
     "eslint-config-prettier": "^6.1.0",
@@ -52,7 +54,9 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "type-check": "tsc",
     "lint": "eslint --ignore-path .eslintignore . --ext ts --ext tsx --ext js --ext jsx",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "downloadSchema": "apollo client:download-schema --endpoint=http://localhost:8000/__graphql",
+    "genTypes": "apollo client:codegen --target=typescript --localSchemaFile=schema.json  --includes=operations.gql ./src/gatsby-queries.d.ts"
   },
   "repository": {
     "type": "git",

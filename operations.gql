@@ -1,0 +1,10 @@
+query ProjectsQuery {
+  allProjectsJson {
+    edges {
+      node {
+        title
+        image
+      }
+    }
+  }
+}
