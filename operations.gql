@@ -3,6 +3,7 @@ query ProjectsQuery {
     edges {
       node {
         title
+        excerpt
         image
       }
     }

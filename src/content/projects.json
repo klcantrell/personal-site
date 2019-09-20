@@ -1,6 +1,22 @@
 [
   {
     "title": "PiChat",
-    "image": "pichat"
+    "description": "The chat style interface of this app accepts commands from the user.  The user can send a command to subscribe to real-time updates of temperature readings from the Raspberry Pi.  If the user wants to unsubscribe or just wants the latest temperature reading, there are commands for that, too.",
+    "excerpt": "Chat with a Raspberry Pi.  Subscribe to real-time updates of its temperature readings.  Built with <strong>GraphQL</strong> and <strong>React</strong>",
+    "userCan": [
+      "Interact with a Raspberry Pi through a chat UI",
+      "Subscribe to real-time data",
+      "Be notified if they issue a command that the Pi doesn't understand"
+    ],
+    "techHighlights": [
+      "Used <strong>AWS AppSync</strong> to run a <strong>GraphQL</strong> back-end service",
+      "Used <strong>React</strong> for rendering the UI and managing app state",
+      "Used <strong>Raspberry Pi</strong> running <strong>Node</strong> and <strong>Apollo Client</strong> for sending data"
+    ],
+    "techUsed": ["GraphQL", "React", "Sass", "AWS", "Node.js"],
+    "image": "pichat.jpg",
+    "gif": "pichat.gif",
+    "github": "https://github.com/klcantrell/pi-chat",
+    "website": "https://pichat.surge.sh/"
   }
 ]
