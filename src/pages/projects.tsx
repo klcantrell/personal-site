@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { ProjectsQuery } from '../gatsby-queries.d.ts/ProjectsQuery';
+import { ProjectsQuery_allProjectsJson_edges as ProjectQueryEdge } from '../gatsby-queries.d.ts/ProjectsQuery';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Project from '../components/project';
@@ -15,11 +16,11 @@ const Projects = ({ data }: Props) => (
   <Layout>
     <Seo title="Projects" />
     <header>
-      <h1 className={style.header}>
-        Projects {data.allProjectsJson.edges[0].node.title}
-      </h1>
+      <h1 className={style.header}>Projects</h1>
     </header>
-    <Project />
+    {data.allProjectsJson.edges.map(({ node }: ProjectQueryEdge, index) => (
+      <Project key={node.title || index} info={node} />
+    ))}
   </Layout>
 );
 
@@ -29,6 +30,7 @@ export const query = graphql`
       edges {
         node {
           title
+          excerpt
           image
         }
       }
