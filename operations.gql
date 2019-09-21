@@ -4,7 +4,17 @@ query ProjectsQuery {
       node {
         title
         excerpt
-        image
+      }
+    }
+  }
+  piChatImage: file(relativePath: { eq: "pichat.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 300) {
+        tracedSVG
+        aspectRatio
+        src
+        srcSet
+        sizes
       }
     }
   }

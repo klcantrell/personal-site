@@ -10,7 +10,6 @@ export interface ProjectsQuery_allProjectsJson_edges_node {
   __typename: "ProjectsJson";
   title: string | null;
   excerpt: string | null;
-  image: string | null;
 }
 
 export interface ProjectsQuery_allProjectsJson_edges {
@@ -23,6 +22,26 @@ export interface ProjectsQuery_allProjectsJson {
   edges: ProjectsQuery_allProjectsJson_edges[];
 }
 
+export interface ProjectsQuery_piChatImage_childImageSharp_fluid {
+  __typename: "ImageSharpFluid";
+  tracedSVG: string | null;
+  aspectRatio: number | null;
+  src: string | null;
+  srcSet: string | null;
+  sizes: string | null;
+}
+
+export interface ProjectsQuery_piChatImage_childImageSharp {
+  __typename: "ImageSharp";
+  fluid: ProjectsQuery_piChatImage_childImageSharp_fluid | null;
+}
+
+export interface ProjectsQuery_piChatImage {
+  __typename: "File";
+  childImageSharp: ProjectsQuery_piChatImage_childImageSharp | null;
+}
+
 export interface ProjectsQuery {
   allProjectsJson: ProjectsQuery_allProjectsJson;
+  piChatImage: ProjectsQuery_piChatImage | null;
 }
