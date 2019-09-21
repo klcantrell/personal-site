@@ -14,8 +14,6 @@
       "Used <strong>Raspberry Pi</strong> running <strong>Node</strong> and <strong>Apollo Client</strong> for sending data"
     ],
     "techUsed": ["GraphQL", "React", "Sass", "AWS", "Node.js"],
-    "image": "pichat.jpg",
-    "gif": "pichat.gif",
     "github": "https://github.com/klcantrell/pi-chat",
     "website": "https://pichat.surge.sh/"
   }
