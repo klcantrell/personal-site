@@ -726,6 +726,16 @@
                 "defaultValue": null
               },
               {
+                "name": "context",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "SitePageContextFilterInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
                 "name": "pluginCreator",
                 "description": null,
                 "type": {
@@ -1641,6 +1651,16 @@
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "InternalFilterInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "slug",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "StringQueryOperatorInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -3194,6 +3214,16 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "InternalFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "slug",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null
@@ -6435,6 +6465,18 @@
             "deprecationReason": null
           },
           {
+            "name": "slug",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "title",
             "description": null,
             "args": [],
@@ -8475,6 +8517,12 @@
             "deprecationReason": null
           },
           {
+            "name": "childProjectsJson___slug",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "childProjectsJson___title",
             "description": null,
             "isDeprecated": false,
@@ -10255,6 +10303,27 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "SitePageContextFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "slug",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "SitePluginFilterInput",
         "description": null,
         "fields": null,
@@ -10876,6 +10945,18 @@
             "deprecationReason": null
           },
           {
+            "name": "context",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SitePageContext",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "pluginCreator",
             "description": null,
             "args": [],
@@ -10920,6 +11001,29 @@
             "ofType": null
           }
         ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SitePageContext",
+        "description": null,
+        "fields": [
+          {
+            "name": "slug",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
       },
@@ -11568,6 +11672,16 @@
             "defaultValue": null
           },
           {
+            "name": "context",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "SitePageContextFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "pluginCreator",
             "description": null,
             "type": {
@@ -12191,6 +12305,12 @@
           },
           {
             "name": "isCreatedByStatefulCreatePages",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "context___slug",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -18667,6 +18787,12 @@
           },
           {
             "name": "internal___type",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "slug",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

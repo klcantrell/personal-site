@@ -23,17 +23,28 @@ const DEFAULT_IMAGE_SETTINGS = {
   sizes: '',
 } as FluidObject;
 
-const Projects = ({ data }: Props) => (
-  <Layout>
-    <Seo title="Projects" />
-    <header>
-      <h1 className={style.header}>Projects</h1>
-    </header>
-    <div className={style.projectsContainer}>
-      {data.allProjectsJson.edges.map(({ node }: ProjectQueryEdge, index) => (
+const DEFAULT_PROJECT_EDGE = {
+  node: {
+    title: '',
+    excerpt: '',
+    slug: '',
+  },
+} as ProjectQueryEdge;
+
+const Projects = ({ data }: Props) => {
+  const piChatProjectEdge =
+    data.allProjectsJson.edges.find(edge => edge.node.slug === 'pichat') ||
+    DEFAULT_PROJECT_EDGE;
+
+  return (
+    <Layout>
+      <Seo title="Projects" />
+      <header>
+        <h1 className={style.header}>Projects</h1>
+      </header>
+      <div className={style.projectsContainer}>
         <Project
-          key={node.title || index}
-          info={node}
+          info={piChatProjectEdge.node}
           image={
             (data.piChatImage &&
               data.piChatImage.childImageSharp &&
@@ -42,10 +53,10 @@ const Projects = ({ data }: Props) => (
           }
           gif={piChatGif}
         />
-      ))}
-    </div>
-  </Layout>
-);
+      </div>
+    </Layout>
+  );
+};
 
 export const query = graphql`
   query ProjectsQuery {
@@ -53,6 +64,7 @@ export const query = graphql`
       edges {
         node {
           title
+          slug
           excerpt
         }
       }

@@ -1,5 +1,6 @@
 [
   {
+    "slug": "pichat",
     "title": "PiChat",
     "description": "The chat style interface of this app accepts commands from the user.  The user can send a command to subscribe to real-time updates of temperature readings from the Raspberry Pi.  If the user wants to unsubscribe or just wants the latest temperature reading, there are commands for that, too.",
     "excerpt": "Chat with a Raspberry Pi.  Subscribe to real-time updates of its temperature readings.  Built with <strong>GraphQL</strong> and <strong>React</strong>",
