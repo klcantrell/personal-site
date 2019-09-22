@@ -10,6 +10,7 @@ export interface ProjectsQuery_allProjectsJson_edges_node {
   __typename: "ProjectsJson";
   title: string | null;
   excerpt: string | null;
+  slug: string | null;
 }
 
 export interface ProjectsQuery_allProjectsJson_edges {
