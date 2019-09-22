@@ -3,6 +3,7 @@ import Img, { FluidObject } from 'gatsby-image';
 import { ProjectsQuery_allProjectsJson_edges_node as ProjectQuery } from '../gatsby-queries.d.ts/ProjectsQuery';
 
 import style from '../styles/project.module.css';
+import { url } from 'inspector';
 
 interface Props {
   info: ProjectQuery;
@@ -12,11 +13,19 @@ interface Props {
 
 const Project = ({ info, image, gif }: Props) => {
   return (
-    <div className={style.projectCard}>
-      <p>{`This is the ${info.title} project`}</p>
-      <Img fluid={image} className={style.projectImage} />
-      <img src={gif} />
-    </div>
+    <figure className={style.card}>
+      <h3>{info.title}</h3>
+      <div className={style.imageContainer}>
+        <div
+          className={style.gif}
+          style={{
+            backgroundImage: `url(${gif})`,
+          }}
+        />
+        <Img fluid={image} className={style.staticImage} />
+      </div>
+      <figcaption dangerouslySetInnerHTML={{ __html: info.excerpt || '' }} />
+    </figure>
   );
 };
 

@@ -1,2 +1,4 @@
-export const projectImage: string;
-export const projectCard: string;
+export const staticImage: string;
+export const card: string;
+export const imageContainer: string;
+export const gif: string;
