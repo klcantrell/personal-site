@@ -71,7 +71,7 @@ export const query = graphql`
     }
     piChatImage: file(relativePath: { eq: "pichat.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 1200) {
           tracedSVG
           aspectRatio
           src
