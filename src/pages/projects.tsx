@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
+import Slider from 'react-slick';
 
 import { ProjectsQuery } from '../gatsby-queries.d.ts/ProjectsQuery';
 import { ProjectsQuery_allProjectsJson_edges as ProjectQueryEdge } from '../gatsby-queries.d.ts/ProjectsQuery';
@@ -43,16 +44,18 @@ const Projects = ({ data }: Props) => {
         <h1 className={style.header}>Projects</h1>
       </header>
       <div className={style.projectsContainer}>
-        <Project
-          info={piChatProjectEdge.node}
-          image={
-            (data.piChatImage &&
-              data.piChatImage.childImageSharp &&
-              (data.piChatImage.childImageSharp.fluid as FluidObject)) ||
-            DEFAULT_IMAGE_SETTINGS
-          }
-          gif={piChatGif}
-        />
+        <Slider>
+          <Project
+            info={piChatProjectEdge.node}
+            image={
+              (data.piChatImage &&
+                data.piChatImage.childImageSharp &&
+                (data.piChatImage.childImageSharp.fluid as FluidObject)) ||
+              DEFAULT_IMAGE_SETTINGS
+            }
+            gif={piChatGif}
+          />
+        </Slider>
       </div>
     </Layout>
   );

@@ -3,7 +3,6 @@ import Img, { FluidObject } from 'gatsby-image';
 import { ProjectsQuery_allProjectsJson_edges_node as ProjectQuery } from '../gatsby-queries.d.ts/ProjectsQuery';
 
 import style from '../styles/project.module.css';
-import { url } from 'inspector';
 
 interface Props {
   info: ProjectQuery;
@@ -11,7 +10,20 @@ interface Props {
   gif: string;
 }
 
+type NullableHTMLImageElement = HTMLImageElement | null;
+
 const Project = ({ info, image, gif }: Props) => {
+  const [gifLoaded, setGifLoaded] = React.useState(false);
+
+  let gifLoader = new Image() as NullableHTMLImageElement;
+  if (gifLoader) {
+    gifLoader.onload = () => {
+      setGifLoaded(true);
+      gifLoader = null;
+    };
+    gifLoader.src = gif;
+  }
+
   return (
     <figure className={style.card}>
       <h3>{info.title}</h3>
@@ -19,10 +31,15 @@ const Project = ({ info, image, gif }: Props) => {
         <div
           className={style.gif}
           style={{
-            backgroundImage: `url(${gif})`,
+            backgroundImage: gifLoaded ? `url(${gif})` : '',
           }}
         />
-        <Img fluid={image} className={style.staticImage} />
+        <Img
+          fluid={image}
+          className={`${style.staticImage} ${
+            gifLoaded ? style.staticImageHide : ''
+          }`}
+        />
       </div>
       <figcaption dangerouslySetInnerHTML={{ __html: info.excerpt || '' }} />
     </figure>

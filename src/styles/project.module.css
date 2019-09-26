@@ -12,10 +12,10 @@
   width: 300px;
   height: 300px;
   transition: opacity 300ms;
+}
 
-  &:hover {
-    opacity: 0;
-  }
+.staticImageHide {
+  opacity: 0;
 }
 
 .gif {
