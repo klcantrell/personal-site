@@ -9,6 +9,7 @@ import { ProjectsQuery_allProjectsJson_edges as ProjectQueryEdge } from '../gats
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Project from '../components/project';
+import CustomArrow from '../components/customArrow';
 
 import piChatGif from '../images/pichat.gif';
 import style from '../styles/projects.module.css';
@@ -32,6 +33,24 @@ const DEFAULT_PROJECT_EDGE = {
   },
 } as ProjectQueryEdge;
 
+const sliderSettings = {
+  speed: 500,
+  infinite: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 820,
+      settings: {
+        dots: true,
+        arrows: false,
+      },
+    },
+  ],
+  prevArrow: <CustomArrow />,
+  nextArrow: <CustomArrow />,
+};
+
 const Projects = ({ data }: Props) => {
   const piChatProjectEdge =
     data.allProjectsJson.edges.find(edge => edge.node.slug === 'pichat') ||
@@ -44,7 +63,17 @@ const Projects = ({ data }: Props) => {
         <h1 className={style.header}>Projects</h1>
       </header>
       <div className={style.projectsContainer}>
-        <Slider>
+        <Slider {...sliderSettings}>
+          <Project
+            info={piChatProjectEdge.node}
+            image={
+              (data.piChatImage &&
+                data.piChatImage.childImageSharp &&
+                (data.piChatImage.childImageSharp.fluid as FluidObject)) ||
+              DEFAULT_IMAGE_SETTINGS
+            }
+            gif={piChatGif}
+          />
           <Project
             info={piChatProjectEdge.node}
             image={
