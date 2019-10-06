@@ -3,7 +3,7 @@
     "slug": "pichat",
     "title": "PiChat",
     "description": "The chat style interface of this app accepts commands from the user.  The user can send a command to subscribe to real-time updates of temperature readings from the Raspberry Pi.  If the user wants to unsubscribe or just wants the latest temperature reading, there are commands for that, too.",
-    "excerpt": "Chat with a Raspberry Pi.  Subscribe to real-time updates of its temperature readings.  Built with <strong>GraphQL</strong> and <strong>React</strong>",
+    "excerpt": "Subscribe to real-time updates of temperature readings from a Raspberry Pi.  The UI features a chat style interface that can accept different commands from the user.",
     "userCan": [
       "Interact with a Raspberry Pi through a chat UI",
       "Subscribe to real-time data",
@@ -17,5 +17,32 @@
     "techUsed": ["GraphQL", "React", "Sass", "AWS", "Node.js"],
     "github": "https://github.com/klcantrell/pi-chat",
     "website": "https://pichat.surge.sh/"
+  },
+  {
+    "slug": "simon-morph",
+    "title": "Simon Morph",
+    "description": "This app is a browser based implementation of the original Simon game.  The game creates a pattern of tones and lights, and challenges the user to repeat the pattern in exact sequence.  This user interface features morphing text that reminds the user whose turn it is and whether they've succeeded or failed.",
+    "excerpt": "Exercise your memory muscles with this game of tones, lights, and patterns. The UI features a morphing SVG message that indicates the game's status.",
+    "userCan": [
+      "See the same series of button presses but with an additional step each time they input the pattern correctly",
+      "Hear a sound that corresponds to each button both when the series plays for them and when they press a button",
+      "Get notified when they press a wrong button and the series of starts again to remind them of the pattern so they can try again",
+      "Win the game by getting a series of 20 steps correct"
+    ],
+    "techHighlights": [
+      "Used <strong>JS async functions</strong> to control how the game responds to user interactions",
+      "Composed the functionality of the CPU and player objects with small factory functions"
+    ],
+    "techUsed": [
+      "JavaScript",
+      "SVG",
+      "KUTE.js",
+      "HTML",
+      "Sass",
+      "Webpack",
+      "PostCSS"
+    ],
+    "github": "https://github.com/klcantrell/simon-morphedition",
+    "website": "https://simon-morphedition.surge.sh/"
   }
 ]

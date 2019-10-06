@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 
 import { ProjectsQuery } from '../gatsby-queries.d.ts/ProjectsQuery';
 import { ProjectsQuery_allProjectsJson_edges as ProjectQueryEdge } from '../gatsby-queries.d.ts/ProjectsQuery';
+import { sharpImageFields as ProjectImage } from '../gatsby-queries.d.ts/sharpImageFields';
 
 import Layout from '../components/layout';
 import Seo from '../components/seo';
@@ -12,11 +13,15 @@ import Project from '../components/project';
 import CustomArrow from '../components/customArrow';
 
 import piChatGif from '../images/pichat.gif';
+import simonMorphGif from '../images/simon-morph.gif';
+
 import style from '../styles/projects.module.css';
 
 interface Props {
   data: ProjectsQuery;
 }
+
+type NullableProjectImage = ProjectImage | null;
 
 const DEFAULT_IMAGE_SETTINGS = {
   aspectRatio: 0,
@@ -51,10 +56,24 @@ const sliderSettings = {
   nextArrow: <CustomArrow />,
 };
 
+const findProjectOrDefault = (edges: ProjectQueryEdge[], projectSlug: string) =>
+  edges.find(edge => edge.node.slug === projectSlug) || DEFAULT_PROJECT_EDGE;
+
+const projectFluidImageOrDefault = (projectImage: NullableProjectImage) =>
+  (projectImage &&
+    projectImage.childImageSharp &&
+    (projectImage.childImageSharp.fluid as FluidObject)) ||
+  DEFAULT_IMAGE_SETTINGS;
+
 const Projects = ({ data }: Props) => {
-  const piChatProjectEdge =
-    data.allProjectsJson.edges.find(edge => edge.node.slug === 'pichat') ||
-    DEFAULT_PROJECT_EDGE;
+  const piChatProjectEdge = findProjectOrDefault(
+    data.allProjectsJson.edges,
+    'pichat'
+  );
+  const simonMorphProjectEdge = findProjectOrDefault(
+    data.allProjectsJson.edges,
+    'simon-morph'
+  );
 
   return (
     <Layout>
@@ -66,23 +85,13 @@ const Projects = ({ data }: Props) => {
         <Slider {...sliderSettings}>
           <Project
             info={piChatProjectEdge.node}
-            image={
-              (data.piChatImage &&
-                data.piChatImage.childImageSharp &&
-                (data.piChatImage.childImageSharp.fluid as FluidObject)) ||
-              DEFAULT_IMAGE_SETTINGS
-            }
+            image={projectFluidImageOrDefault(data.piChatImage)}
             gif={piChatGif}
           />
           <Project
-            info={piChatProjectEdge.node}
-            image={
-              (data.piChatImage &&
-                data.piChatImage.childImageSharp &&
-                (data.piChatImage.childImageSharp.fluid as FluidObject)) ||
-              DEFAULT_IMAGE_SETTINGS
-            }
-            gif={piChatGif}
+            info={simonMorphProjectEdge.node}
+            image={projectFluidImageOrDefault(data.simonMorphImage)}
+            gif={simonMorphGif}
           />
         </Slider>
       </div>
@@ -91,6 +100,18 @@ const Projects = ({ data }: Props) => {
 };
 
 export const query = graphql`
+  fragment sharpImageFields on File {
+    childImageSharp {
+      fluid(maxWidth: 1200) {
+        tracedSVG
+        aspectRatio
+        src
+        srcSet
+        sizes
+      }
+    }
+  }
+
   query ProjectsQuery {
     allProjectsJson {
       edges {
@@ -102,15 +123,10 @@ export const query = graphql`
       }
     }
     piChatImage: file(relativePath: { eq: "pichat.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1200) {
-          tracedSVG
-          aspectRatio
-          src
-          srcSet
-          sizes
-        }
-      }
+      ...sharpImageFields
+    }
+    simonMorphImage: file(relativePath: { eq: "simon-morph.jpg" }) {
+      ...sharpImageFields
     }
   }
 `;

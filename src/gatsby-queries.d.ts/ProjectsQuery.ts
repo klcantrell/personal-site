@@ -9,8 +9,8 @@
 export interface ProjectsQuery_allProjectsJson_edges_node {
   __typename: "ProjectsJson";
   title: string | null;
-  excerpt: string | null;
   slug: string | null;
+  excerpt: string | null;
 }
 
 export interface ProjectsQuery_allProjectsJson_edges {
@@ -42,7 +42,27 @@ export interface ProjectsQuery_piChatImage {
   childImageSharp: ProjectsQuery_piChatImage_childImageSharp | null;
 }
 
+export interface ProjectsQuery_simonMorphImage_childImageSharp_fluid {
+  __typename: "ImageSharpFluid";
+  tracedSVG: string | null;
+  aspectRatio: number | null;
+  src: string | null;
+  srcSet: string | null;
+  sizes: string | null;
+}
+
+export interface ProjectsQuery_simonMorphImage_childImageSharp {
+  __typename: "ImageSharp";
+  fluid: ProjectsQuery_simonMorphImage_childImageSharp_fluid | null;
+}
+
+export interface ProjectsQuery_simonMorphImage {
+  __typename: "File";
+  childImageSharp: ProjectsQuery_simonMorphImage_childImageSharp | null;
+}
+
 export interface ProjectsQuery {
   allProjectsJson: ProjectsQuery_allProjectsJson;
   piChatImage: ProjectsQuery_piChatImage | null;
+  simonMorphImage: ProjectsQuery_simonMorphImage | null;
 }
