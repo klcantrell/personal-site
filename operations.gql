@@ -1,3 +1,15 @@
+fragment sharpImageFields on File {
+  childImageSharp {
+    fluid(maxWidth: 1200) {
+      tracedSVG
+      aspectRatio
+      src
+      srcSet
+      sizes
+    }
+  }
+}
+
 query ProjectsQuery {
   allProjectsJson {
     edges {
@@ -9,14 +21,9 @@ query ProjectsQuery {
     }
   }
   piChatImage: file(relativePath: { eq: "pichat.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 300) {
-        tracedSVG
-        aspectRatio
-        src
-        srcSet
-        sizes
-      }
-    }
+    ...sharpImageFields
+  }
+  simonMorphImage: file(relativePath: { eq: "simon-morph.jpg" }) {
+    ...sharpImageFields
   }
 }

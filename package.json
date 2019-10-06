@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "kalalau-personal-site",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "kalalau cantrell",
   "dependencies": {
     "gatsby": "^2.13.73",
     "gatsby-image": "^2.2.10",
