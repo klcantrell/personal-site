@@ -26,7 +26,7 @@ const Project = ({ info, image, gif }: Props) => {
 
   return (
     <figure className={style.card}>
-      <h3>{info.title}</h3>
+      <h3 className={style.title}>{info.title}</h3>
       <div className={style.imageContainer}>
         <div
           className={style.gif}
@@ -41,7 +41,10 @@ const Project = ({ info, image, gif }: Props) => {
           }`}
         />
       </div>
-      <figcaption dangerouslySetInnerHTML={{ __html: info.excerpt || '' }} />
+      <figcaption
+        className={style.caption}
+        dangerouslySetInnerHTML={{ __html: info.excerpt || '' }}
+      />
     </figure>
   );
 };

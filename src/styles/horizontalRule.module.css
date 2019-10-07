@@ -3,4 +3,8 @@
 .rule {
   width: 50%;
   margin: 20px;
+
+  @media (--phone) {
+    margin: 0;
+  }
 }

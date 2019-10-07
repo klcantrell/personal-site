@@ -15,6 +15,10 @@
   }
 }
 
+.dividerHorizontal {
+  transform: rotate(30deg);
+}
+
 :global .dark-theme :local(.divider) {
   & svg line {
     stroke: var(--dark-color);
