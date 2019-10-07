@@ -24,5 +24,14 @@
 
   & p {
     margin: 0 10px;
+    font-size: 1rem;
+  }
+
+  @media (--phone) {
+    flex-direction: column;
+
+    & p {
+      font-size: 0.9rem;
+    }
   }
 }

@@ -107,7 +107,6 @@ img {
 }
 
 figure {
-  display: table;
   max-width: 100%;
   margin: 25px 0;
 
@@ -124,10 +123,9 @@ figure {
     margin-left: auto;
   }
 
-  figcaption {
-    font-size: 14px;
+  & figcaption {
+    font-size: 16px;
     margin-top: 5px;
-    opacity: 0.8;
 
     &.left {
       text-align: left;

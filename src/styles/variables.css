@@ -14,6 +14,8 @@
   --dark-border-color: #4a4b50;
 
   --accent-color: #51a2fe;
+
+  font-size: 16px;
 }
 
 @custom-media --phone (width < 684px);
