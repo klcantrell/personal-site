@@ -5,6 +5,8 @@ import { throttle } from '../utils';
 
 import style from '../styles/landing.module.css';
 
+const { Horizontal, Vertical } = Orientation;
+
 const Landing = () => {
   const [isPhoneWidth, setIsPhoneWidth] = React.useState(
     window.innerWidth < 684
@@ -27,16 +29,12 @@ const Landing = () => {
         <p>Software Engineer</p>
         <Divider
           width={isPhoneWidth ? '4' : '5'}
-          orientation={
-            isPhoneWidth ? Orientation.Vertical : Orientation.Horizontal
-          }
+          orientation={isPhoneWidth ? Vertical : Horizontal}
         />
         <p>Learner</p>
         <Divider
           width={isPhoneWidth ? '4' : '5'}
-          orientation={
-            isPhoneWidth ? Orientation.Vertical : Orientation.Horizontal
-          }
+          orientation={isPhoneWidth ? Vertical : Horizontal}
         />
         <p>Final Fantasy nerd</p>
       </div>

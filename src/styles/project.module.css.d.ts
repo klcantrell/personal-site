@@ -5,3 +5,4 @@ export const gif: string;
 export const staticImageHide: string;
 export const title: string;
 export const caption: string;
+export const skills: string;

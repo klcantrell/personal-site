@@ -7,6 +7,8 @@ import { ProjectsQuery } from '../gatsby-queries.d.ts/ProjectsQuery';
 import { ProjectsQuery_allProjectsJson_edges as ProjectQueryEdge } from '../gatsby-queries.d.ts/ProjectsQuery';
 import { sharpImageFields as ProjectImage } from '../gatsby-queries.d.ts/sharpImageFields';
 
+import { Tech } from '../components/skills';
+
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Project from '../components/project';
@@ -16,6 +18,18 @@ import piChatGif from '../images/pichat.gif';
 import simonMorphGif from '../images/simon-morph.gif';
 
 import style from '../styles/projects.module.css';
+
+const {
+  JAVASCRIPT,
+  HTML,
+  CSS,
+  REACT,
+  NODE,
+  JAVA,
+  AWS,
+  GRAPHQL,
+  REASONML,
+} = Tech;
 
 interface Props {
   data: ProjectsQuery;
@@ -87,11 +101,13 @@ const Projects = ({ data }: Props) => {
             info={piChatProjectEdge.node}
             image={projectFluidImageOrDefault(data.piChatImage)}
             gif={piChatGif}
+            skills={[GRAPHQL, REACT, AWS, NODE]}
           />
           <Project
             info={simonMorphProjectEdge.node}
             image={projectFluidImageOrDefault(data.simonMorphImage)}
             gif={simonMorphGif}
+            skills={[JAVASCRIPT, HTML, CSS]}
           />
         </Slider>
       </div>

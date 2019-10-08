@@ -2,17 +2,20 @@ import React from 'react';
 import Img, { FluidObject } from 'gatsby-image';
 import { ProjectsQuery_allProjectsJson_edges_node as ProjectQuery } from '../gatsby-queries.d.ts/ProjectsQuery';
 
+import Skills, { Tech } from './skills';
+
 import style from '../styles/project.module.css';
 
 interface Props {
   info: ProjectQuery;
   image: FluidObject;
   gif: string;
+  skills: Tech[];
 }
 
 type NullableHTMLImageElement = HTMLImageElement | null;
 
-const Project = ({ info, image, gif }: Props) => {
+const Project = ({ info, image, gif, skills }: Props) => {
   const [gifLoaded, setGifLoaded] = React.useState(false);
 
   let gifLoader = new Image() as NullableHTMLImageElement;
@@ -45,6 +48,7 @@ const Project = ({ info, image, gif }: Props) => {
         className={style.caption}
         dangerouslySetInnerHTML={{ __html: info.excerpt || '' }}
       />
+      <Skills className={style.skills} skills={skills} />
     </figure>
   );
 };
