@@ -1,15 +1,15 @@
 @import './variables.css';
 
 .container {
-  position: absolute;
-  top: 25vh;
+  position: relative;
+  top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media screen and (--short) {
-    position: relative;
-    top: 0vh;
+    margin-top: 15vh;
+    top: -50px;
   }
 }
 

@@ -74,7 +74,11 @@ const Project = ({ info, image, gif, skills }: Props) => {
           </div>
         </div>
       </div>
-      <Skills className={style.skills} skills={skills} />
+      <HorizontalRule className={style.horizontalRule} />
+      <div className={style.skillsContainer}>
+        <h4 className={style.skillsHeading}>Tech</h4>
+        <Skills className={style.skills} skills={skills} />
+      </div>
     </figure>
   );
 };
