@@ -12,12 +12,13 @@ const Landing = () => {
     window.innerWidth < 684
   );
   React.useEffect(() => {
-    window.addEventListener(
-      'resize',
-      throttle(() => {
-        setIsPhoneWidth(window.innerWidth < 684);
-      }, 100)
-    );
+    const throttledWidthHandler = throttle(() => {
+      setIsPhoneWidth(window.innerWidth < 684);
+    }, 100);
+    window.addEventListener('resize', throttledWidthHandler);
+    return () => {
+      window.removeEventListener('resize', throttledWidthHandler);
+    };
   });
 
   return (

@@ -18,6 +18,6 @@
   font-size: 16px;
 }
 
-@custom-media --phone (width < 684px);
-@custom-media --tablet (width < 900px);
-@custom-media --short (height < 500px);
+@custom-media --phone (max-width: 684px);
+@custom-media --tablet (max-width: 900px);
+@custom-media --short (max-width: 500px);

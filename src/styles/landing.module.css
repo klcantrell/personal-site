@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
 
-  @media (--short) {
+  @media screen and (--short) {
     position: relative;
     top: 0vh;
   }
@@ -27,7 +27,7 @@
     font-size: 1rem;
   }
 
-  @media (--phone) {
+  @media screen and (--phone) {
     flex-direction: column;
 
     & p {

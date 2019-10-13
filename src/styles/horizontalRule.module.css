@@ -4,7 +4,7 @@
   width: 50%;
   margin: 20px;
 
-  @media (--phone) {
+  @media screen and (--phone) {
     margin: 0;
   }
 }
