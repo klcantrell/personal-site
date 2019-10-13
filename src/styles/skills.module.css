@@ -24,7 +24,7 @@
     margin-top: 0;
   }
 
-  @media (--phone) {
+  @media screen and (--phone) {
     width: 30%;
   }
 }
@@ -50,7 +50,7 @@
     margin-top: auto;
   }
 
-  @media (--phone) {
+  @media screen and (--phone) {
     width: 30%;
   }
 }
