@@ -92,6 +92,7 @@
 }
 
 .skillsContainer {
+  width: 100%;
   grid-column: 1 / -1;
   margin-bottom: 15px;
 }
@@ -100,16 +101,36 @@
   margin: 1rem 0.75rem;
   margin-top: 2rem;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
+
+  @supports (display: grid) {
+    justify-content: space-around;
+  }
 }
 
 .link {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+  margin: 0 30px;
+
+  @supports (display: grid) {
+    margin: initial;
+  }
+
   & p {
     margin: 0;
+  }
+
+  &:hover {
+    & a {
+      color: var(--accent-color);
+    }
+    & .linkIcon path {
+      fill: var(--accent-color);
+    }
   }
 }
 
@@ -121,10 +142,6 @@
 
 :global .dark-theme :local(.linkIcon) {
   & path {
-    fill: var(--dark-color);
-  }
-
-  & rect {
     fill: var(--dark-color);
   }
 }

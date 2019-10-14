@@ -135,6 +135,8 @@ export const query = graphql`
           title
           slug
           excerpt
+          github
+          website
         }
       }
     }
