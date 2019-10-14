@@ -11,6 +11,8 @@ export interface ProjectsQuery_allProjectsJson_edges_node {
   title: string | null;
   slug: string | null;
   excerpt: string | null;
+  github: string | null;
+  website: string | null;
 }
 
 export interface ProjectsQuery_allProjectsJson_edges {

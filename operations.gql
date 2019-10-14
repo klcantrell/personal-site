@@ -17,6 +17,8 @@ query ProjectsQuery {
         title
         slug
         excerpt
+        github
+        website
       }
     }
   }

@@ -1,3 +1,5 @@
+@import './variables.css';
+
 .mobileMenuContainer {
   display: none;
 
@@ -103,6 +105,10 @@
   padding: 0 5px;
   appearance: none;
   outline: none;
+
+  &:hover path {
+    fill: var(--accent-color);
+  }
 }
 
 .subMenuTrigger {

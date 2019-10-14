@@ -386,11 +386,11 @@
                 "defaultValue": null
               },
               {
-                "name": "childProjectsJson",
+                "name": "childrenProjectsJson",
                 "description": null,
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "ProjectsJsonFilterInput",
+                  "name": "ProjectsJsonFilterListInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -3174,6 +3174,27 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "ProjectsJsonFilterListInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "elemMatch",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "ProjectsJsonFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "ProjectsJsonFilterInput",
         "description": null,
         "fields": null,
@@ -4070,13 +4091,17 @@
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson",
+            "name": "childrenProjectsJson",
             "description": null,
             "args": [],
             "type": {
-              "kind": "OBJECT",
-              "name": "ProjectsJson",
-              "ofType": null
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProjectsJson",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -6973,11 +6998,11 @@
             "defaultValue": null
           },
           {
-            "name": "childProjectsJson",
+            "name": "childrenProjectsJson",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "ProjectsJsonFilterInput",
+              "name": "ProjectsJsonFilterListInput",
               "ofType": null
             },
             "defaultValue": null
@@ -8289,283 +8314,289 @@
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
-            "name": "childProjectsJson___id",
+            "name": "childrenProjectsJson",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___id",
+            "name": "childrenProjectsJson___id",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___parent___id",
+            "name": "childrenProjectsJson___parent___id",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___parent___children",
+            "name": "childrenProjectsJson___parent___parent___id",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___children",
+            "name": "childrenProjectsJson___parent___parent___children",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___children___id",
+            "name": "childrenProjectsJson___parent___children",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___children___children",
+            "name": "childrenProjectsJson___parent___children___id",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___internal___content",
+            "name": "childrenProjectsJson___parent___children___children",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___internal___contentDigest",
+            "name": "childrenProjectsJson___parent___internal___content",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___internal___description",
+            "name": "childrenProjectsJson___parent___internal___contentDigest",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___internal___fieldOwners",
+            "name": "childrenProjectsJson___parent___internal___description",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___internal___ignoreType",
+            "name": "childrenProjectsJson___parent___internal___fieldOwners",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___internal___mediaType",
+            "name": "childrenProjectsJson___parent___internal___ignoreType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___internal___owner",
+            "name": "childrenProjectsJson___parent___internal___mediaType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___parent___internal___type",
+            "name": "childrenProjectsJson___parent___internal___owner",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children",
+            "name": "childrenProjectsJson___parent___internal___type",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___id",
+            "name": "childrenProjectsJson___children",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___parent___id",
+            "name": "childrenProjectsJson___children___id",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___parent___children",
+            "name": "childrenProjectsJson___children___parent___id",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___children",
+            "name": "childrenProjectsJson___children___parent___children",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___children___id",
+            "name": "childrenProjectsJson___children___children",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___children___children",
+            "name": "childrenProjectsJson___children___children___id",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___internal___content",
+            "name": "childrenProjectsJson___children___children___children",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___internal___contentDigest",
+            "name": "childrenProjectsJson___children___internal___content",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___internal___description",
+            "name": "childrenProjectsJson___children___internal___contentDigest",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___internal___fieldOwners",
+            "name": "childrenProjectsJson___children___internal___description",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___internal___ignoreType",
+            "name": "childrenProjectsJson___children___internal___fieldOwners",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___internal___mediaType",
+            "name": "childrenProjectsJson___children___internal___ignoreType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___internal___owner",
+            "name": "childrenProjectsJson___children___internal___mediaType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___children___internal___type",
+            "name": "childrenProjectsJson___children___internal___owner",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___internal___content",
+            "name": "childrenProjectsJson___children___internal___type",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___internal___contentDigest",
+            "name": "childrenProjectsJson___internal___content",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___internal___description",
+            "name": "childrenProjectsJson___internal___contentDigest",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___internal___fieldOwners",
+            "name": "childrenProjectsJson___internal___description",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___internal___ignoreType",
+            "name": "childrenProjectsJson___internal___fieldOwners",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___internal___mediaType",
+            "name": "childrenProjectsJson___internal___ignoreType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___internal___owner",
+            "name": "childrenProjectsJson___internal___mediaType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___internal___type",
+            "name": "childrenProjectsJson___internal___owner",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___slug",
+            "name": "childrenProjectsJson___internal___type",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___title",
+            "name": "childrenProjectsJson___slug",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___description",
+            "name": "childrenProjectsJson___title",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___excerpt",
+            "name": "childrenProjectsJson___description",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___userCan",
+            "name": "childrenProjectsJson___excerpt",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___techHighlights",
+            "name": "childrenProjectsJson___userCan",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___techUsed",
+            "name": "childrenProjectsJson___techHighlights",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___github",
+            "name": "childrenProjectsJson___techUsed",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childProjectsJson___website",
+            "name": "childrenProjectsJson___github",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childrenProjectsJson___website",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -10316,6 +10347,68 @@
               "ofType": null
             },
             "defaultValue": null
+          },
+          {
+            "name": "previous",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "SitePageContextPreviousFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "next",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "SitePageContextNextFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "SitePageContextPreviousFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "slug",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "SitePageContextNextFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "slug",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
           }
         ],
         "interfaces": null,
@@ -11007,6 +11100,76 @@
       {
         "kind": "OBJECT",
         "name": "SitePageContext",
+        "description": null,
+        "fields": [
+          {
+            "name": "slug",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "previous",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SitePageContextPrevious",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "next",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SitePageContextNext",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SitePageContextPrevious",
+        "description": null,
+        "fields": [
+          {
+            "name": "slug",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SitePageContextNext",
         "description": null,
         "fields": [
           {
@@ -12311,6 +12474,18 @@
           },
           {
             "name": "context___slug",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "context___previous___slug",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "context___next___slug",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
