@@ -28,4 +28,7 @@ query ProjectsQuery {
   simonMorphImage: file(relativePath: { eq: "simon-morph.jpg" }) {
     ...sharpImageFields
   }
+  swGuessImage: file(relativePath: { eq: "sw-guess.jpg" }) {
+    ...sharpImageFields
+  }
 }

@@ -16,20 +16,11 @@ import CustomArrow from '../components/customArrow';
 
 import piChatGif from '../images/pichat.gif';
 import simonMorphGif from '../images/simon-morph.gif';
+import swGuessGif from '../images/sw-guess.gif';
 
 import style from '../styles/projects.module.css';
 
-const {
-  JAVASCRIPT,
-  HTML,
-  CSS,
-  REACT,
-  NODE,
-  JAVA,
-  AWS,
-  GRAPHQL,
-  REASONML,
-} = Tech;
+const { JAVASCRIPT, HTML, CSS, REACT, NODE, AWS, GRAPHQL } = Tech;
 
 interface Props {
   data: ProjectsQuery;
@@ -88,6 +79,10 @@ const Projects = ({ data }: Props) => {
     data.allProjectsJson.edges,
     'simon-morph'
   );
+  const swGuessProjectEdge = findProjectOrDefault(
+    data.allProjectsJson.edges,
+    'sw-guess'
+  );
 
   return (
     <Layout>
@@ -108,6 +103,12 @@ const Projects = ({ data }: Props) => {
             image={projectFluidImageOrDefault(data.simonMorphImage)}
             gif={simonMorphGif}
             skills={[JAVASCRIPT, HTML, CSS]}
+          />
+          <Project
+            info={swGuessProjectEdge.node}
+            image={projectFluidImageOrDefault(data.swGuessImage)}
+            gif={swGuessGif}
+            skills={[NODE, AWS, REACT]}
           />
         </Slider>
       </div>
@@ -144,6 +145,9 @@ export const query = graphql`
       ...sharpImageFields
     }
     simonMorphImage: file(relativePath: { eq: "simon-morph.jpg" }) {
+      ...sharpImageFields
+    }
+    swGuessImage: file(relativePath: { eq: "sw-guess.jpg" }) {
       ...sharpImageFields
     }
   }

@@ -63,8 +63,28 @@ export interface ProjectsQuery_simonMorphImage {
   childImageSharp: ProjectsQuery_simonMorphImage_childImageSharp | null;
 }
 
+export interface ProjectsQuery_swGuessImage_childImageSharp_fluid {
+  __typename: "ImageSharpFluid";
+  tracedSVG: string | null;
+  aspectRatio: number | null;
+  src: string | null;
+  srcSet: string | null;
+  sizes: string | null;
+}
+
+export interface ProjectsQuery_swGuessImage_childImageSharp {
+  __typename: "ImageSharp";
+  fluid: ProjectsQuery_swGuessImage_childImageSharp_fluid | null;
+}
+
+export interface ProjectsQuery_swGuessImage {
+  __typename: "File";
+  childImageSharp: ProjectsQuery_swGuessImage_childImageSharp | null;
+}
+
 export interface ProjectsQuery {
   allProjectsJson: ProjectsQuery_allProjectsJson;
   piChatImage: ProjectsQuery_piChatImage | null;
   simonMorphImage: ProjectsQuery_simonMorphImage | null;
+  swGuessImage: ProjectsQuery_swGuessImage | null;
 }
