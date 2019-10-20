@@ -20,7 +20,8 @@ type NullableHTMLImageElement = HTMLImageElement | null;
 const Project = ({ info, image, gif, skills }: Props) => {
   const [gifLoaded, setGifLoaded] = React.useState(false);
 
-  let gifLoader = new Image() as NullableHTMLImageElement;
+  let gifLoader =
+    typeof window !== 'undefined' && (new Image() as NullableHTMLImageElement);
   if (gifLoader) {
     gifLoader.onload = () => {
       setGifLoaded(true);

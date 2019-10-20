@@ -8,15 +8,17 @@ import style from '../styles/aboutMe.module.css';
 
 const AboutMe = () => {
   const [isPhoneWidth, setIsPhoneWidth] = React.useState(
-    window.innerWidth < 684
+    typeof window !== 'undefined' && window.innerWidth < 684
   );
   React.useEffect(() => {
     const throttledWidthHandler = throttle(() => {
-      setIsPhoneWidth(window.innerWidth < 684);
+      setIsPhoneWidth(typeof window !== 'undefined' && window.innerWidth < 684);
     }, 100);
-    window.addEventListener('resize', throttledWidthHandler);
+    typeof window !== 'undefined' &&
+      window.addEventListener('resize', throttledWidthHandler);
     return () => {
-      window.removeEventListener('resize', throttledWidthHandler);
+      typeof window !== 'undefined' &&
+        window.removeEventListener('resize', throttledWidthHandler);
     };
   });
   return (
