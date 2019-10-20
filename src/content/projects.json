@@ -15,7 +15,7 @@
       "Used <strong>Raspberry Pi</strong> running <strong>Node</strong> and <strong>Apollo Client</strong> for sending data"
     ],
     "techUsed": ["GraphQL", "React", "Sass", "AWS", "Node.js"],
-    "github": "https://github.com/klcantrell/pi-chat",
+    "github": "https://github.com/klcantrell/pi-chat/",
     "website": "https://pichat.surge.sh/"
   },
   {
@@ -42,7 +42,26 @@
       "Webpack",
       "PostCSS"
     ],
-    "github": "https://github.com/klcantrell/simon-morphedition",
+    "github": "https://github.com/klcantrell/simon-morphedition/",
     "website": "https://simon-morphedition.surge.sh/"
+  },
+  {
+    "slug": "sw-guess",
+    "title": "Star Wars Guess Who Game",
+    "description": "This is a <strong>React</strong> app that challenges the user to guess the name of random Star Wars characters.",
+    "excerpt": "Guess the random character and see how high you can get your streak of correct guesses. Login to save your streak.",
+    "userCan": [
+      "Play the game and try to select the name of the character displayed in the random image",
+      "Sign up for an account to save their streak score"
+    ],
+    "techHighlights": [
+      "Used <strong>AWS Lambda</strong> running <strong>Node</strong> to server-side render the initial load of the app",
+      "Used <strong>AWS Lambda</strong> running <strong>Node</strong> to handle authentication with <strong>JWTs</strong>",
+      "Used <strong>React</strong> for rendering the UI and managing app state",
+      "Used <strong>AWS RDS</strong> running <strong>PostgreSQL</strong> to persist the user's streak if they choose to sign up"
+    ],
+    "techUsed": ["AWS", "Node.js", "React", "SVG", "JWT", "CSS", "Webpack"],
+    "github": "https://github.com/klcantrell/ssr-react-swapi/",
+    "website": "https://swguesswho.kalalau-cantrell.me/"
   }
 ]
