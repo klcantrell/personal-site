@@ -14,10 +14,6 @@ import Seo from '../components/seo';
 import Project from '../components/project';
 import CustomArrow from '../components/customArrow';
 
-import piChatGif from '../images/pichat.gif';
-import simonMorphGif from '../images/simon-morph.gif';
-import swGuessGif from '../images/sw-guess.gif';
-
 import style from '../styles/projects.module.css';
 
 const { JAVASCRIPT, HTML, CSS, REACT, NODE, AWS, GRAPHQL } = Tech;
@@ -95,19 +91,23 @@ const Projects = ({ data }: Props) => {
           <Project
             info={piChatProjectEdge.node}
             image={projectFluidImageOrDefault(data.piChatImage)}
-            gif={piChatGif}
+            gif={
+              'https://kals-portfolio-assets.s3.us-east-2.amazonaws.com/main/gifs/p6.gif'
+            }
             skills={[GRAPHQL, REACT, AWS, NODE]}
           />
           <Project
             info={simonMorphProjectEdge.node}
             image={projectFluidImageOrDefault(data.simonMorphImage)}
-            gif={simonMorphGif}
+            gif="https://kals-portfolio-assets.s3.us-east-2.amazonaws.com/main/gifs/p1.gif"
             skills={[JAVASCRIPT, HTML, CSS]}
           />
           <Project
             info={swGuessProjectEdge.node}
             image={projectFluidImageOrDefault(data.swGuessImage)}
-            gif={swGuessGif}
+            gif={
+              'https://kals-portfolio-assets.s3.us-east-2.amazonaws.com/main/gifs/p5.gif'
+            }
             skills={[NODE, AWS, REACT]}
           />
         </Slider>
