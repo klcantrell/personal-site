@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
+import Footer from './footer';
 
 import '../styles/layout.css';
 
@@ -53,6 +54,7 @@ const Layout = ({ children }: Props) => {
           menuMoreText={menuMoreText}
         />
         <div className="content">{children}</div>
+        <Footer />
       </div>
     </>
   );
