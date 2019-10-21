@@ -7,20 +7,24 @@ import { throttle } from '../utils';
 import style from '../styles/aboutMe.module.css';
 
 const AboutMe = () => {
-  const [isPhoneWidth, setIsPhoneWidth] = React.useState(
-    typeof window !== 'undefined' && window.innerWidth < 684
-  );
+  const [isPhoneWidth, setIsPhoneWidth] = React.useState(false);
   React.useEffect(() => {
+    const _isPhoneWidth =
+      typeof window !== 'undefined' && window.innerWidth < 684;
     const throttledWidthHandler = throttle(() => {
-      setIsPhoneWidth(typeof window !== 'undefined' && window.innerWidth < 684);
+      setIsPhoneWidth(_isPhoneWidth);
     }, 100);
-    typeof window !== 'undefined' &&
+    if (typeof window !== 'undefined') {
+      setIsPhoneWidth(_isPhoneWidth);
       window.addEventListener('resize', throttledWidthHandler);
+    }
     return () => {
-      typeof window !== 'undefined' &&
+      if (typeof window !== 'undefined') {
         window.removeEventListener('resize', throttledWidthHandler);
+      }
     };
   });
+
   return (
     <>
       <header className={style.header}>
