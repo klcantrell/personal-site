@@ -16,14 +16,14 @@
   }
 }
 
-.socialIcon:hover {
-  & svg path {
-    fill: var(--accent-color);
-  }
-}
-
 :global .dark-theme :local(.socialIcon) {
   & svg path {
     fill: var(--dark-color);
+  }
+}
+
+.socialIcon:hover {
+  & svg path {
+    fill: var(--accent-color);
   }
 }
