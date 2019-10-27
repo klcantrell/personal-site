@@ -1,2 +1,29 @@
-.test {
+@import './variables.css';
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcon {
+  margin: 0 30px;
+  & svg path {
+    fill: var(--light-color);
+  }
+
+  @media screen and (--phone) {
+    margin: 0 18px;
+  }
+}
+
+.socialIcon:hover {
+  & svg path {
+    fill: var(--accent-color);
+  }
+}
+
+:global .dark-theme :local(.socialIcon) {
+  & svg path {
+    fill: var(--dark-color);
+  }
 }

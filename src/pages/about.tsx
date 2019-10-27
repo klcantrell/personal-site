@@ -21,7 +21,7 @@ const About = () => (
   <Layout>
     <Seo title="About" />
     <AboutMe />
-    <HorizontalRule />
+    <h4>I have experience with...</h4>
     <Skills
       skills={[
         JAVASCRIPT,
@@ -35,6 +35,7 @@ const About = () => (
         REASONML,
       ]}
     />
+    <HorizontalRule />
   </Layout>
 );
 

@@ -1,16 +1,11 @@
 @import './variables.css';
 
 .container {
-  position: relative;
-  top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media screen and (--short) {
-    margin-top: 15vh;
-    top: -50px;
-  }
+  position: relative;
+  top: -10vh;
 }
 
 .headerAccent {
