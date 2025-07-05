@@ -1,0 +1,130 @@
+---
+import '../styles/global.css';
+
+const allBlogPosts = [
+  {
+    id: 1,
+    title: "Getting Started with Astro",
+    excerpt: "Exploring the modern web framework that delivers fast, content-focused websites.",
+    date: "2024-01-15",
+    slug: "getting-started-with-astro"
+  },
+  {
+    id: 2,
+    title: "Building with Tailwind CSS",
+    excerpt: "How utility-first CSS frameworks can speed up your development workflow.",
+    date: "2024-01-10",
+    slug: "building-with-tailwind-css"
+  },
+  {
+    id: 3,
+    title: "JavaScript Modern Patterns",
+    excerpt: "Exploring contemporary JavaScript patterns and best practices for 2024.",
+    date: "2024-01-05",
+    slug: "javascript-modern-patterns"
+  },
+  {
+    id: 4,
+    title: "Web Performance Optimization",
+    excerpt: "Techniques and strategies to make your websites load faster and perform better.",
+    date: "2024-01-01",
+    slug: "web-performance-optimization"
+  },
+  {
+    id: 5,
+    title: "TypeScript for Better Code",
+    excerpt: "How TypeScript can improve your development experience and code quality.",
+    date: "2023-12-28",
+    slug: "typescript-for-better-code"
+  },
+  {
+    id: 6,
+    title: "React Hooks Deep Dive",
+    excerpt: "Understanding the power and flexibility of React hooks in modern applications.",
+    date: "2023-12-20",
+    slug: "react-hooks-deep-dive"
+  },
+  {
+    id: 7,
+    title: "CSS Grid vs Flexbox",
+    excerpt: "When to use CSS Grid and when to use Flexbox for your layouts.",
+    date: "2023-12-15",
+    slug: "css-grid-vs-flexbox"
+  },
+  {
+    id: 8,
+    title: "Node.js Best Practices",
+    excerpt: "Essential patterns and practices for building robust Node.js applications.",
+    date: "2023-12-10",
+    slug: "nodejs-best-practices"
+  }
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Blog - Your Name</title>
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="py-8 px-4 pcb-trace">
+			<div class="max-w-6xl mx-auto">
+				<nav class="flex justify-between items-center">
+					<a href="/" class="text-2xl font-bold text-amber-400 hover:text-amber-300 transition-colors">
+						Your Name
+					</a>
+					<div class="space-x-6">
+						<a href="/" class="text-slate-300 hover:text-amber-400 transition-colors">Home</a>
+						<a href="/blog" class="text-amber-400 font-medium">Blog</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Blog Posts Section -->
+		<main class="py-16 px-4">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-100">
+					My <span class="text-amber-400">Blog</span>
+				</h1>
+				<p class="text-xl text-slate-300 text-center mb-16 max-w-2xl mx-auto">
+					Thoughts, tutorials, and insights on web development, technology, and software engineering.
+				</p>
+				
+				<div class="space-y-8">
+					{allBlogPosts.map((post) => (
+						<article class="bg-slate-800 rounded-lg p-8 hover:bg-slate-700 transition-colors border border-slate-700">
+							<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+								<h2 class="text-2xl font-bold text-slate-100 mb-2 md:mb-0">
+									<a href={`/blog/${post.slug}`} class="hover:text-amber-400 transition-colors">
+										{post.title}
+									</a>
+								</h2>
+								<time class="text-amber-400 text-sm font-medium">
+									{new Date(post.date).toLocaleDateString('en-US', { 
+										year: 'numeric', 
+										month: 'long', 
+										day: 'numeric' 
+									})}
+								</time>
+							</div>
+							<p class="text-slate-300 mb-6 leading-relaxed">
+								{post.excerpt}
+							</p>
+							<a href={`/blog/${post.slug}`} class="inline-flex items-center text-amber-400 hover:text-amber-300 font-medium">
+								Read More 
+								<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+								</svg>
+							</a>
+						</article>
+					))}
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
