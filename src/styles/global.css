@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --pcb-dark-blue: #0a0e1a;
+  --pcb-blue: #1a2332;
+  --pcb-copper: #d4af37;
+  --pcb-gold: #ffd700;
+  --pcb-light-blue: #2d3748;
+  --text-primary: #e2e8f0;
+  --text-secondary: #a0aec0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--pcb-dark-blue);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.pcb-trace {
+  position: relative;
+}
+
+.pcb-trace::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--pcb-copper), transparent);
+  opacity: 0.6;
+}
+
+.pcb-trace::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--pcb-gold), transparent);
+  opacity: 0.3;
+}
