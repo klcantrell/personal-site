@@ -51,35 +51,27 @@ const recentPosts = mockBlogPosts.slice(0, 5);
 		<title>Your Name - Developer</title>
 	</head>
 	<body>
-		<!-- Hero Section -->
 		<section class="min-h-screen flex items-center justify-center px-4 pcb-trace">
 			<div class="max-w-4xl mx-auto text-center">
 				<div class="mb-8">
-					<img 
-						src="/headshot.jpg" 
-						alt="Your Name" 
-						class="w-32 h-32 mx-auto rounded-full border-4 border-amber-400 shadow-lg shadow-amber-400/20"
-					/>
+					<div class="headshot-container mx-auto">
+						<img 
+							src="/headshot.jpg" 
+							alt="Your Name" 
+							class="w-40 h-40 rounded-full shadow-lg shadow-amber-400/20"
+						/>
+					</div>
 				</div>
 				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-slate-100">
-					Hello, I'm <span class="text-amber-400">Your Name</span>
+					<span class="text-amber-400">Kal</span>alau <span class="text-amber-400">Cantrell</span>
 				</h1>
 				<p class="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl mx-auto">
 					I'm a passionate developer who loves building elegant solutions to complex problems. 
 					I specialize in modern web technologies and enjoy creating experiences that make a difference.
 				</p>
-				<div class="flex justify-center space-x-4">
-					<a href="/blog" class="bg-amber-500 hover:bg-amber-600 text-slate-900 px-6 py-3 rounded-lg font-medium transition-colors">
-						View My Blog
-					</a>
-					<a href="#contact" class="border border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition-colors">
-						Get In Touch
-					</a>
-				</div>
 			</div>
 		</section>
 
-		<!-- Recent Blog Posts Section -->
 		<section class="py-16 px-4 bg-slate-900/50">
 			<div class="max-w-6xl mx-auto">
 				<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-100">
