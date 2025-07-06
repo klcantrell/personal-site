@@ -1,18 +1,12 @@
 ---
 import '../styles/global.css';
 import { getCollection } from 'astro:content';
+import { createExcerpt } from '../utils/excerpt';
 
 // Get all blog posts and sort by date (newest first)
 const allBlogPosts = await getCollection('blog');
 const sortedPosts = allBlogPosts
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
-
-// Create excerpt from content
-function createExcerpt(content: string, maxLength: number = 200): string {
-  const plainText = content.replace(/[#*`\[\]]/g, '').replace(/\n+/g, ' ').trim();
-  if (plainText.length <= maxLength) return plainText;
-  return plainText.substring(0, maxLength).trim() + '...';
-}
 ---
 
 <html lang="en">
@@ -45,7 +39,7 @@ function createExcerpt(content: string, maxLength: number = 200): string {
 				
 				<div class="space-y-8">
 					{sortedPosts.map((post) => {
-						const excerpt = createExcerpt(post.body ?? '');
+						const excerpt = createExcerpt(post.body ?? '', 200);
 						
 						return (
 							<article class="bg-slate-800 rounded-lg p-8 hover:bg-slate-700 transition-colors border border-slate-700">

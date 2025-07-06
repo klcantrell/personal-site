@@ -3,19 +3,13 @@ import '../styles/global.css';
 import { Image } from 'astro:assets';
 import headshotImage from '../content/images/headshot.jpg';
 import { getCollection } from 'astro:content';
+import { createExcerpt } from '../utils/excerpt';
 
 // Get all blog posts and sort by date (newest first)
 const allBlogPosts = await getCollection('blog');
 const sortedPosts = allBlogPosts
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 5);
-
-// Create excerpt from content
-function createExcerpt(content: string, maxLength: number = 150): string {
-  const plainText = content.replace(/[#*`\[\]]/g, '').replace(/\n+/g, ' ').trim();
-  if (plainText.length <= maxLength) return plainText;
-  return plainText.substring(0, maxLength).trim() + '...';
-}
 ---
 
 <html lang="en">
