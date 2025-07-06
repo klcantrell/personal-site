@@ -1,4 +1,7 @@
 ---
+import '../styles/global.css';
+import Prose from '../components/Prose.astro';
+
 export interface Props {
   frontmatter: {
     title: string;
@@ -68,41 +71,11 @@ const formattedDate = frontmatter.date.toLocaleDateString('en-US', {
         </header>
 
         <!-- Content -->
-        <div class="prose prose-invert prose-amber max-w-none">
+        <Prose>
           <slot />
-        </div>
+        </Prose>
       </article>
     </div>
   </body>
 </html>
 
-<style>
-  /* Custom prose styles for the PCB theme */
-  .prose {
-    --tw-prose-body: theme(colors.slate.300);
-    --tw-prose-headings: theme(colors.slate.100);
-    --tw-prose-links: theme(colors.amber.400);
-    --tw-prose-bold: theme(colors.slate.100);
-    --tw-prose-code: theme(colors.amber.300);
-    --tw-prose-pre-bg: theme(colors.slate.800);
-    --tw-prose-pre-code: theme(colors.slate.300);
-    --tw-prose-quotes: theme(colors.slate.400);
-    --tw-prose-quote-borders: theme(colors.amber.500);
-  }
-  
-  .prose code {
-    background-color: theme(colors.slate.800);
-    padding: 0.125rem 0.25rem;
-    border-radius: 0.25rem;
-    font-size: 0.875em;
-  }
-  
-  .prose pre {
-    border: 1px solid theme(colors.slate.700);
-  }
-  
-  .prose pre code {
-    background-color: transparent;
-    padding: 0;
-  }
-</style>
