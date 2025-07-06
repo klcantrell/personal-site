@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/BlogPost.astro
 title: "How a sound engineer started learning to code"
 date: "2017-10-01"
 slug: "how-and-why-a-sound-engineer-started-learning-to-code"

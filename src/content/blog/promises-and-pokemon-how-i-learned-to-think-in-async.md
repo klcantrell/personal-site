@@ -8,7 +8,6 @@ img:
   caption: "Pokeballs. Image Credit:  Lee McKusick."
 ---
 
-![pokeball](http://coder-rising.blog/wp-content/uploads/2017/12/pokeball-1024x576.jpg)Pokeballs. Image Credit: [ Lee McKusick.](https://www.flickr.com/photos/leemckusick/9076215503)
 If you’ve been learning JavaScript, you may have heard about promises and how awesome they are. So, you decided to research the basics and perhaps you came across the [MDN docs on promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) or great articles like [this one](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261) by Eric Elliott or [this one](https://codeburst.io/javascript-learn-promises-f1eaa00c5461) by Brandon Morelli. If you’ve read all of these and more, you’ve probably seen the go-to example of promises in action.
 
 ```js
