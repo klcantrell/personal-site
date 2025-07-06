@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPost.astro
 title: "How a sound engineer started learning to code"
 date: "2017-10-01"
 slug: "how-and-why-a-sound-engineer-started-learning-to-code"
@@ -78,7 +77,9 @@ I started to see the writing on the wall. The technology industry was quickly gr
 
 Coupled with this growth, there were also tons of resources popping up online that helped people learn to code.  This made the prospect of becoming a self-taught developer seem viable. Then I started hearing that the tech industry was starting to grow in my city of Indianapolis, IN.
 
+```js
 const me = new Programmer();
+```
 
 #### Sparks for the fire
 
