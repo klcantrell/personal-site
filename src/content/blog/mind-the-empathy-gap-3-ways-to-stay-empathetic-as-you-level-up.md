@@ -5,7 +5,7 @@ slug: "mind-the-empathy-gap-3-ways-to-stay-empathetic-as-you-level-up"
 img:
   src: "http://blog.kalalau-cantrell.com/wp-content/uploads/2019/10/mind-the-gap.jpg"
   alt: ""
-  caption: ""
+  caption: "Photo by Jeff Fenton - http://flickr.com/photos/ealingjeff"
 ---
 
 The title of this post references the iconic phrase from the [London Underground](https://en.wikipedia.org/wiki/London_Underground), “Mind the gap.” It’s used to warn passengers about the gap between the train and the station platform. Although hazardous, the gap for these travelers is a natural part of the journey.
@@ -81,5 +81,3 @@ Teaching isn’t easy – you have to both understand the concept well enough an
 As I grow as a software engineer, I plan to never become complacent in my experience by isolating myself on the far side of an empathy gap. Staying aware of it, documenting my experiences as I grow, and teaching others what I know are a few ways I plan on “minding” the gap.
 
 If you enjoyed this topic, consider reading up on the other kinds of empathy gaps out there such as the one that exists between [you and your future self](https://en.wikipedia.org/wiki/Affective_forecasting#Projection_bias). Thanks for reading!
-
-*Cover photo by [Jeff Fenton](http://flickr.com/photos/ealingjeff).*

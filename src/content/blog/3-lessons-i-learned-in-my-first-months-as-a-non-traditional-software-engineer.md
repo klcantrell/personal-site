@@ -12,7 +12,7 @@ I am about 3 months into my journey as a new software engineer. I work at a plac
 
 To top it off, however, I have the fact that my background in software is non-traditional. My degree is in music and I am self-taught in programming. You can probably imagine the kind of [impostor syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) that someone in my position might feel when surrounded by people who are so smart and credentialed. 
 
-**The self-doubt could have been paralyzing. But, somehow it didn’t last very long at all.  **
+> The self-doubt could have been paralyzing. But, somehow it didn’t last very long at all.
 
 So, how did that happen? How did the doubt give way to the enthusiasm to learn and grow that I mostly feel today? I made a list of 31 experiences that helped me embrace being new and non-traditional rather than fearing it. I studied the list and in it noticed three patterns, which I’ve formed into lessons, that I’d like share with you.
 
