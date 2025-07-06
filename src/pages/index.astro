@@ -52,7 +52,7 @@ const sortedPosts = allBlogPosts
 						const excerpt = createExcerpt(post.body ?? '');
 						
 						return (
-							<article class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors border border-slate-700">
+							<article class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors border border-slate-700 flex flex-col">
 								<h3 class="text-xl font-bold mb-3 text-slate-100">
 									<a href={`/blog/${post.data.slug}`} class="hover:text-amber-400 transition-colors">
 										{post.data.title}
@@ -61,7 +61,7 @@ const sortedPosts = allBlogPosts
 								<p class="text-slate-300 mb-4 text-sm leading-relaxed">
 									{excerpt}
 								</p>
-								<div class="flex justify-between items-center">
+								<div class="flex justify-between items-center mt-auto">
 									<time class="text-amber-400 text-sm font-medium">
 										{post.data.date.toLocaleDateString('en-US', { 
 											year: 'numeric', 

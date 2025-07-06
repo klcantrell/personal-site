@@ -53,7 +53,10 @@ These kids are referred to as “high-needs” in the public education sector. A
 
 The hardest part of lesson two is that most “high-needs” kids grow up fulfilling the terrible stereotypes that exist in our society regarding crime and poverty. I observed that this cycle is vicious and hard to break. It was hard to see.
 
-![endless stairs](http://coder-rising.blog/wp-content/uploads/2017/10/endless-stairs-1024x683.jpg)Vicious cycle. Image Credit: Unsplash.
+<figure>
+  <img src="http://coder-rising.blog/wp-content/uploads/2017/10/endless-stairs-1024x683.jpg" alt="endless stairs">
+  <figcaption>Vicious cycle. Image Credit: Unsplash</figcaption>
+</figure>
 
 #### Finding stable ground
 
