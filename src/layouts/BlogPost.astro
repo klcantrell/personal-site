@@ -1,0 +1,108 @@
+---
+export interface Props {
+  frontmatter: {
+    title: string;
+    date: Date;
+    slug: string;
+    img?: {
+      src: string;
+      alt?: string;
+      caption?: string;
+    };
+  };
+}
+
+const { frontmatter } = Astro.props;
+const formattedDate = frontmatter.date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title} - Kalalau Cantrell</title>
+    <meta name="description" content={frontmatter.title} />
+  </head>
+  <body>
+    <div class="min-h-screen bg-slate-900 text-slate-100">
+      <!-- Navigation -->
+      <nav class="border-b border-slate-700 bg-slate-800/50">
+        <div class="max-w-4xl mx-auto px-4 py-4">
+          <a href="/" class="text-amber-400 hover:text-amber-300 font-medium">
+            ← Back to Home
+          </a>
+        </div>
+      </nav>
+
+      <!-- Blog Post -->
+      <article class="max-w-4xl mx-auto px-4 py-12">
+        <!-- Header -->
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 text-slate-100">
+            {frontmatter.title}
+          </h1>
+          <time class="text-amber-400 font-medium text-lg">
+            {formattedDate}
+          </time>
+          
+          {frontmatter.img && (
+            <div class="mt-8">
+              <img 
+                src={frontmatter.img.src} 
+                alt={frontmatter.img.alt || frontmatter.title}
+                class="w-full rounded-lg shadow-lg"
+              />
+              {frontmatter.img.caption && (
+                <p class="text-slate-400 text-sm mt-2 italic text-center">
+                  {frontmatter.img.caption}
+                </p>
+              )}
+            </div>
+          )}
+        </header>
+
+        <!-- Content -->
+        <div class="prose prose-invert prose-amber max-w-none">
+          <slot />
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
+
+<style>
+  /* Custom prose styles for the PCB theme */
+  .prose {
+    --tw-prose-body: theme(colors.slate.300);
+    --tw-prose-headings: theme(colors.slate.100);
+    --tw-prose-links: theme(colors.amber.400);
+    --tw-prose-bold: theme(colors.slate.100);
+    --tw-prose-code: theme(colors.amber.300);
+    --tw-prose-pre-bg: theme(colors.slate.800);
+    --tw-prose-pre-code: theme(colors.slate.300);
+    --tw-prose-quotes: theme(colors.slate.400);
+    --tw-prose-quote-borders: theme(colors.amber.500);
+  }
+  
+  .prose code {
+    background-color: theme(colors.slate.800);
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+  }
+  
+  .prose pre {
+    border: 1px solid theme(colors.slate.700);
+  }
+  
+  .prose pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+</style>
