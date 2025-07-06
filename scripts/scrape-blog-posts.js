@@ -1,13 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { JSDOM } from 'jsdom';
+import { parseHTML } from 'linkedom';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const blogUrls = [
-  'https://blog.kalalau-cantrell.com/2017/10/how-and-why-a-sound-engineer-started-learning-to-code/',
+  // 'https://blog.kalalau-cantrell.com/2017/10/how-and-why-a-sound-engineer-started-learning-to-code/',
   // 'https://blog.kalalau-cantrell.com/2017/12/promises-and-pokemon-how-i-learned-to-think-in-async/',
   // 'https://blog.kalalau-cantrell.com/2018/02/learn-webpack-through-example-i-blurred-placeholder-images/',
   // 'https://blog.kalalau-cantrell.com/2018/09/learn-webpack-by-example-ii-simple-code-splitting-in-a-vanilla-js-app/',
@@ -20,18 +20,21 @@ const blogUrls = [
 // HTML to Markdown converter
 function htmlToMarkdown(html) {
   return html
-    // Handle code snippets in tables first (your specific case)
-    .replace(/<table[^>]*>[\s\S]*?<td[^>]*class="code"[^>]*>([\s\S]*?)<\/td>[\s\S]*?<\/table>/gi, (match, codeContent) => {
-      // Remove HTML tags from code content and preserve line breaks
+    // Handle code blocks in <pre> tags first
+    .replace(/<pre[^>]*>([\s\S]*?)<\/pre>/gi, (match, codeContent) => {
+      // Clean up the code content
       const cleanCode = codeContent
         .replace(/<br\s*\/?>/gi, '\n')
-        .replace(/<[^>]*>/g, '')
+        .replace(/<div[^>]*>/gi, '\n')
+        .replace(/<\/div>/gi, '')
+        .replace(/<[^>]*>/g, '') // Remove any remaining HTML tags
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .replace(/&amp;/g, '&')
         .replace(/&quot;/g, '"')
         .replace(/&#39;/g, "'")
         .replace(/&nbsp;/g, ' ')
+        .replace(/\n\s*\n/g, '\n') // Clean up multiple newlines
         .trim();
       
       return `\n\`\`\`\n${cleanCode}\n\`\`\`\n`;
@@ -57,8 +60,7 @@ function htmlToMarkdown(html) {
     .replace(/<p[^>]*>(.*?)<\/p>/gi, '$1\n\n')
     // Convert line breaks
     .replace(/<br[^>]*>/gi, '\n')
-    // Convert regular code blocks
-    .replace(/<pre[^>]*><code[^>]*>(.*?)<\/code><\/pre>/gi, '```\n$1\n```\n')
+    // Convert inline code (not block code, since <pre> is handled above)
     .replace(/<code[^>]*>(.*?)<\/code>/gi, '`$1`')
     // Convert lists
     .replace(/<ul[^>]*>(.*?)<\/ul>/gi, '$1\n')
@@ -111,8 +113,7 @@ async function fetchBlogPost(url) {
     }
     
     const html = await response.text();
-    const dom = new JSDOM(html);
-    const document = dom.window.document;
+    const { document } = parseHTML(html);
     
     // Extract header content
     const headerElement = document.querySelector('.entry-header');
@@ -131,15 +132,41 @@ async function fetchBlogPost(url) {
     const date = getDateFromUrl(url);
     const slug = getSlugFromUrl(url);
     
+    // Extract header image from first div with figure
+    let headerImage = null;
+    const headerFigure = contentElement.querySelector('figure');
+    if (headerFigure) {
+      const img = headerFigure.querySelector('img');
+      const figcaption = headerFigure.querySelector('figcaption');
+
+      if (img) {
+        headerImage = {
+          src: img.getAttribute('src') || '',
+          alt: img.getAttribute('alt') || '',
+          caption: figcaption ? figcaption.textContent.trim() : ''
+        };
+      }
+    }
+    
     // Convert content to markdown
     const contentHtml = contentElement.innerHTML;
     const markdownContent = htmlToMarkdown(contentHtml);
     
-    // Create the full markdown file content
-    const fullContent = `---
+    // Create frontmatter
+    let frontmatter = `---
 title: "${title}"
 date: "${date}"
-slug: "${slug}"
+slug: "${slug}"`;
+    
+    if (headerImage) {
+      frontmatter += `
+img:
+  src: "${headerImage.src}"
+  alt: "${headerImage.alt}"
+  caption: "${headerImage.caption}"`;
+    }
+    
+    frontmatter += `
 ---
 
 ${markdownContent}`;
@@ -148,8 +175,9 @@ ${markdownContent}`;
       title,
       date,
       slug,
-      content: fullContent,
-      url
+      content: frontmatter,
+      url,
+      headerImage
     };
     
   } catch (error) {
