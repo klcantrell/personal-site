@@ -3,9 +3,9 @@ title: "Learn Webpack by Example (I): Blurred placeholder images"
 date: "2018-02-01"
 slug: "learn-webpack-through-example-i-blurred-placeholder-images"
 img:
-  src: "http://coder-rising.blog/wp-content/uploads/2018/01/mobile-phone_800.jpg"
+  src: "https://res.cloudinary.com/kalalau/image/upload/v1751855460/personal-site/mobile-phone_800.jpg"
   alt: "mobile phone"
-  caption: "Mobile. Image by Rodion Kutsaev on Unsplash."
+  caption: "Mobile. Image credit: Rodion Kutsaev."
 ---
 
 **_The repo that goes along with this post uses webpack 3. If you are interested in learning webpack 4, you will find this post useful as the concepts as well as the config file format is the same. Webpack 4 did introduce optimizations, zero-config capabilities, as well as new out-of-the-box plugins that an advanced user would want to know about but is beyond the purpose of this post._**
@@ -18,7 +18,7 @@ All the folks that maintain the packages used in this guide deserve recognition 
 
 In episode I, we’ll look at a technique for loading images that 1) inlines blurred placeholder versions of our images on initial page load, 2) requests the full images from the server, and 3) when the full images finally load, they get faded in and the blurred placeholders get removed.
 
-![blurred-placeholders](http://coder-rising.blog/wp-content/uploads/2018/01/blurred-image-placeholders.gif)
+![blurred-placeholders](https://res.cloudinary.com/kalalau/image/upload/v1751855460/personal-site/blurred-image-placeholders.gif)
 Blurred placeholder images.
 This technique is great for devices on slow connections because it gives users some sense of what the page will look like during the several seconds (think slow 3G) it may take for the page’s images to fully load.
 

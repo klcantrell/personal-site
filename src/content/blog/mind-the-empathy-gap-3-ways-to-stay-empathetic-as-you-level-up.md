@@ -5,7 +5,7 @@ slug: "mind-the-empathy-gap-3-ways-to-stay-empathetic-as-you-level-up"
 img:
   src: "http://blog.kalalau-cantrell.com/wp-content/uploads/2019/10/mind-the-gap.jpg"
   alt: ""
-  caption: "Photo by Jeff Fenton - http://flickr.com/photos/ealingjeff"
+  caption: "Image credit: Jeff Fenton."
 ---
 
 The title of this post references the iconic phrase from the [London Underground](https://en.wikipedia.org/wiki/London_Underground), “Mind the gap.” It’s used to warn passengers about the gap between the train and the station platform. Although hazardous, the gap for these travelers is a natural part of the journey.
