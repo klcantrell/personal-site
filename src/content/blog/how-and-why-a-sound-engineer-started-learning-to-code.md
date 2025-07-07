@@ -3,8 +3,8 @@ title: "How a sound engineer started learning to code"
 date: "2017-10-01"
 slug: "how-and-why-a-sound-engineer-started-learning-to-code"
 img:
-  src: http://coder-rising.blog/wp-content/uploads/2017/10/mixing-board-1024x683.jpg
-  caption: "Mixing console. Image Credit: Unsplash."
+  src: "https://res.cloudinary.com/kalalau/image/upload/v1751854842/personal-site/mixing-board-1024x683.jpg"
+  caption: "Mixing console. Image credit: Unsplash."
 ---
 
 I seriously started teaching myself to code several months ago, somewhere in the beginning of 2017. I say “seriously” because I started and stopped a few times in my life. When I look back, I realize I had caught a bug sometime early in life, and although I’ve lived with it for many years, it took a few life experiences and some nurturing from me before this bug finally had what it needed to “take-over”.
@@ -54,8 +54,8 @@ These kids are referred to as “high-needs” in the public education sector. A
 The hardest part of lesson two is that most “high-needs” kids grow up fulfilling the terrible stereotypes that exist in our society regarding crime and poverty. I observed that this cycle is vicious and hard to break. It was hard to see.
 
 <figure>
-  <img src="http://coder-rising.blog/wp-content/uploads/2017/10/endless-stairs-1024x683.jpg" alt="endless stairs">
-  <figcaption>Vicious cycle. Image Credit: Unsplash</figcaption>
+  <img src="https://res.cloudinary.com/kalalau/image/upload/v1751854842/personal-site/endless-stairs-1024x683.jpg" alt="endless stairs">
+  <figcaption>Vicious cycle. Image credit: Unsplash</figcaption>
 </figure>
 
 #### Finding stable ground

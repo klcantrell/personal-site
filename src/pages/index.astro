@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import { Image } from 'astro:assets';
-import headshotImage from '../content/images/headshot.jpg';
 import { getCollection } from 'astro:content';
 import { createExcerpt } from '../utils/excerpt';
 
@@ -25,8 +24,8 @@ const sortedPosts = allBlogPosts
 			<div class="max-w-4xl mx-auto text-center">
 				<div class="mb-8">
 					<div class="headshot-container mx-auto">
-						<Image 
-							src={headshotImage} 
+						<img 
+							src="https://res.cloudinary.com/kalalau/image/upload/v1751854843/personal-site/headshot.jpg"
 							alt="Kalalau Cantrell headshot" 
 							class="w-40 h-40 rounded-full shadow-lg shadow-amber-400/20"
 						/>
