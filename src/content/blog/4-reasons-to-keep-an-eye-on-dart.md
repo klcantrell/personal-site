@@ -68,7 +68,7 @@ It took me a few minutes to discover that you can create a console app in Dart w
 
 Dart’s tools and IDE plugins are easy to install and use on Windows, Mac, and Linux. Also, they have an emphasis on quick, iterative feedback. Check out the video clip below in which the mobile app hot reloads with each edit I make to the source code (note that hot reloading a Dart or Flutter web app is [still being worked on](https://github.com/flutter/flutter/issues/53041)).
 
-[INSERT YOUTUBE LINK HERE]
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/EX65OHCK26k?si=rkSnfHYxyTjF_DrK&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 Hot reloading with Flutter
 
 ## Strong community
