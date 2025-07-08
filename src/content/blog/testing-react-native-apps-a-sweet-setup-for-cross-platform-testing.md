@@ -3,7 +3,7 @@ title: "Testing React Native Apps: A Sweet Setup for Cross-Platform Testing"
 date: "2022-12-02"
 slug: "testing-react-native-apps-a-sweet-setup-for-cross-platform-testing"
 img:
-  src: "https://sep.com/wp-content/uploads/2022/11/testing-react-native-apps-featured-image-1024x683.jpg"
+  src: "https://res.cloudinary.com/kalalau/image/upload/v1751940288/personal-site/testing-react-native-apps-featured-image-1024x683.jpg"
   alt: ""
   caption: ""
 ---
