@@ -21,10 +21,10 @@ const sortedPosts = allBlogPosts
 		<header class="py-8 px-4 pcb-trace">
 			<div class="max-w-6xl mx-auto">
 				<nav class="flex justify-between items-center">
-					<a href="/" class="text-2xl font-bold text-amber-400 hover:text-amber-300 transition-colors"><span class="text-slate-100">Kal</span>alau Cantrell</a>
-					<div class="space-x-6">
-						<a href="/" class="text-slate-300 hover:text-amber-400 transition-colors">Home</a>
-						<a href="/blog" class="text-amber-400 font-medium">Blog</a>
+					<a href="/" class="text-2xl font-bold text-amber-400 hover:text-amber-300 transition-colors p-4 -m-4"><span class="text-slate-100">Kal</span>alau Cantrell</a>
+					<div class="flex gap-7">
+						<a href="/" class="text-slate-300 hover:text-amber-400 transition-colors p-4 -m-4">Home</a>
+						<a href="/blog" class="text-amber-400 font-medium p-4 -m-4">Blog</a>
 					</div>
 				</nav>
 			</div>
@@ -44,7 +44,7 @@ const sortedPosts = allBlogPosts
 							<article class="bg-slate-800 rounded-lg p-8 hover:bg-slate-700 transition-colors border border-slate-700">
 								<div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-4 gap-4">
 									<h2 class="text-2xl font-bold text-slate-100 mb-2 md:mb-0">
-										<a href={`/blog/${post.data.slug}`} class="hover:text-amber-400 transition-colors">
+										<a href={`/blog/${post.data.slug}`} class="hover:text-amber-400 transition-colors p-4 -m-4">
 											{post.data.title}
 										</a>
 									</h2>
@@ -70,7 +70,7 @@ const sortedPosts = allBlogPosts
 								<p class="text-slate-300 mb-6 leading-relaxed">
 									{excerpt}
 								</p>
-								<a href={`/blog/${post.data.slug}`} class="inline-flex items-center text-amber-400 hover:text-amber-300 font-medium">
+								<a href={`/blog/${post.data.slug}`} class="inline-flex items-center text-amber-400 hover:text-amber-300 font-medium p-4 -m-4">
 									Read More 
 									<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
