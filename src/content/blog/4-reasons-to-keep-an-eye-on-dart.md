@@ -3,7 +3,7 @@ title: "4 reasons to keep an eye on Dart"
 date: "2020-12-01"
 slug: "4-reasons-to-keep-an-eye-on-dart"
 img:
-  src: "http://blog.kalalau-cantrell.com/wp-content/uploads/2020/12/headline.png"
+  src: "https://res.cloudinary.com/kalalau/image/upload/v1751936822/personal-site/dart-header-image.png"
   alt: ""
   caption: ""
 ---
@@ -39,7 +39,10 @@ As we’ve seen, however, Dart did not actually take off on the web, and the Jav
 
 Dart seemed to be a fairly niche language for a while. That is, until its recent surge in popularity, primarily due to the rise of [Flutter](https://flutter.dev). Dart was the the fastest growing language on GitHub in 2019 (see Figure 1). It’s also climbing the charts on language popularity indexes such as [PYPL](https://pypl.github.io/PYPL.html) and [Tiobe](https://www.tiobe.com/tiobe-index) (currently ranked as the 20th and 31th most popular language, respectively).
 
-![](https://blog.kalalau-cantrell.com/wp-content/uploads/2020/12/Screen-Shot-2020-11-27-at-10.43.35-PM-1024x573.png)Figure 1 – The State of the Octoverse in 2019
+<figure>
+  <img src="https://res.cloudinary.com/kalalau/image/upload/v1751936719/personal-site/state-of-octoverse-2019-1024x573.png" alt="state of octoverse 2019 chart">
+  <figcaption>Figure 1 – The State of the Octoverse in 2019</figcaption>
+</figure>
 
 For additional reading on the history of Dart, here are a couple interesting links:
 
@@ -69,7 +72,8 @@ It took me a few minutes to discover that you can create a console app in Dart w
 Dart’s tools and IDE plugins are easy to install and use on Windows, Mac, and Linux. Also, they have an emphasis on quick, iterative feedback. Check out the video clip below in which the mobile app hot reloads with each edit I make to the source code (note that hot reloading a Dart or Flutter web app is [still being worked on](https://github.com/flutter/flutter/issues/53041)).
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/EX65OHCK26k?si=rkSnfHYxyTjF_DrK&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-Hot reloading with Flutter
+
+<p class="text-sm text-slate-400 -mt-4 mb-4 text-center italic">Hot reloading with Flutter</span>
 
 ## Strong community
 

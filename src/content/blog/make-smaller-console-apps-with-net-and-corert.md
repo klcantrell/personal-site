@@ -3,9 +3,9 @@ title: "Make smaller console apps with .NET and CoreRT"
 date: "2021-01-01"
 slug: "make-smaller-console-apps-with-net-and-corert"
 img:
-  src: "http://blog.kalalau-cantrell.com/wp-content/uploads/2021/01/Screen-Shot-2021-01-02-at-1.40.09-PM-1024x770.png"
+  src: "https://res.cloudinary.com/kalalau/image/upload/v1751936956/personal-site/small-binaries.png"
   alt: ""
-  caption: "Figure 1 – “Hello, World!” example"
+  caption: ""
 ---
 
 There’s something satisfying about slimming down an app’s executable file(s) to be as small as possible. It’s not unlike the joy of removing dead code from a codebase; or, to use a non-programming example, the satisfaction of emptying your home of clutter. It feels good to remove clutter, whether that clutter is unneeded lines of code, bloated file sizes, or things in your home that you just don’t need anymore.
@@ -32,7 +32,10 @@ To get started with .NET native AOT, I followed the instructions in the [“Hell
 
 For comparison, I also built “Hello, World!” examples on Windows, Mac, and Linux for .NET native AOT, Rust, Go, Dart and .NET single file apps. For each toolchain, I compiled using the release configuration and with debug info excluded from the final executable. Figure 1 shows the resulting file sizes.
 
-![](http://blog.kalalau-cantrell.com/wp-content/uploads/2021/01/Screen-Shot-2021-01-02-at-1.40.09-PM-1024x770.png)Figure 1 – “Hello, World!” example
+<figure>
+  <img src="https://res.cloudinary.com/kalalau/image/upload/v1751936956/personal-site/small-binaries.png" alt="&quot;hello, world!&quot; binary size comparison chart">
+  <figcaption>Figure 1 – “Hello, World!” example</figcaption>
+</figure>
 
 [Single file apps](https://docs.microsoft.com/en-us/dotnet/core/deploying/single-file) is the current solution from .NET for producing executables that are self-contained, trimmed-down in size, and AOT compiled (although only partially). However, some .NET users have expressed dissatisfaction with this solution, and Microsoft acknowledged their concerns in the [.NET 5 preview 8 announcement](https://devblogs.microsoft.com/dotnet/announcing-net-5-0-preview-8/#single-file-applications) saying that “[t]he single file solution…doesn’t satisfy this definition of AOT”, referring to “native AOT” as having “extremely fast startup” and “binary size as small as it can be”.
 
@@ -44,7 +47,11 @@ I also wanted to see the file sizes for an app that did slightly more than “He
 
 Although not much more complicated than “Hello, World!”, this example required more native dependencies for the random number generation and the networking. I thought it’d be interesting to see how the additional dependencies affected the file sizes. Figure 2 shows the results.
 
-![](http://blog.kalalau-cantrell.com/wp-content/uploads/2021/01/Screen-Shot-2021-01-02-at-1.50.38-PM-1024x769.png)Figure 2 – Star Wars API example
+
+<figure>
+  <img src="https://res.cloudinary.com/kalalau/image/upload/v1751937267/personal-site/small-binaries-star-wars-api-example.png" alt="&quot;hello, world!&quot; binary size comparison chart">
+  <figcaption>Figure 2 – Star Wars API example</figcaption>
+</figure>
 
 Overall, the sizes increased for the Star Wars API example. However, especially compared to .NET single file apps, the AOT compiled executables were still relatively small. Rust produced the smallest executables across the board, but .NET native AOT’s sizes were right around what the other toolchains produced.
 

@@ -5,7 +5,7 @@ slug: "learn-webpack-through-example-i-blurred-placeholder-images"
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751855460/personal-site/mobile-phone_800.jpg"
   alt: "mobile phone"
-  caption: "Mobile. Image credit: Rodion Kutsaev."
+  caption: "Mobile. Image credit: Rodion Kutsaev"
 ---
 
 **_The repo that goes along with this post uses webpack 3. If you are interested in learning webpack 4, you will find this post useful as the concepts as well as the config file format is the same. Webpack 4 did introduce optimizations, zero-config capabilities, as well as new out-of-the-box plugins that an advanced user would want to know about but is beyond the purpose of this post._**

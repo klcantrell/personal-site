@@ -3,7 +3,7 @@ title: "Learn Webpack by Example (II): Simple code-splitting in a vanilla JS app
 date: "2018-09-01"
 slug: "learn-webpack-by-example-ii-simple-code-splitting-in-a-vanilla-js-app"
 img:
-  src: "http://coder-rising.blog/wp-content/uploads/2018/08/banana-split.jpg"
+  src: "https://res.cloudinary.com/kalalau/image/upload/v1751935272/personal-site/banana-split.jpg"
   alt: "banana split"
   caption: "A tasty split"
 ---
@@ -26,7 +26,11 @@ So, to learn about code-splitting, I decided that I wanted to make as small and 
 
 I want to share the little app that I made to help me explore code-splitting with webpack. My hope is that it may help you better understand the topic as well. All we’re going to do is make the single page app depicted in the below gif.
 
-![code splitting blog intro](http://coder-rising.blog/wp-content/uploads/2018/08/code-splitting-blog__intro.gif)A tasty route
+<figure>
+  <img src="https://res.cloudinary.com/kalalau/image/upload/v1751935272/personal-site/code-splitting-blog__intro.gif" alt="app overview gif">
+  <figcaption>A tasty route</figcaption>
+</figure>
+
 If you want to follow along in your code editor, check out the code in the `code-split` branch of [this repo](https://github.com/klcantrell/webpack-through-example-blog). Once you install the packages, `npm start` will run a development server for you if you want to see the code-splitting in action.
 
 Our app has two routes – a **home** route, which the user starts off on, and a **tasty** route. The view for the **home** route is very basic – just a header and a link to the **tasty** route.
@@ -103,7 +107,10 @@ Without code-splitting, you would be sending your user one big bundle of code wh
 
 You can see in the image below that the size of our bundle is **22.8K**. Although that’s not very big compared to real apps in the world, let’s pretend it is for the sake of learning.
 
-![code splitting blog none](http://coder-rising.blog/wp-content/uploads/2018/08/code-splitting-blog__none.gif)No code-splitting
+<figure>
+  <img src="https://res.cloudinary.com/kalalau/image/upload/v1751935439/personal-site/code-splitting-blog__none.gif" alt="no code-splitting gif">
+  <figcaption>No code-splitting</figcaption>
+</figure>
 
 ### Code-splitting with dynamic imports
 
@@ -164,7 +171,11 @@ Here’s what this code says to do: when the **tasty** route is triggered, first
 
 Let’s see what this does for us. In the image below, you can see that the initial page load now downloads a bundle that’s **10.8K** instead of **22.8K** – much better! Then, when the user clicks to go to the **tasty** route, another bundle chunk of **13.6K** is downloaded.
 
-![code splitting blog dynamic imports](http://coder-rising.blog/wp-content/uploads/2018/08/code-splitting-blog__dynamic-imports.gif)With code-splitting
+<figure>
+  <img src="https://res.cloudinary.com/kalalau/image/upload/v1751935932/personal-site/code-splitting-blog__dynamic-imports.gif" alt="with code-splitting gif">
+  <figcaption>With code-splitting</figcaption>
+</figure>
+
 Webpack automatically names these chunks – if you want control over that, check out [this section](https://webpack.js.org/api/module-methods/#import-) of the webpack docs.
 
 ### UX improvements
@@ -192,7 +203,10 @@ Now, our app will show a loading spinner while the `Tasty` component loads. Whil
 
 This trade off exchanges some performance for a better user experience – finding that balance is what it’s all about!
 
-![code splitting blog with spinner](http://coder-rising.blog/wp-content/uploads/2018/08/code-splitting-blog__withSpinner.gif)A tasty route
+<figure>
+  <img src="https://res.cloudinary.com/kalalau/image/upload/v1751936131/personal-site/code-splitting-blog__withSpinner.gif" alt="with loading indicator gif">
+  <figcaption>A tasty spinner</figcaption>
+</figure>
 
 ### Conclusion and further reading
 
