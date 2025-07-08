@@ -3,9 +3,9 @@ title: "Mind the Empathy Gap: 3 ways to stay empathetic as you level up"
 date: "2019-10-01"
 slug: "mind-the-empathy-gap-3-ways-to-stay-empathetic-as-you-level-up"
 img:
-  src: "http://blog.kalalau-cantrell.com/wp-content/uploads/2019/10/mind-the-gap.jpg"
+  src: "https://res.cloudinary.com/kalalau/image/upload/v1751936317/personal-site/mind-the-gap.jpg"
   alt: ""
-  caption: "Image credit: Jeff Fenton."
+  caption: "Image credit: Jeff Fenton"
 ---
 
 The title of this post references the iconic phrase from the [London Underground](https://en.wikipedia.org/wiki/London_Underground), “Mind the gap.” It’s used to warn passengers about the gap between the train and the station platform. Although hazardous, the gap for these travelers is a natural part of the journey.
@@ -28,7 +28,10 @@ Whatever happens, I plan to be wary of the empathy gap that forms between me and
 
 The thing is, *preventing* the empathy gap is pretty difficult. As we go through life overcoming tough challenges and encountering new ones, our mental states will change. Once that happens, the cognitive bias will settle in and it can be a tough thing to break.
 
-![](https://blog.kalalau-cantrell.com/wp-content/uploads/2019/10/kristopher-roller-BzIC8ioj7Ms-unsplash-819x1024.jpg)On the other side. Photo by [Kristopher Roller](https://unsplash.com/@krisroller?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText). 
+<figure>
+  <img src="https://res.cloudinary.com/kalalau/image/upload/v1751936405/personal-site/kristopher-roller-BzIC8ioj7Ms-unsplash-819x1024.jpg" alt="with code-splitting gif">
+  <figcaption>On the other side. Image credit: Kristopher Roller</figcaption>
+</figure>
 
 I’ve observed how hard it is to prevent the empathy gap in my experiences as a first-time parent. The first few months as a new parent are rather crazy – lack of sleep, baby crying inconsolably, life in major disarray, and so on. My wife and I swore we’d never forget those times. 
 

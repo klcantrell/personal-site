@@ -4,7 +4,7 @@ date: "2017-10-01"
 slug: "how-and-why-a-sound-engineer-started-learning-to-code"
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751854842/personal-site/mixing-board-1024x683.jpg"
-  caption: "Mixing console. Image credit: Unsplash."
+  caption: "Mixing console. Image credit: Unsplash"
 ---
 
 I seriously started teaching myself to code several months ago, somewhere in the beginning of 2017. I say “seriously” because I started and stopped a few times in my life. When I look back, I realize I had caught a bug sometime early in life, and although I’ve lived with it for many years, it took a few life experiences and some nurturing from me before this bug finally had what it needed to “take-over”.

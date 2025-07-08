@@ -5,7 +5,7 @@ slug: "promises-and-pokemon-how-i-learned-to-think-in-async"
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751855177/personal-site/pokeball-1024x576.jpg"
   alt: "pokeball"
-  caption: "Pokeballs. Image credit: Lee McKusick."
+  caption: "Pokeballs. Image credit: Lee McKusick"
 ---
 
 If you’ve been learning JavaScript, you may have heard about promises and how awesome they are. So, you decided to research the basics and perhaps you came across the [MDN docs on promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) or great articles like [this one](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261) by Eric Elliott or [this one](https://codeburst.io/javascript-learn-promises-f1eaa00c5461) by Brandon Morelli. If you’ve read all of these and more, you’ve probably seen the go-to example of promises in action.

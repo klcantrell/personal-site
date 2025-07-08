@@ -3,9 +3,9 @@ title: "3 lessons I learned in my first months as a non-traditional software eng
 date: "2019-04-01"
 slug: "3-lessons-i-learned-in-my-first-months-as-a-non-traditional-software-engineer"
 img:
-  src: "https://blog.kalalau-cantrell.com/wp-content/uploads/2019/04/jon-flobrant-1362-unsplash-1024x683.jpg"
+  src: "https://res.cloudinary.com/kalalau/image/upload/v1751936194/personal-site/jon-flobrant-1362-unsplash-1024x683.jpg"
   alt: ""
-  caption: "Photo by Jon Flobrant on Unsplash"
+  caption: "Image credit: Jon Flobrant"
 ---
 
 I am about 3 months into my journey as a new software engineer. I work at a place where the bar is high for what it means to craft quality software. My peers are well-educated and highly disciplined engineers with many years of experience. Those conditions alone would be enough to cause someone new to wonder things like “Am I good enough to be here?” or “Will I be able to keep up?”
