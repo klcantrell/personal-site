@@ -27,7 +27,7 @@ const sortedPosts = allBlogPosts
 						<img 
 							src="https://res.cloudinary.com/kalalau/image/upload/v1751854843/personal-site/headshot.jpg"
 							alt="Kalalau Cantrell headshot" 
-							class="w-40 h-40 rounded-full shadow-lg shadow-amber-400/20"
+							class="w-48 h-48 rounded-full shadow-lg shadow-amber-400/20"
 						/>
 					</div>
 				</div>
@@ -54,7 +54,7 @@ const sortedPosts = allBlogPosts
 						return (
 							<article class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors border border-slate-700 flex flex-col">
 								<h3 class="text-xl font-bold mb-3 text-slate-100">
-									<a href={`/blog/${post.data.slug}`} class="hover:text-amber-400 transition-colors">
+									<a href={`/blog/${post.data.slug}`} class="hover:text-amber-400 transition-colors p-4 -m-4">
 										{post.data.title}
 									</a>
 								</h3>
@@ -69,7 +69,7 @@ const sortedPosts = allBlogPosts
 											day: 'numeric' 
 										})}
 									</time>
-									<a href={`/blog/${post.data.slug}`} class="text-amber-400 hover:text-amber-300 text-sm font-medium">
+									<a href={`/blog/${post.data.slug}`} class="text-amber-400 hover:text-amber-300 text-sm font-medium p-4 -m-4">
 										Read More →
 									</a>
 								</div>
