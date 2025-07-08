@@ -1,4 +1,4 @@
-# My personal site, build with Astro
+# My personal site, built with Astro
 
 ## 🧞 Commands
 
