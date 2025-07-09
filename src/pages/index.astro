@@ -27,14 +27,14 @@ const sortedPosts = allBlogPosts
 						<img 
 							src="https://res.cloudinary.com/kalalau/image/upload/v1751854843/personal-site/headshot.jpg"
 							alt="Kalalau Cantrell headshot" 
-							class="w-48 h-48 rounded-full shadow-lg shadow-amber-400/20"
+							class="w-32 h-32 md:w-40 md:h-40 rounded-full shadow-lg shadow-amber-400/20"
 						/>
 					</div>
 				</div>
-				<h1 class="text-3xl md:text-4xl font-bold mb-6 text-slate-100 name-font">
+				<h1 class="text-2xl md:text-3xl font-bold mb-6 text-slate-100 name-font">
 					<span class="text-amber-400">Kal</span>alau <span class="text-amber-400">Cantrell</span>
 				</h1>
-				<p class="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl mx-auto">
+				<p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
 					I&rsquo;m a software engineer building full-stack web and mobile applications since 2019.
 					I have experience building with TypeScript, Node.js, React, React Native, AWS, SST, and more.
 					My current focus is AI engineering and building things with AI that help people achieve more.
@@ -44,7 +44,7 @@ const sortedPosts = allBlogPosts
 
 		<section class="py-16 px-4 bg-slate-900/50">
 			<div class="max-w-6xl mx-auto">
-				<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-100">
+				<h2 class="text-xl md:text-2xl font-bold text-center mb-12 text-slate-100">
 					Recent <span class="text-amber-400">Content</span>
 				</h2>
 				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -53,7 +53,7 @@ const sortedPosts = allBlogPosts
 						
 						return (
 							<article class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors border border-slate-700 flex flex-col">
-								<h3 class="text-xl font-bold mb-3 text-slate-100">
+								<h3 class="text-md font-bold mb-3 text-slate-100">
 									<a href={`/blog/${post.data.slug}`} class="hover:text-amber-400 transition-colors p-4 -m-4">
 										{post.data.title}
 									</a>
