@@ -1,6 +1,6 @@
 ---
 title: "4 reasons to keep an eye on Dart"
-date: "2020-12-01"
+date: "2020-12-01T23:59:59.000Z"
 slug: "4-reasons-to-keep-an-eye-on-dart"
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751936822/personal-site/dart-header-image.png"

@@ -1,6 +1,6 @@
 ---
 title: "Learn Webpack by Example (II): Simple code-splitting in a vanilla JS app"
-date: "2018-09-01"
+date: "2018-09-01T23:59:59.000Z"
 slug: "learn-webpack-by-example-ii-simple-code-splitting-in-a-vanilla-js-app"
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751935272/personal-site/banana-split.jpg"

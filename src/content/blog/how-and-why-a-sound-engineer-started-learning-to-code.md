@@ -1,6 +1,6 @@
 ---
 title: "How a sound engineer started learning to code"
-date: "2017-10-01"
+date: "2017-10-01T23:59:59.000Z"
 slug: "how-and-why-a-sound-engineer-started-learning-to-code"
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751854842/personal-site/mixing-board-1024x683.jpg"

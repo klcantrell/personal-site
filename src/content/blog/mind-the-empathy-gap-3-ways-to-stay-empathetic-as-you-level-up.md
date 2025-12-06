@@ -1,6 +1,6 @@
 ---
 title: "Mind the Empathy Gap: 3 ways to stay empathetic as you level up"
-date: "2019-10-01"
+date: "2019-10-01T23:59:59.000Z"
 slug: "mind-the-empathy-gap-3-ways-to-stay-empathetic-as-you-level-up"
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751936317/personal-site/mind-the-gap.jpg"

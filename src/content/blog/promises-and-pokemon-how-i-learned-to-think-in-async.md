@@ -1,6 +1,6 @@
 ---
 title: "Promises and Pokemon – how I learned to think in async"
-date: "2017-12-01"
+date: "2017-12-01T23:59:59.000Z"
 slug: "promises-and-pokemon-how-i-learned-to-think-in-async"
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751855177/personal-site/pokeball-1024x576.jpg"

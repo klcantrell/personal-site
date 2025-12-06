@@ -1,6 +1,6 @@
 ---
 title: "Make smaller console apps with .NET and CoreRT"
-date: "2021-01-01"
+date: "2021-01-01T23:59:59.000Z"
 slug: "make-smaller-console-apps-with-net-and-corert"
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751936956/personal-site/small-binaries.png"

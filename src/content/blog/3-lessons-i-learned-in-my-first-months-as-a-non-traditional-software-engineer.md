@@ -1,6 +1,6 @@
 ---
 title: "3 lessons I learned in my first months as a non-traditional software engineer"
-date: "2019-04-01"
+date: "2019-04-01T23:59:59.000Z"
 slug: "3-lessons-i-learned-in-my-first-months-as-a-non-traditional-software-engineer"
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751936194/personal-site/jon-flobrant-1362-unsplash-1024x683.jpg"
