@@ -2,6 +2,7 @@
 title: "Robot Foundation Models Are Not What I Was Expecting (I’m 5 Years Too Early)"
 date: "2025-12-08T23:59:59.000Z"
 slug: "robot-foundation-models-are-not-what-i-was-expecting"
+description: "When Physical Intelligence announced the π0 foundation model, I thought a ChatGPT moment in robotics was near. Here was a model that could control..."
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1765243686/robot-hiking-kalen-emsley-unsplash-photo_smjnmo.png"
   alt: "Robot on hike at a scenic lookout"

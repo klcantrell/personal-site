@@ -2,6 +2,7 @@
 title: "Promises and Pokemon – how I learned to think in async"
 date: "2017-12-01T23:59:59.000Z"
 slug: "promises-and-pokemon-how-i-learned-to-think-in-async"
+description: "If you’ve been learning JavaScript, you may have heard about promises and how awesome they are. So, you decided to research the basics..."
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751855177/personal-site/pokeball-1024x576.jpg"
   alt: "pokeball"

@@ -7,6 +7,7 @@ export interface Props {
     title: string;
     date: Date;
     slug: string;
+    description: string;
     img?: {
       src: string;
       alt?: string;
@@ -21,6 +22,11 @@ const formattedDate = frontmatter.date.toLocaleDateString("en-US", {
   month: "long",
   day: "numeric",
 });
+
+// Construct full URL for social sharing
+const siteUrl = Astro.site
+const postUrl = new URL(`/blog/${frontmatter.slug}`, siteUrl).toString();
+const imageUrl = frontmatter.img.src || 'https://res.cloudinary.com/kalalau/image/upload/v1751854843/personal-site/headshot.jpg';
 ---
 
 <html lang="en">
@@ -30,7 +36,24 @@ const formattedDate = frontmatter.date.toLocaleDateString("en-US", {
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{frontmatter.title} - Kalalau Cantrell</title>
-    <meta name="description" content={frontmatter.title} />
+    <meta name="description" content={frontmatter.description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={postUrl} />
+    <meta property="og:title" content={frontmatter.title} />
+    <meta property="og:description" content={frontmatter.description} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:site_name" content="Kalalau Cantrell" />
+    <meta property="article:published_time" content={frontmatter.date.toISOString()} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={postUrl} />
+    <meta name="twitter:title" content={frontmatter.title} />
+    <meta name="twitter:description" content={frontmatter.description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:image:alt" content={frontmatter.img?.alt || frontmatter.title} />
   </head>
   <body>
     <header class="py-8 px-4 pcb-trace">

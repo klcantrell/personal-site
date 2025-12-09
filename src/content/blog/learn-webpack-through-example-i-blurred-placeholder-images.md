@@ -2,6 +2,7 @@
 title: "Learn Webpack by Example (I): Blurred placeholder images"
 date: "2018-02-01T23:59:59.000Z"
 slug: "learn-webpack-through-example-i-blurred-placeholder-images"
+description: "This is an episodic guide for learning webpack through various examples. Webpack newbies are welcome – I’m one myself and I’ll try to..."
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751855460/personal-site/mobile-phone_800.jpg"
   alt: "mobile phone"

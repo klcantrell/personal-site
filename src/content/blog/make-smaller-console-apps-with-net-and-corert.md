@@ -2,6 +2,7 @@
 title: "Make smaller console apps with .NET and CoreRT"
 date: "2021-01-01T23:59:59.000Z"
 slug: "make-smaller-console-apps-with-net-and-corert"
+description: "There’s something satisfying about slimming down an app’s executable file(s) to be as small as possible. It’s not unlike the joy of removing..."
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751936956/personal-site/small-binaries.png"
   alt: ""
