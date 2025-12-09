@@ -1,7 +1,8 @@
 ---
 title: "4 reasons to keep an eye on Dart"
-date: "2020-12-01"
+date: "2020-12-01T23:59:59.000Z"
 slug: "4-reasons-to-keep-an-eye-on-dart"
+description: "Dart is worth watching because 1) it can be used to create many different kinds of apps, 2) it has nice tools that..."
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1751936822/personal-site/dart-header-image.png"
   alt: ""
