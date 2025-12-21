@@ -5,6 +5,8 @@ export function createExcerpt(content: string, maxLength: number = 150): string 
   const cleanText = content
     // Remove markdown links but keep the link text: [text](url) -> text
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    // Remove <a> tags but keep the inner text
+    .replace(/<a\b[^>]*>(.*?)<\/a>/gi, '$1')
     // Remove other markdown formatting
     .replace(/[#*`_~]/g, '')
     // Remove square brackets that might be left over
