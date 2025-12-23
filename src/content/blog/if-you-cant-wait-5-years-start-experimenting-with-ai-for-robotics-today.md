@@ -4,7 +4,7 @@ date: "2025-12-23T23:59:59.000Z"
 slug: "if-you-cant-wait-5-years-start-experimenting-with-ai-for-robotics-today"
 description: "In my last post, I discussed why the ChatGPT moment for robotics is likely still 5 years away. But if you can’t wait that long..."
 img:
-  src: "https://res.cloudinary.com/kalalau/image/upload/v1766456086/ghost-laptop-editing-code_wehpyi.png"
+  src: "https://res.cloudinary.com/kalalau/image/upload/v1766498882/ghost-laptop-editing-code_jfvvqd.png"
   alt: "Ghost laptop editing code"
   caption: "Original photo by Oskar Yildiz on Unsplash"
 ---
