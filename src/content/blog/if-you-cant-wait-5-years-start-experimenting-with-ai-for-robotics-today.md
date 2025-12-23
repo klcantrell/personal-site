@@ -1,6 +1,6 @@
 ---
-title: "If You Can’t Wait 5 Years, Start Experimenting with AI for Robotics Today"
-date: "2025-12-22T23:59:59.000Z"
+title: "If You Can’t Wait 5 Years: Start Experimenting with AI for Robotics Today"
+date: "2025-12-23T23:59:59.000Z"
 slug: "if-you-cant-wait-5-years-start-experimenting-with-ai-for-robotics-today"
 description: "In my last post, I discussed why the ChatGPT moment for robotics is likely still 5 years away. But if you can’t wait that long..."
 img:
