@@ -19,7 +19,7 @@ So, where to begin? Here’s what I’m doing, and I hope it gives you a good st
 
 I don’t have thousands to spend on <a href="https://www.trossenrobotics.com/solo-ai" target="_blank" rel="noopener">a research-grade robot arm</a>, but I wanted something more serious than a project kit. I also wanted real hardware. Simulation would have been fine, but I wanted to see something I made working in the real world.
 
-Enter the <a href="https://github.com/TheRobotStudio/SO-ARM100" target="_blank" rel="noopener">SO-100</a>: a 3D-printable, low-cost robot arm that is well supported and loved in the Hugging Face and NVIDIA developer communities. Depending on how you source the motors and parts, a single arm costs about 100 to 200 USD. That’s a good deal for the hardware alone, but you’re buying much more than servos and screws when it comes to the SO-100—the tools, community, and learning resources that come along with it make it totally worth the investment.
+Enter the <a href="https://github.com/TheRobotStudio/SO-ARM100" target="_blank" rel="noopener">SO-100</a>: a 3D-printable, low-cost robot arm that is well supported and loved in the Hugging Face and NVIDIA developer communities. Depending on how you source the motors and parts, a single arm costs about 100 to 200 USD. That’s a good deal for the hardware alone, but you’re buying much more than servos and chassis parts when it comes to the SO-100—the tools, community, and learning resources that come along with it make it totally worth the investment.
 
 I’ve purchased my parts from PartaBot <a href="https://partabot.com/products/so-arm101?variant=43026077155443" target="_blank" rel="noopener">here</a>, and I’m building it as we speak.
 
