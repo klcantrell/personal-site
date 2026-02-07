@@ -43,7 +43,7 @@ Compared to the LLM space, the AI for robotics community is relatively small. Bu
 
 **Where to chat**
 
-Join the Discord servers for <a href="https://discord.com/invite/s3KuuzsPFb" target="_blank" rel="noopener">LeRobot</a>, <a href="https://discord.gg/nvidiaomniverse" target="_blank" rel="noopener">NVIDIA Omniverse</a>, and <a href="https://hf.co/join/discord" target="_blank" rel="noopener">Hugging Face</a> to ask for help and stay in the loop.
+Join the Discord servers for <a href="https://discord.com/invite/s3KuuzsPFb" target="_blank" rel="noopener">LeRobot</a>, <a href="https://discord.gg/nvidiaomniverse" target="_blank" rel="noopener">NVIDIA Omniverse</a>, and <a href="https://discord.com/invite/JfAtkvEtRb" target="_blank" rel="noopener">Hugging Face</a> to ask for help and stay in the loop.
 
 ## Learning Resources
 
