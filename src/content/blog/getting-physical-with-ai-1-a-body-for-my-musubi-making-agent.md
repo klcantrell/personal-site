@@ -9,11 +9,11 @@ img:
   caption: "Original photo by Hugging Face"
 ---
 
-AI agents are pretty fantastic. I use tools like GitHub Copilot and Claude Code daily to code and learn. My biggest complaint is their usefulness is trapped in the digital realm. Digital agents can’t place a slice of grilled Spam onto a bed of rice or fold nori, can they? So, my excitement for them can only go so far.
+AI agents are pretty fantastic. I use tools like GitHub Copilot and Claude Code daily to code and learn. My biggest complaint is their usefulness today is trapped in the digital realm. And digital agents can’t place a slice of grilled Spam onto a bed of rice or fold nori, can they? So, my excitement for them can only go so far.
 
 Then I learned that the Claudes and GPTs of the world have cousins like GR00T, Cosmos, π, and Genie that exist to enable physical agents. I decided it was time to experience what’s possible when an agent is broken out of its digital box and given the intelligence to interact with the world.
 
-## Okay, But What’s With The Musubi?
+## Okay, But What’s With Musubi?
 
 ### 1. Fuel
 
@@ -27,7 +27,7 @@ With physical AI, I won’t be writing `if/else` statements for every grain of r
 
 ### 3. Why not?
 
-How awesome is it that I can even attempt this? One or two years ago, this would have required a robotics degree, a lab at a university, and a $50,000 industrial arm. Today, if you’re a software engineer with a laptop, around a hundred bucks to buy the electronics, and access to a 3D printer, you can build a physical AI agent as a side project.
+How awesome is it that I can even attempt a musubi-making agent? One or two years ago, this would have required a robotics degree, a lab at a university, and a $50,000 industrial arm. Today, if you’re a software engineer with a laptop, around a hundred bucks to buy the electronics, and access to a 3D printer, you can build a physical AI agent like this as a side project.
 
 ## Building the SO-101 Robot Arm
 
@@ -47,4 +47,4 @@ If buying a kit, I recommend getting one that provides a wrist camera. If going 
 
 ## What’s Next?
 
-Now I’ll be collecting the data to train GR00T how to move the SO-101. I’ve got the hardware, I’ve got the models, and now I just need to record enough data to train the model (without eating all the supplies first).
+Now I’ll be collecting the data to train GR00T how to move the SO-101. I’ve got the robot arm, I’ve got the models, and now I just need to record enough data for training (without eating all the supplies first).
