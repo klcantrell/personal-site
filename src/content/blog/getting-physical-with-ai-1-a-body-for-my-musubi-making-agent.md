@@ -35,7 +35,9 @@ To give my agent a body, I chose the <a href="https://github.com/TheRobotStudio/
 
 Check out this sped-up video of me unboxing, assembling, calibrating, and doing a test teleoperation of the SO-101 follower arm. There are other videos out there that are more step-by-step like <a href="https://www.youtube.com/watch?v=70GuJf2jbYk" target="_blank" rel="noopener">this one from WowRobo</a>. For mine, it’s just a quick look at what it’s like to build one of these.
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/VrkLgyNLXiU?si=VVVrzbw3lO9ew1v3&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="w-full aspect-16/9">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VrkLgyNLXiU?si=VVVrzbw3lO9ew1v3&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ### Tips
 

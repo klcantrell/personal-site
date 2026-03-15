@@ -19,7 +19,9 @@ Since you write your app code only once – in JavaScript or TypeScript – you 
 
 Check out the UI test below, written once in TypeScript and capable of verifying the app on iOS and on Android. See the video below the code snippet for the test in action.
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/kB0EiqrpCsk?si=Mx11ArgoS_4cdGKX&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="w-full aspect-16/9">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kB0EiqrpCsk?si=Mx11ArgoS_4cdGKX&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 Pretty sweet, right?
 
