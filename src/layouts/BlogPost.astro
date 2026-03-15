@@ -37,6 +37,7 @@ const imageUrl = frontmatter.img.src || 'https://res.cloudinary.com/kalalau/imag
     <meta name="generator" content={Astro.generator} />
     <title>{frontmatter.title} - Kalalau Cantrell</title>
     <meta name="description" content={frontmatter.description} />
+    <link rel="alternate" type="application/rss+xml" title="Kalalau's Blog" href={new URL("rss.xml", Astro.site)} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />

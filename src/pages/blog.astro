@@ -16,6 +16,7 @@ const sortedPosts = allBlogPosts
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Kalalaus Blog</title>
+		<link rel="alternate" type="application/rss+xml" title="Kalalau's Blog" href={new URL("rss.xml", Astro.site)} />
 	</head>
 	<body>
 		<header class="py-8 px-4 pcb-trace">
