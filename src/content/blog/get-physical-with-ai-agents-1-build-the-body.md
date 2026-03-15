@@ -9,15 +9,15 @@ img:
   caption: "Original photo by Hugging Face"
 ---
 
-AI agents are pretty fantastic. I use tools like GitHub Copilot and Claude Code daily to code and learn. My biggest complaint is their usefulness is trapped in the digital realm. Digital agents can’t place a slice of grilled Spam onto a bed of rice or fold nori, can they? So, my excitement can only go so far.
+AI agents are pretty fantastic. I use tools like GitHub Copilot and Claude Code daily to code and learn. My biggest complaint is their usefulness is trapped in the digital realm. Digital agents can’t place a slice of grilled Spam onto a bed of rice or fold nori, can they? So, my excitement for them can only go so far.
 
 Then I learned that the Claudes and GPTs of the world have cousins like GR00T, Cosmos, π, and Genie that exist to enable physical agents. I decided it was time to experience what’s possible when an agent is broken out of its digital box and given the intelligence to interact with the world.
 
-## Okay, But Why Musubi?
+## Okay, But What’s With The Musubi?
 
 ### 1. Fuel
 
-Learning about AI for robotics—or <a href="https://www.nvidia.com/en-us/glossary/generative-physical-ai" target="_blank" rel="noopener">physical AI</a>—works up a serious mental appetite. So how should I refuel? The answer is undeniably to eat more musubi. It was one of my favorite snacks growing up and deserves to be the North Star of this project. My wife isn’t convinced that the excessive sodium intake is justified, but science must prevail.
+Learning about AI for robotics—or <a href="https://www.nvidia.com/en-us/glossary/generative-physical-ai" target="_blank" rel="noopener">physical AI</a>—works up a serious mental appetite. So how should I refuel? The answer is undeniably to eat more <a href="https://en.wikipedia.org/wiki/Spam_musubi" target="_blank" rel="noopener">musubi</a>. It was one of my favorite snacks growing up and deserves to be the North Star of this project. My wife isn’t convinced that the excessive sodium intake is justified, but science must prevail.
 
 ### 2. Squishiness
 
