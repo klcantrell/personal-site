@@ -1,6 +1,6 @@
 ---
 title: "Getting Physical with AI (1): A Body for My Musubi-Making Agent"
-date: "2026-03-14T23:59:59.000Z"
+date: "2026-03-15T23:59:59.000Z"
 slug: "getting-physical-with-ai-1-a-body-for-my-musubi-making-agent"
 description: "AI agents are pretty fantastic. I use tools like GitHub Copilot and Claude Code daily to code and learn. My biggest complaint is..."
 img:
