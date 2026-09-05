@@ -9,7 +9,13 @@ img:
   caption: ""
 ---
 
-*I made a YouTube video covering most of what’s in this post, complete with clips of the robot in action. If you’d rather watch than read, **[check out the video here]**.*
+*I made a YouTube video covering most of what’s in this post, complete with clips of the robot in action. If you’d rather watch than read, **check out the video here:**.*
+
+<div class="w-full aspect-16/9">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/L6YW8lz4XN0?si=e13G1ED6VmgFBzN7&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="py-2"></div>
 
 My musubi agent already has a body, the SO-101 robotic arm I built in <a href="https://kalalau-cantrell.com/blog/getting-physical-with-ai-1-a-body-for-my-musubi-making-agent" target="_blank">my last post</a>. Now the challenge is to build the brain that will bring it to life so it can assemble my favorite snack.
 
