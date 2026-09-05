@@ -17,7 +17,7 @@ Then I learned that the Claudes and GPTs of the world have cousins like GR00T, C
 
 ### 1. Fuel
 
-Learning about AI for robotics—or <a href="https://www.nvidia.com/en-us/glossary/generative-physical-ai" target="_blank" rel="noopener">physical AI</a>—works up a serious mental appetite. So how should I refuel? The answer is undeniably to eat more <a href="https://en.wikipedia.org/wiki/Spam_musubi" target="_blank" rel="noopener">musubi</a>. It was one of my favorite snacks growing up and deserves to be the North Star of this project. My wife isn’t convinced that the excessive sodium intake is justified, but science must prevail.
+Exploring AI for robotics (often called <a href="https://www.nvidia.com/en-us/glossary/generative-physical-ai" target="_blank" rel="noopener">physical AI</a>) works up a serious appetite. How am I fueling this journey? Inevitably, with <a href="https://en.wikipedia.org/wiki/Spam_musubi" target="_blank" rel="noopener">musubi</a>. It was a childhood favorite of mine and deserves to be the official snack of this project. My wife isn’t convinced the excessive sodium is justified, but science must prevail.
 
 ### 2. Squishiness
 
