@@ -4,7 +4,7 @@ date: "2026-03-15T23:59:59.000Z"
 slug: "getting-physical-with-ai-1-a-body-for-my-musubi-making-agent"
 description: "AI agents are pretty fantastic. I use tools like GitHub Copilot and Claude Code daily to code and learn. My biggest complaint is..."
 img:
-  src: "https://res.cloudinary.com/kalalau/image/upload/v1773498404/digitized-so-100-spam-musubi_bncrvl.png"
+  src: "https://res.cloudinary.com/kalalau/image/upload/v1788658660/digitized-so-100-spam-musubi_rczvr0.webp"
   alt: "Digitized SO-100 reaching for Spam musubi"
   caption: "Original photo by Hugging Face"
 ---
