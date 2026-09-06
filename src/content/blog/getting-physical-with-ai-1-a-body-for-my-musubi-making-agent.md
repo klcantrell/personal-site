@@ -11,7 +11,7 @@ img:
 
 AI agents are pretty fantastic. I use tools like GitHub Copilot and Claude Code daily to code and learn. My biggest complaint is their usefulness today is trapped in the digital realm. And digital agents can’t place a slice of grilled Spam onto a bed of rice or fold nori, can they? So, my excitement for them can only go so far.
 
-Then I learned that the Claudes and GPTs of the world have cousins like GR00T, Cosmos, π, and Genie that exist to enable physical agents. I decided it was time to experience what’s possible when an agent is broken out of its digital box and given the intelligence to interact with the world.
+Then I learned that the Claudes and GPTs of the world have cousins like <a href="https://developer.nvidia.com/isaac/gr00t" target="_blank" rel="noopener">GR00T</a>, <a href="https://www.nvidia.com/en-us/ai/cosmos" target="_blank" rel="noopener">Cosmos</a>, <a href="https://www.pi.website/blog/pi0" target="_blank" rel="noopener">π</a>, and <a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie" target="_blank" rel="noopener">Genie</a> that exist to enable physical agents. I decided it was time to experience what’s possible when an agent is broken out of its digital box and given the intelligence to interact with the world.
 
 ## Okay, But What’s With Musubi?
 
