@@ -5,8 +5,8 @@ slug: "getting-physical-with-ai-2-a-system-1-brain-for-my-musubi-making-agent"
 description: "My musubi agent already has a body, the SO-101 robotic arm. Now the challenge is to build the brain that will bring it..."
 img:
   src: "https://res.cloudinary.com/kalalau/image/upload/v1788629801/SO-101_Duotone_with_LeRobot_and_GR00T_logos_vammck.webp"
-  alt: "Duo tone styled image of SO-101 reaching to make spam musubi with LeRobot and GR00T logos"
-  caption: ""
+  alt: "Duotone styled image of SO-101 reaching to make Spam musubi with LeRobot and GR00T logos"
+  caption: "SO-101, LeRobot, and GR00T working together to learn to make musubi"
 ---
 
 *I made a YouTube video covering most of what’s in this post, complete with clips of the robot in action. If you’d rather watch than read, **check out the video here:***
